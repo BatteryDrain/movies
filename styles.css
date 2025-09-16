@@ -21,7 +21,6 @@ h1 {
 #ageS {
     display: flex;
     flex-direction: row;
-    height: 20px;
 }
 
 #ageS p {
@@ -69,18 +68,27 @@ h1 {
     visibility: visible;
   }
 
-  #hiddenOpt {
-    display: none;
-  }
+#hiddenOpt {
+display: none;
+}
 
-  #green {
-    color: green;
-  }
+#green {
+color: green;
+}
 
-  #yellow {
-    color: yellow;
-  }
+#yellow {
+color: yellow;
+}
 
-  #red {
-    color: red;
-  }
+#red {
+color: red;
+}
+
+#filterScore {
+display: flex;
+flex-direction: row;
+}
+
+#filterScore p {
+    margin: 0;
+}

@@ -37,3 +37,17 @@ function tooltipT(rate){
     }
     return null;
 }
+
+showOhide.addEventListener("click", function(){
+    expandheadder();
+});
+
+function expandheadder(){
+    filters.classList.toggle("hide");
+    if(filters.classList.contains("hide")){
+        showOhide.innerHTML = "show filters";
+    }
+    else{
+        showOhide.innerHTML = "hide filters";
+    }
+}

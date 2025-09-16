@@ -5,10 +5,17 @@
 body {
     margin: 0;
     font-family: "Mulish", Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+header {
+    background-color: white;
+    margin: 0;
 }
 
 h1 {
     text-align: center;
+    margin: 0;
 }
 
 #ageS {
@@ -64,4 +71,16 @@ h1 {
 
   #hiddenOpt {
     display: none;
+  }
+
+  #green {
+    color: green;
+  }
+
+  #yellow {
+    color: yellow;
+  }
+
+  #red {
+    color: red;
   }

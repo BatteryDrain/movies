@@ -1,7 +1,7 @@
 DATA = [
-    //id, name, picture, link,
-    [0, "Lost In Starlight", "LostInStarlight", "https://www.imdb.com/title/tt28664733/"],
-    [1, "The Take/Bastille Day", "TheTake", "https://www.imdb.com/title/tt2368619/"]
+    //id, name, picture, link, recomend(1/0/-1)
+    [0, "Lost In Starlight", "LostInStarlight", "https://www.imdb.com/title/tt28664733/", 1],
+    [1, "The Take/Bastille Day", "TheTake", "https://www.imdb.com/title/tt2368619/", 1]
 ]
 
 TAGS = [
@@ -101,6 +101,6 @@ COUNTRY = [
 
 OTHER = [
     //movie id, age ratting, year realised, score, animated?,
-    [0, "PG", "2025", 100, "an"],
-    [1, "R", "2016", 99, "la"]
+    [0, "PG", 2025, 100, "an"],
+    [1, "R", 2016, 99, "la"]
 ]

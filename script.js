@@ -1,3 +1,5 @@
+populate();
+
 filterage();
 ageRate.addEventListener("change", () => {
     filterage();
@@ -108,10 +110,42 @@ function populate(){
         h2 = document.createElement('h2');
         h2.classList.add("yellow");
         h2.innerHTML = "maybe recomend";
-        green.appendChild(h2);
+        yellow.appendChild(h2);
     red.replaceChildren();
         h2 = document.createElement('h2');
         h2.classList.add("red");
         h2.innerHTML = "don't recomend";
-        green.appendChild(h2);
+        red.appendChild(h2);
+
+    for(m=0; m<DATA.length; m++){
+        console.log("in");
+        fig = document.createElement('figure');
+            div = document.createElement('div');
+            div.classList.add("figTop");
+                figT = document.createElement('figcaption');
+                figT.innerHTML = DATA[m][1] + " " + OTHER[DATA[m][0]][2];
+                div.appendChild(figT);
+
+                spn = document.createElement('span');
+                spn.innerHTML = OTHER[DATA[m][0]][3];
+                div.appendChild(spn);
+            fig.appendChild(div);
+
+            foto = document.createElement('img');
+            foto.src = "assets/" + DATA[m][2] + ".jpg";
+            foto.alt = "";
+            fig.appendChild(foto);
+
+            but = document.createElement('button');
+            but.innerHTML = "more info"
+            but.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
+            fig.appendChild(but);
+        // fig.classList.add("");
+        green.appendChild(fig);
+    }
+}
+
+function goToLink(number){
+    console.log("button " + number + " clicked");
+    window.open(DATA[number][3],"_blank");
 }

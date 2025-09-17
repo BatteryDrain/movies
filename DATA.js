@@ -1,7 +1,7 @@
 DATA = [
     //id, name, picture, link, recomend(1/0/-1)
-    [0, "Lost In Starlight", "LostInStarlight", "https://www.imdb.com/title/tt28664733/", 1],
-    [1, "The Take/Bastille Day", "TheTake", "https://www.imdb.com/title/tt2368619/", 1]
+    [0, "Lost In Starlight", "LostinStarlight", "https://www.imdb.com/title/tt28664733/", 1],
+    [1, "Bastille Day/The Take", "TheTake", "https://www.imdb.com/title/tt2368619/", 1]
 ]
 
 TAGS = [

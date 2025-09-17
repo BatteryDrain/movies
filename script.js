@@ -71,6 +71,7 @@ function tooltipT(rate){
 
 showOhide.addEventListener("click", function(){
     expandheadder();
+    header.classList.toggle("expanded");
 });
 
 function expandheadder(){

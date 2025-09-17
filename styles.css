@@ -199,7 +199,7 @@ figure {
     padding-right: 5px;
     padding-bottom: 20px;
     max-width: 700px;
-    filter: drop-shadow(18px 18px 8px grey);
+    filter: drop-shadow(18px 18px 8px black);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 

@@ -83,6 +83,20 @@ function expandheadder(){
     }
 }
 
+reset.addEventListener("click", function(){
+    resetF();
+});
+
+function resetF(){
+    ageRate.value = "*";
+    filterage();
+    min.value = 0;
+    max.value = 100;
+    Can.checked = true;
+    Cla.checked = true;
+    populate();
+}
+
 function populate(){
     green.replaceChildren();
         h2 = document.createElement('h2');

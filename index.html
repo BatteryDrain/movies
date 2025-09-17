@@ -19,7 +19,7 @@
                     <div id="ageS" class="">
                         <p>age rating</p>
                         <select id="ageRate">
-                            <option id="hiddenOpt" value="*" selected></option>
+                            <option class="hiddenOpt" value="*" selected></option>
                             <option value="0">all ages</option>
                             <option value="1">with guidence</option>
                             <option value="2">preteen</option>
@@ -50,15 +50,27 @@
                         </label>
                     </div>
                 </div>
+                <div id="sort">
+                    <p>sort by:</p>
+                    <select name="" id="sortBy">
+                        <option value="score">score</option>
+                        <option value="year">year</option>
+                    </select>
+                    <p>most to least</p>
+                    <label class="switch">
+                        <input type="checkbox" id = "min2hi" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </header>
-            <section >
-                <h2 id="green">Recomend</h2>
+            <section id="green">
+                <h2 class="green">recomend</h2>
             </section>
-            <section>
-                <h2 id="yellow">maybe recomend</h2>
+            <section id="yellow">
+                <h2 class="yellow">maybe recomend</h2>
             </section>
-            <section>
-                <h2 id="red">don't recomend</h2>
+            <section id="red">
+                <h2 class="red">don't recomend</h2>
             </section>
         </main>
     <script src="DATA.js"></script>

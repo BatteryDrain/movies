@@ -68,19 +68,19 @@ h1 {
     visibility: visible;
   }
 
-#hiddenOpt {
+.hiddenOpt {
 display: none;
 }
 
-#green {
+.green {
 color: green;
 }
 
-#yellow {
+.yellow {
 color: yellow;
 }
 
-#red {
+.red {
 color: red;
 }
 
@@ -150,4 +150,13 @@ input:checked + .slider {
 
 input:checked + .slider::before {
     transform: translateX(14px);
+}
+
+#sort {
+    display: flex;
+    flex-direction: row;
+}
+
+#sort p {
+    margin: 0;
 }

@@ -17,7 +17,7 @@ max.addEventListener("change", () => {
 Can.addEventListener("change", () => {
     // console.log("Can");
     if(Can.value && Cla.value){
-        Cla.checked = true
+        Cla.checked = true;
     }
     populate();
 });
@@ -25,8 +25,12 @@ Can.addEventListener("change", () => {
 Cla.addEventListener("change", () => {
     // console.log("Cla");
     if(Can.value && Cla.value){
-        Can.checked = true
+        Can.checked = true;
     }
+    populate();
+});
+
+sortBy.addEventListener("change", () => {
     populate();
 });
 
@@ -80,5 +84,19 @@ function expandheadder(){
 }
 
 function populate(){
-
+    green.replaceChildren();
+        h2 = document.createElement('h2');
+        h2.classList.add("green");
+        h2.innerHTML = "recomend";
+        green.appendChild(h2);
+    yellow.replaceChildren();
+        h2 = document.createElement('h2');
+        h2.classList.add("yellow");
+        h2.innerHTML = "maybe recomend";
+        green.appendChild(h2);
+    red.replaceChildren();
+        h2 = document.createElement('h2');
+        h2.classList.add("red");
+        h2.innerHTML = "don't recomend";
+        green.appendChild(h2);
 }

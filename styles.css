@@ -102,6 +102,12 @@ input {
     border: 1px solid rgb(83, 83, 83);
 }
 
+#filters {
+    margin-left: 5px;
+    background-color: lightcyan;
+    width: fit-content;
+}
+
 #filters div {
     margin-bottom: 5px;
 }

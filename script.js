@@ -1,6 +1,33 @@
 filterage();
 ageRate.addEventListener("change", () => {
     filterage();
+    populate();
+});
+
+min.addEventListener("change", () => {
+    // console.log("min");
+    populate();
+});
+
+max.addEventListener("change", () => {
+    // console.log("max");
+    populate();
+});
+
+Can.addEventListener("change", () => {
+    // console.log("Can");
+    if(Can.value && Cla.value){
+        Cla.checked = true
+    }
+    populate();
+});
+
+Cla.addEventListener("change", () => {
+    // console.log("Cla");
+    if(Can.value && Cla.value){
+        Can.checked = true
+    }
+    populate();
 });
 
 function filterage(){
@@ -52,3 +79,6 @@ function expandheadder(){
     }
 }
 
+function populate(){
+
+}

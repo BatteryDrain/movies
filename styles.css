@@ -13,6 +13,12 @@ header {
     margin: 0;
 }
 
+header button {
+    width: 100px;
+    border-radius: 25px;
+
+}
+
 header.expanded {
     max-height: 500px;
     padding-bottom: 20px;
@@ -199,7 +205,7 @@ figure {
     padding-right: 5px;
     padding-bottom: 20px;
     max-width: 700px;
-    filter: drop-shadow(18px 18px 8px black);
+    /* filter: drop-shadow(18px 18px 8px black); */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -219,6 +225,15 @@ figcaption {
 .figTop {
     display: flex;
     flex-direction: row;
+}
+
+.tags span {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 0 3px;
+    width: fit-content;
+    margin: 0 1px;
 }
 
 figure button {

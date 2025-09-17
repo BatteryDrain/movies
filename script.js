@@ -118,8 +118,22 @@ function populate(){
         red.appendChild(h2);
 
     for(m=0; m<DATA.length; m++){
-        console.log("in");
-        fig = document.createElement('figure');
+        recomend = DATA[m][4];
+        if(recomend == 1){
+            makeFig("green", m);
+        }
+        if(recomend == 0){
+            makeFig("yellow", m);
+        }
+        if(recomend == -1){
+            makeFig("red", m);
+        }
+    }
+}
+
+function makeFig(place, m){
+    pace = document.getElementById(place);
+    fig = document.createElement('figure');
             div = document.createElement('div');
             div.classList.add("figTop");
                 figT = document.createElement('figcaption');
@@ -128,8 +142,19 @@ function populate(){
 
                 spn = document.createElement('span');
                 spn.innerHTML = OTHER[DATA[m][0]][3];
+                spn.style.backgroundcolor = place;
                 div.appendChild(spn);
             fig.appendChild(div);
+
+            div1 = document.createElement('div');
+            div1.classList.add("tags");
+                for(t=1; t<MOVIETAGS[DATA[m][0]].length; t++){
+                    spn = document.createElement('span');
+                    spn.innerHTML = TAGS[MOVIETAGS[DATA[m][0]][t]][1];
+                    div1.appendChild(spn);
+                }
+            fig.appendChild(div1);
+            
 
             foto = document.createElement('img');
             foto.src = "assets/" + DATA[m][2] + ".jpg";
@@ -141,8 +166,7 @@ function populate(){
             but.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
             fig.appendChild(but);
         // fig.classList.add("");
-        green.appendChild(fig);
-    }
+        pace.appendChild(fig);
 }
 
 function goToLink(number){

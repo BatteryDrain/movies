@@ -10,13 +10,14 @@ TAGS = [
     [1, "romance", ""],
     [2, "love", ""],
     [3, "action", ""],
-    [4, "cop", ""]
+    [4, "cop", ""],
+    [5, "heist", ""]
 ]
 
 MOVIETAGS = [
     //movie id, tag1, tag2, tag3, tag4, tag5,
     [0, 0, 1, 2],
-    [1, 3, 0, 4]
+    [1, 3, 0, 4, 5]
 ]
 
 AGERATE = [

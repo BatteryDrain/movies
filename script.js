@@ -1,6 +1,6 @@
-AGE = [
-    "G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"
-];
+AGE = [];
+
+filterage();
 
 populate();
 setOptInFilterTag();
@@ -57,18 +57,23 @@ function filterage(){
     AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
-    for(ii=0; ii < RATE.length; ii++){
-        if(RATE[ii][1] <= val){
-            txt = document.createElement('p');
-            txt.id = ii + "AR"
-            txt.classList.add("tooltip");
-            txt.innerHTML = RATE[ii][2];
-            const tooltipSpan = tooltipT(ii);
-            if (tooltipSpan) {
-                txt.appendChild(tooltipSpan);
+    if(val == "*"){
+        AGE = ["G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"];
+    }
+    else{
+        for(ii=0; ii < RATE.length; ii++){
+            if(RATE[ii][1] <= val){
+                txt = document.createElement('p');
+                txt.id = ii + "AR"
+                txt.classList.add("tooltip");
+                txt.innerHTML = RATE[ii][2];
+                const tooltipSpan = tooltipT(ii);
+                if (tooltipSpan) {
+                    txt.appendChild(tooltipSpan);
+                }
+                ageList.appendChild(txt);
+                AGE.push(RATE[ii][2]);
             }
-            ageList.appendChild(txt);
-            AGE.push(RATE[ii][2]);
         }
     }
 }

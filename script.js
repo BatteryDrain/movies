@@ -153,15 +153,18 @@ function populate(){
 
     for(m=0; m<DATA.length; m++){
         if(AGE.includes(OTHER[DATA[m][0]][1])){
-            recomend = DATA[m][4];
-            if(recomend == 1){
-                makeFig("green", m);
-            }
-            if(recomend == 0){
-                makeFig("yellow", m);
-            }
-            if(recomend == -1){
-                makeFig("red", m);
+            score = OTHER[DATA[m][0]][3];
+            if(score <= max.value && score >= min.value){
+                recomend = DATA[m][4];
+                if(recomend == 1){
+                    makeFig("green", m);
+                }
+                if(recomend == 0){
+                    makeFig("yellow", m);
+                }
+                if(recomend == -1){
+                    makeFig("red", m);
+                }
             }
         }
     }

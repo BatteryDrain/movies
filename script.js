@@ -1,4 +1,6 @@
 AGE = [];
+CHECKANIMATED = true;
+CHECKLIVE = true;
 
 filterage();
 
@@ -30,16 +32,20 @@ max.addEventListener("change", () => {
 });
 
 Can.addEventListener("change", () => {
-    // console.log("Can");
-    if(Can.value && Cla.value){
+    CHECKANIMATED = !CHECKANIMATED;
+    // console.log(CHECKANIMATED);
+    if(!CHECKANIMATED && !CHECKLIVE){
+        CHECKLIVE = true;
         Cla.checked = true;
     }
     populate();
 });
 
 Cla.addEventListener("change", () => {
-    // console.log("Cla");
-    if(Can.value && Cla.value){
+    CHECKLIVE = !CHECKLIVE;
+    // console.log(CHECKLIVE);
+    if(!CHECKANIMATED && !CHECKLIVE){
+        CHECKANIMATED = true;
         Can.checked = true;
     }
     populate();
@@ -154,16 +160,24 @@ function populate(){
     for(m=0; m<DATA.length; m++){
         if(AGE.includes(OTHER[DATA[m][0]][1])){
             score = OTHER[DATA[m][0]][3];
+
             if(score <= max.value && score >= min.value){
-                recomend = DATA[m][4];
-                if(recomend == 1){
-                    makeFig("green", m);
-                }
-                if(recomend == 0){
-                    makeFig("yellow", m);
-                }
-                if(recomend == -1){
-                    makeFig("red", m);
+                film = OTHER[DATA[m][0]][4];
+
+                if(CHECKANIMATED && film == "an" || film == "la"){
+                    if(CHECKLIVE && film == "la" || film == "an"){
+                        recomend = DATA[m][4];
+
+                        if(recomend == 1){
+                            makeFig("green", m);
+                        }
+                        if(recomend == 0){
+                            makeFig("yellow", m);
+                        }
+                        if(recomend == -1){
+                            makeFig("red", m);
+                        }
+                    }
                 }
             }
         }

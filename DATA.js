@@ -1,7 +1,9 @@
 DATA = [
     //id, name, picture, link, recomend(1/0/-1)
     [0, "Lost In Starlight", "LostinStarlight", "https://www.imdb.com/title/tt28664733/", 1],
-    [1, "Bastille Day/The Take", "TheTake", "https://www.imdb.com/title/tt2368619/", 1]
+    [1, "Bastille Day/The Take", "TheTake", "https://www.imdb.com/title/tt2368619/", 1],
+    [2, "Pirates of the Caribbean: The Curse of the Black Pearl", "Jack", "https://www.imdb.com/title/tt0325980/", 1],
+    [3, "The Acountant 2", "TheAcountant2", "https://www.imdb.com/title/tt7068946/", 1]
 ]
 
 TAGS = [
@@ -11,13 +13,24 @@ TAGS = [
     [2, "love", ""],
     [3, "action", ""],
     [4, "cop", ""],
-    [5, "heist", ""]
+    [5, "heist", ""],
+    [6, "spy", ""]
 ]
 
 MOVIETAGS = [
     //movie id, tag1, tag2, tag3, tag4, tag5,
     [0, 0, 1, 2],
-    [1, 3, 0, 4, 5]
+    [1, 3, 0, 4, 5],
+    [2, 3, 0, 5],
+    [3, 3, 0, 2, 6]
+]
+
+OTHER = [
+    //movie id, age ratting, year realised, score, animated?,
+    [0, "PG", 2025, 100, "an"],
+    [1, "R", 2016, 99, "la"],
+    [2, "PG-13", 2003, 98, "la"],
+    [3, "R", 2025, 90, "la"]
 ]
 
 AGERATE = [
@@ -28,7 +41,6 @@ AGERATE = [
     [3, "teen"],
     [4, "mature teen"],
     [5, "18+"]
-
 ]
 
 RATE = [
@@ -98,10 +110,4 @@ COUNTRY = [
     [7, "🇰🇷", "South Korea"],
     [8, "🇩🇪", "Germany"],
     [9, "🇮🇳", "India"]
-]
-
-OTHER = [
-    //movie id, age ratting, year realised, score, animated?,
-    [0, "PG", 2025, 100, "an"],
-    [1, "R", 2016, 99, "la"]
 ]

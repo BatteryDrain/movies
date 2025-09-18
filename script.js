@@ -1,4 +1,44 @@
+AGE = [
+    "G",
+    "U",
+    "ALL",
+    "0",
+    "U",
+    "PG",
+    "PG-12",
+    "M",
+    "UA",
+    "12A",
+    "12",
+    "PG-13",
+    "RP13",
+    "14A",
+    "15",
+    "R15+",
+    "R13 / R15",
+    "16",
+    "-16",
+    "R16",
+    "R",
+    "18A",
+    "18",
+    "-18",
+    "R18",
+    "R18+",
+    "A",
+    "NC-17"
+];
+
 populate();
+setOptInFilterTag();
+function setOptInFilterTag(){
+    for(o=0; o < TAGS.length; o++){
+        opt = document.createElement('option');
+        opt.innerHTML = TAGS[o][1];
+        opt.value = TAGS[o][1];
+        Ftags.appendChild(opt);
+    }
+}
 
 filterage();
 ageRate.addEventListener("change", () => {
@@ -36,7 +76,12 @@ sortBy.addEventListener("change", () => {
     populate();
 });
 
+Ftags.addEventListener("change", () => {
+    setTagsToFilter();
+});
+
 function filterage(){
+    AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
     for(ii=0; ii < RATE.length; ii++){
@@ -50,6 +95,7 @@ function filterage(){
                 txt.appendChild(tooltipSpan);
             }
             ageList.appendChild(txt);
+            AGE.push(RATE[ii][2]);
         }
     }
 }
@@ -90,6 +136,16 @@ reset.addEventListener("click", function(){
     resetF();
 });
 
+function setTagsToFilter(){
+    tag = Ftags.value;
+    if(tag != null){
+        spn = document.createElement('span');
+        spn.innerHTML = tag;
+        tagHere.appendChild(spn);
+        Ftags.value = '*';
+    }
+}
+
 function resetF(){
     ageRate.value = "*";
     filterage();
@@ -118,15 +174,17 @@ function populate(){
         red.appendChild(h2);
 
     for(m=0; m<DATA.length; m++){
-        recomend = DATA[m][4];
-        if(recomend == 1){
-            makeFig("green", m);
-        }
-        if(recomend == 0){
-            makeFig("yellow", m);
-        }
-        if(recomend == -1){
-            makeFig("red", m);
+        if(AGE.includes(OTHER[DATA[m][0]][1])){
+            recomend = DATA[m][4];
+            if(recomend == 1){
+                makeFig("green", m);
+            }
+            if(recomend == 0){
+                makeFig("yellow", m);
+            }
+            if(recomend == -1){
+                makeFig("red", m);
+            }
         }
     }
 }
@@ -142,7 +200,6 @@ function makeFig(place, m){
 
                 spn = document.createElement('span');
                 spn.innerHTML = OTHER[DATA[m][0]][3];
-                spn.style.backgroundcolor = place;
                 div.appendChild(spn);
             fig.appendChild(div);
 
@@ -160,11 +217,19 @@ function makeFig(place, m){
             foto.src = "assets/" + DATA[m][2] + ".jpg";
             foto.alt = "";
             fig.appendChild(foto);
+            
+            div2 = document.createElement('div');
+            div2.classList.add("div2");
+                but = document.createElement('button');
+                but.innerHTML = "more info"
+                but.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
+                div2.appendChild(but);
 
-            but = document.createElement('button');
-            but.innerHTML = "more info"
-            but.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
-            fig.appendChild(but);
+                p = document.createElement('p');
+                p.classList.add("ageTag");
+                p.innerHTML = OTHER[DATA[m][0]][1];
+                div2.appendChild(p);
+            fig.appendChild(div2);
         // fig.classList.add("");
         pace.appendChild(fig);
 }

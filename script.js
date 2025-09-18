@@ -21,6 +21,16 @@ ageRate.addEventListener("change", () => {
     populate();
 });
 
+HideAgeTags.addEventListener("click", () => {
+    ageList.classList.toggle("hide");
+    if(ageList.classList.contains("hide")){
+        HideAgeTags.innerHTML = "show age tags";
+    }
+    else{
+        HideAgeTags.innerHTML = "hide age tags";
+    }
+});
+
 min.addEventListener("change", () => {
     // console.log("min");
     populate();

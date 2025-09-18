@@ -4,7 +4,8 @@ DATA = [
     [1, "Bastille Day/The Take", "TheTake", "https://www.imdb.com/title/tt2368619/", 1],
     [2, "Pirates of the Caribbean: The Curse of the Black Pearl", "Jack", "https://www.imdb.com/title/tt0325980/", 1],
     [3, "The Acountant 2", "TheAcountant2", "https://www.imdb.com/title/tt7068946/", 1],
-    [4, "The Accountant", "TheAccountant", "https://www.imdb.com/title/tt2140479/", 1]
+    [4, "The Accountant", "TheAccountant", "https://www.imdb.com/title/tt2140479/", 1],
+    [5, "Head of State", "HeadofState", "https://www.imdb.com/title/tt13357520/", 1]
 ]
 
 TAGS = [
@@ -17,7 +18,9 @@ TAGS = [
     [5, "heist", ""],
     [6, "spy", ""],
     [7, "Business", ""],
-    [8, "Mystery", ""]
+    [8, "Mystery", ""],
+    [9, "comedy", ""],
+    [10, "spy", ""]
 ]
 
 MOVIETAGS = [
@@ -26,7 +29,8 @@ MOVIETAGS = [
     [1, 3, 0, 4, 5],
     [2, 3, 0, 5],
     [3, 3, 0, 2, 6],
-    [4, 3, 7, 8]
+    [4, 3, 7, 8],
+    [5, 3, 9, 10]
 ]
 
 OTHER = [
@@ -35,7 +39,8 @@ OTHER = [
     [1, "R", 2016, 99, "la"],
     [2, "PG-13", 2003, 98, "la"],
     [3, "R", 2025, 90, "la"],
-    [4, "R", 2016, 80, "la"]
+    [4, "R", 2016, 80, "la"],
+    [5, "PG-13", 2025, 70, "la"]
 ]
 
 AGERATE = [

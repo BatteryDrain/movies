@@ -287,3 +287,7 @@ select {
 h2 {
     text-align: center;
 }
+
+#HideAgeTags {
+    width: fit-content;
+}

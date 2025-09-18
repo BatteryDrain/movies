@@ -5,7 +5,11 @@ DATA = [
     [2, "Pirates of the Caribbean: The Curse of the Black Pearl", "Jack", "https://www.imdb.com/title/tt0325980/", 1],
     [3, "The Acountant 2", "TheAcountant2", "https://www.imdb.com/title/tt7068946/", 1],
     [4, "The Accountant", "TheAccountant", "https://www.imdb.com/title/tt2140479/", 1],
-    [5, "Head of State", "HeadofState", "https://www.imdb.com/title/tt13357520/", 1]
+    [5, "Head of State", "HeadofState", "https://www.imdb.com/title/tt13357520/", 1],
+    [6, "21 Jump Street", "21JumpStreet", "https://www.imdb.com/title/tt1232829/", 1],
+    [7, "The Mitchells vs. the Machines", "TheMMachines", "https://www.imdb.com/title/tt0343818/", 1],
+    [8, "I, Robot", "irobot", "https://www.imdb.com/title/tt0343818/", 1],
+    [9, "Electric State 2025", "ElectricState", "", 1]
 ]
 
 TAGS = [
@@ -20,7 +24,9 @@ TAGS = [
     [7, "Business", ""],
     [8, "Mystery", ""],
     [9, "comedy", ""],
-    [10, "spy", ""]
+    [10, "spy", ""],
+    [11, "family"],
+    [12, "AI"]
 ]
 
 MOVIETAGS = [
@@ -30,7 +36,11 @@ MOVIETAGS = [
     [2, 3, 0, 5],
     [3, 3, 0, 2, 6],
     [4, 3, 7, 8],
-    [5, 3, 9, 10]
+    [5, 3, 9, 10],
+    [6, 3, 9, 4],
+    [7, 3, 0, 11, 9],
+    [8, 3, 0, 4, 12],
+    [9, 3, 0, 11]
 ]
 
 OTHER = [
@@ -40,7 +50,11 @@ OTHER = [
     [2, "PG-13", 2003, 98, "la"],
     [3, "R", 2025, 90, "la"],
     [4, "R", 2016, 80, "la"],
-    [5, "PG-13", 2025, 70, "la"]
+    [5, "PG-13", 2025, 70, "la"],
+    [6, "R", 2012, 85, "la"],
+    [7, "PG", 2021, 85, "an"],
+    [8, "PG-13", 2004, 90, "la"],
+    [9, "PG-13", 2025, 77, "la"]
 ]
 
 AGERATE = [

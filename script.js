@@ -142,20 +142,8 @@ function resetF(){
 
 function populate(){
     green.replaceChildren();
-        h2 = document.createElement('h2');
-        h2.classList.add("green");
-        h2.innerHTML = "recomend";
-        green.appendChild(h2);
     yellow.replaceChildren();
-        h2 = document.createElement('h2');
-        h2.classList.add("yellow");
-        h2.innerHTML = "maybe recomend";
-        yellow.appendChild(h2);
     red.replaceChildren();
-        h2 = document.createElement('h2');
-        h2.classList.add("red");
-        h2.innerHTML = "don't recomend";
-        red.appendChild(h2);
 
     for(m=0; m<DATA.length; m++){
         if(AGE.includes(OTHER[DATA[m][0]][1])){

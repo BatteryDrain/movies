@@ -254,10 +254,6 @@ figcaption {
     margin: 0 1px;
 }
 
-figure img {
-    max-height: 500px;
-}
-
 figure button {
     width: 100px;
     height: auto;

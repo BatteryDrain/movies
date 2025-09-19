@@ -9,7 +9,9 @@ DATA = [
     [6, "21 Jump Street", "21JumpStreet", "https://www.imdb.com/title/tt1232829/", 1],
     [7, "The Mitchells vs. the Machines", "TheMMachines", "https://www.imdb.com/title/tt0343818/", 1],
     [8, "I, Robot", "irobot", "https://www.imdb.com/title/tt0343818/", 1],
-    [9, "Electric State 2025", "ElectricState", "", 1]
+    [9, "Electric State 2025", "ElectricState", "https://www.imdb.com/title/tt7766378/", 1],
+    [10, "Tower Heist", "TowerHeist", "https://www.imdb.com/title/tt0471042/", 1],
+    [11, "Mikey 17", "Mikey17", "https://www.imdb.com/title/tt12299608/", 1]
 ]
 
 TAGS = [
@@ -21,12 +23,14 @@ TAGS = [
     [4, "cop", ""],
     [5, "heist", ""],
     [6, "spy", ""],
-    [7, "Business", ""],
-    [8, "Mystery", ""],
+    [7, "business", ""],
+    [8, "mystery", ""],
     [9, "comedy", ""],
     [10, "spy", ""],
     [11, "family"],
-    [12, "AI"]
+    [12, "AI"],
+    [13, "gore"],
+    [14, "suspence"]
 ]
 
 MOVIETAGS = [
@@ -40,7 +44,9 @@ MOVIETAGS = [
     [6, 3, 9, 4],
     [7, 3, 0, 11, 9],
     [8, 3, 0, 4, 12],
-    [9, 3, 0, 11]
+    [9, 3, 0, 11],
+    [10, 3, 5, 7], 
+    [11, 3, 0, 14]
 ]
 
 OTHER = [
@@ -54,7 +60,9 @@ OTHER = [
     [6, "R", 2012, 85, "la"],
     [7, "PG", 2021, 85, "an"],
     [8, "PG-13", 2004, 90, "la"],
-    [9, "PG-13", 2025, 77, "la"]
+    [9, "PG-13", 2025, 77, "la"],
+    [10, "PG-13", 2011, 80, "la"],
+    [11, "R", 2025, 98, "la"]
 ]
 
 AGERATE = [

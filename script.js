@@ -70,9 +70,9 @@ Ftags.addEventListener("change", () => {
 });
 
 function filterage(){
-    AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
+    if(val == "*"){val = 5}
     for(ii=0; ii < RATE.length; ii++){
         if(RATE[ii][1] <= val){
             txt = document.createElement('p');
@@ -87,7 +87,6 @@ function filterage(){
             AGE.push(RATE[ii][2]);
         }
     }
-    
 }
 
 function tooltipT(rate){

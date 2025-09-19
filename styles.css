@@ -255,8 +255,7 @@ figcaption {
 }
 
 figure img {
-    max-height: 500px;
-    width: auto;
+    /* max-width: 500px; */
 }
 
 figure button {

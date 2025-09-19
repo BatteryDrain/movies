@@ -11,7 +11,19 @@ DATA = [
     [8, "I, Robot", "irobot", "https://www.imdb.com/title/tt0343818/", 1],
     [9, "Electric State 2025", "ElectricState", "https://www.imdb.com/title/tt7766378/", 1],
     [10, "Tower Heist", "TowerHeist", "https://www.imdb.com/title/tt0471042/", 1],
-    [11, "Mikey 17", "Mikey17", "https://www.imdb.com/title/tt12299608/", 1]
+    [11, "Mikey 17", "Mikey17", "https://www.imdb.com/title/tt12299608/", 1],
+    [12, "The Union", "Union", "https://www.imdb.com/title/tt12610390/", 1],
+    [13, "Girl Haunts Boy", "GirlHauntsBoy", "https://www.imdb.com/title/tt20215396/", 1],
+    [14, "Murder Mystery", "MurderMystery", "https://www.imdb.com/title/tt1618434/", 1],
+    [15, "The Man from U.N.C.L.E.", "U.N.C.L.E.", "https://www.imdb.com/title/tt1638355/", 1],
+    [16, "Red One", "RedOne", "https://www.imdb.com/title/tt14948432/", 1],
+    [17, "Moana 2", "Moana2", "https://www.imdb.com/title/tt13622970/", 1],
+    [18, "Moana", "Moana", "https://www.imdb.com/title/tt3521164/", 1],
+    [19, "Paddington", "Paddington", "https://www.imdb.com/title/tt1109624/", 1],
+    [20, "Paddington 2", "Paddington2", "https://www.imdb.com/title/tt4468740/", 1],
+    [21, "Beverly Hills Cop", "BeverlyHillsCop", "https://www.imdb.com/title/tt3083016/", 1],
+    [22, "Ron’s Gone Wrong", "RonGoneWrong", "https://www.imdb.com/title/tt7504818/", 1],
+    [23, "Carry-On", "Carry-On", "https://www.imdb.com/title/tt21382296/", 1]
 ]
 
 TAGS = [
@@ -27,10 +39,14 @@ TAGS = [
     [8, "mystery", ""],
     [9, "comedy", ""],
     [10, "spy", ""],
-    [11, "family"],
-    [12, "AI"],
-    [13, "gore"],
-    [14, "suspence"]
+    [11, "family", ""],
+    [12, "AI", ""],
+    [13, "gore", ""],
+    [14, "suspence", ""],
+    [15, "emotional", ""],
+    [16, "time", ""],
+    [17, "mystery", ""],
+    [18, "community", ""]
 ]
 
 MOVIETAGS = [
@@ -46,7 +62,19 @@ MOVIETAGS = [
     [8, 3, 0, 4, 12],
     [9, 3, 0, 11],
     [10, 3, 5, 7], 
-    [11, 3, 0, 14]
+    [11, 3, 0, 14],
+    [12, 3, 0, 10],
+    [13, 15, 2, 16, 1],
+    [14, 17, 10, 5],
+    [15, 3, 0, 6, 5],
+    [16, 3, 0, 18, 9],
+    [17, 3, 0, 18],
+    [18, 0, 18, 2],
+    [19, 11, 5, 0, 9],
+    [20, 5, 11, 3, 9, 18],
+    [21, 11, 3, 4, 9],
+    [22, 0, 2, 18, 15], 
+    [23, 1, 3, 5, 14]
 ]
 
 OTHER = [
@@ -62,7 +90,19 @@ OTHER = [
     [8, "PG-13", 2004, 90, "la"],
     [9, "PG-13", 2025, 77, "la"],
     [10, "PG-13", 2011, 80, "la"],
-    [11, "R", 2025, 98, "la"]
+    [11, "R", 2025, 98, "la"],
+    [12, "PG-13", 2024, 82, "la"],
+    [13, "PG", 2024, 100, "la"],
+    [14, "PG-13", 2019, 99, "la"],
+    [15, "PG-13", 2015, 100, "la"],
+    [16, "PG-13", 2024, 72, "la"],
+    [17, "PG", 2024, 60, "an"],
+    [18, "PG", 2016, 60, "an"],
+    [19, "PG", 2014, 75, "la"],
+    [20, "PG", 2017, 95, "la"],
+    [21, "R", 2024, 85, "la"],
+    [22, "PG", 2021, 100, "an"],
+    [23, "R", 2024, 99, "la"]
 ]
 
 AGERATE = [

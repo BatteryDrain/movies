@@ -255,6 +255,7 @@ figcaption {
 }
 
 figure img {
+    margin-top: 5px;
     /* max-width: 500px; */
 }
 

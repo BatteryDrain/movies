@@ -209,8 +209,7 @@ input:checked + .slider::before {
 
 section {
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit,minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(285px, 1fr));
     grid-gap: 1rem;
 }
 
@@ -249,6 +248,11 @@ figcaption {
 .figTop {
     display: flex;
     flex-direction: row;
+}
+
+.tags {
+    height: fit-content;
+    width: 200px;
 }
 
 .tags span {

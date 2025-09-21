@@ -81,6 +81,7 @@ Ftags.addEventListener("change", () => {
 });
 
 function filterage(){
+    AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
     if(val == "*"){val = 5}

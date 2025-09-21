@@ -204,7 +204,7 @@ input:checked + .slider::before {
 }
 
 #tagHere button:hover {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     background-color: grey;
 }
 

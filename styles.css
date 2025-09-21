@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: white;
+    background-color: lightcyan;
     margin: 0;
 }
 
@@ -116,7 +116,6 @@ input {
 
 #filters {
     margin-left: 5px;
-    background-color: lightcyan;
     width: fit-content;
 }
 
@@ -189,12 +188,24 @@ input:checked + .slider::before {
     margin: 0;
 }
 
-#tagHere span {
+#tagHere button {
     margin: 2px;
     background-color: white;
     color: black;
     padding: 2px;
     border-radius: 15px;
+    border: none;
+}
+
+#tagHere button span {
+    color: white;
+    float: right;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#tagHere button:hover {
+    border: 1px solid white;
+    background-color: grey;
 }
 
 #showOhide {
@@ -224,6 +235,10 @@ figure {
     max-width: 700px;
     /* filter: drop-shadow(18px 18px 8px black); */
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.1);
 }
 
 figcaption {

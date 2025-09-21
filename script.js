@@ -1,6 +1,7 @@
 AGE = ["G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"];
 CHECKANIMATED = true;
 CHECKLIVE = true;
+TAGCOUNT = 0;
 
 filterage();
 
@@ -128,10 +129,16 @@ reset.addEventListener("click", function(){
 function setTagsToFilter(){
     tag = Ftags.value;
     if(tag != null){
-        spn = document.createElement('span');
-        spn.innerHTML = tag;
-        tagHere.appendChild(spn);
+        but = document.createElement('button');
+        but.id = "TAG" + TAGCOUNT;
+        but.setAttribute("onclick", "away(" + but.id + ")");
+        but.innerHTML = tag;
+            spn = document.createElement('span');
+            spn.innerHTML = "x";
+            but.appendChild(spn);
+        tagHere.appendChild(but);
         Ftags.value = '*';
+        TAGCOUNT++;
     }
 }
 
@@ -143,6 +150,7 @@ function resetF(){
     Can.checked = true;
     Cla.checked = true;
     populate();
+    TAGCOUNT = 0;
 }
 
 function populate(){
@@ -226,3 +234,15 @@ function goToLink(number){
     console.log("button " + number + " clicked");
     window.open(DATA[number][3],"_blank");
 }
+
+function away(oldid){
+    if (oldid) {
+        oldid.remove(oldid);
+        populate();
+    }
+    else {
+        console.log("no id found");
+        console.log("id = " + oldid + typeof(oldid));
+    }
+}
+

@@ -1,18 +1,27 @@
 AGE = ["G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"];
 CHECKANIMATED = true;
 CHECKLIVE = true;
+TAGINUSE = [];
 TAGCOUNT = 0;
 
 filterage();
 
 populate();
 setOptInFilterTag();
+
 function setOptInFilterTag(){
+    Ftags.replaceChildren();
+    opt = document.createElement('option');
+    opt.innerHTML = "";
+    opt.value = "*";
+    Ftags.appendChild(opt);
     for(o=0; o < TAGS.length; o++){
-        opt = document.createElement('option');
-        opt.innerHTML = TAGS[o][1];
-        opt.value = TAGS[o][1];
-        Ftags.appendChild(opt);
+        if(!TAGINUSE.includes(TAGS[o][1])){
+            opt = document.createElement('option');
+            opt.innerHTML = TAGS[o][1];
+            opt.value = TAGS[o][1];
+            Ftags.appendChild(opt);
+        }
     }
 }
 
@@ -68,6 +77,7 @@ sortBy.addEventListener("change", () => {
 
 Ftags.addEventListener("change", () => {
     setTagsToFilter();
+    setOptInFilterTag();
 });
 
 function filterage(){
@@ -139,6 +149,7 @@ function setTagsToFilter(){
         tagHere.appendChild(but);
         Ftags.value = '*';
         TAGCOUNT++;
+        TAGINUSE.push(tag);
     }
 }
 
@@ -237,8 +248,25 @@ function goToLink(number){
 
 function away(oldid){
     if (oldid) {
+        // console.log(oldid.innerHTML);
+        tag = oldid.innerHTML;
+        temp = "";
+        f = 0;
+        while(tag[f] != "<"){
+            temp = temp + tag[f];
+            f++;
+        }
+        // console.log(temp);
+        r = 0;
+        while(temp != TAGINUSE[r]){
+            r++;
+        }
+        // console.log(temp + " " + r);
+        TAGINUSE.splice(r, 1);
+        // console.log(TAGINUSE);
         oldid.remove(oldid);
         populate();
+        setOptInFilterTag();
     }
     else {
         console.log("no id found");

@@ -28,7 +28,6 @@ function setOptInFilterTag(){
 filterage();
 ageRate.addEventListener("change", () => {
     filterage();
-    populate();
 });
 
 HideAgeTags.addEventListener("click", () => {
@@ -77,7 +76,7 @@ sortBy.addEventListener("change", () => {
 
 Ftags.addEventListener("change", () => {
     setTagsToFilter();
-    setOptInFilterTag();
+    populate();
 });
 
 function filterage(){
@@ -99,6 +98,7 @@ function filterage(){
             AGE.push(RATE[ii][2]);
         }
     }
+    populate();
 }
 
 function tooltipT(rate){
@@ -161,8 +161,11 @@ function resetF(){
     max.value = 100;
     Can.checked = true;
     Cla.checked = true;
-    populate();
     TAGCOUNT = 0;
+    populate();
+    // tagHere.replaceChildren();
+    // setOptInFilterTag();
+
 }
 
 function populate(){
@@ -172,23 +175,29 @@ function populate(){
 
     for(m=0; m<DATA.length; m++){
         if(AGE.includes(OTHER[DATA[m][0]][1])){
+
             score = OTHER[DATA[m][0]][3];
-
             if(score <= max.value && score >= min.value){
-                film = OTHER[DATA[m][0]][4];
 
+                film = OTHER[DATA[m][0]][4];
                 if(CHECKANIMATED && film == "an" || film == "la"){
                     if(CHECKLIVE && film == "la" || film == "an"){
-                        recomend = DATA[m][4];
 
-                        if(recomend == 1){
-                            makeFig("green", m);
-                        }
-                        if(recomend == 0){
-                            makeFig("yellow", m);
-                        }
-                        if(recomend == -1){
-                            makeFig("red", m);
+                        has = hasTags(m);
+                        console.log("has " + has);
+                        console.log("length " + (TAGINUSE.length == 0));
+                        if((TAGINUSE.length == 0) || has){
+
+                            recomend = DATA[m][4];
+                            if(recomend == 1){
+                                makeFig("green", m);
+                            }
+                            if(recomend == 0){
+                                makeFig("yellow", m);
+                            }
+                            if(recomend == -1){
+                                makeFig("red", m);
+                            }
                         }
                     }
                 }
@@ -275,3 +284,19 @@ function away(oldid){
     }
 }
 
+function hasTags(index) {
+    currentTags = [];
+    for(k=1; k<MOVIETAGS[DATA[index][0]].length; k++){
+        currentTags.push(TAGS[MOVIETAGS[DATA[index][0]][k]][1]);
+    }
+
+    console.log(currentTags);
+    for(x=0; x<TAGINUSE.length; x++){
+        // console.log("error here " + currentTags.includes(TAGINUSE[x]));
+        if(currentTags.includes(TAGINUSE[x])){
+            return true;
+        }
+    }
+    return false;
+
+}

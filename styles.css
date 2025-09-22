@@ -309,7 +309,7 @@ h2 {
 
 @media screen and (min-width: 800px) {
     figure:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 
     #tagHere button span {

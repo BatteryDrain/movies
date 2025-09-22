@@ -79,6 +79,13 @@ Ftags.addEventListener("change", () => {
     populate();
 });
 
+window.addEventListener("scroll", () => {
+    if(header.classList.contains("hide")){
+        expandheadder();
+        header.classList.toggle("expanded");
+    }
+});
+
 function filterage(){
     AGE = [];
     ageList.replaceChildren();
@@ -162,10 +169,10 @@ function resetF(){
     Can.checked = true;
     Cla.checked = true;
     TAGCOUNT = 0;
+    tagHere.replaceChildren();
+    setOptInFilterTag();
+    TAGINUSE = [];
     populate();
-    // tagHere.replaceChildren();
-    // setOptInFilterTag();
-
 }
 
 function populate(){
@@ -184,8 +191,8 @@ function populate(){
                     if(CHECKLIVE && film == "la" || film == "an"){
 
                         has = hasTags(m);
-                        console.log("has " + has);
-                        console.log("length " + (TAGINUSE.length == 0));
+                        // console.log("has " + has);
+                        // console.log("length " + (TAGINUSE.length == 0));
                         if((TAGINUSE.length == 0) || has){
 
                             recomend = DATA[m][4];
@@ -290,7 +297,7 @@ function hasTags(index) {
         currentTags.push(TAGS[MOVIETAGS[DATA[index][0]][k]][1]);
     }
 
-    console.log(currentTags);
+    // console.log(currentTags);
     for(x=0; x<TAGINUSE.length; x++){
         // console.log("error here " + currentTags.includes(TAGINUSE[x]));
         if(currentTags.includes(TAGINUSE[x])){

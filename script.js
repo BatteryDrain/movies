@@ -80,10 +80,19 @@ Ftags.addEventListener("change", () => {
 });
 
 window.addEventListener("scroll", () => {
+    // console.log("scroll");
     if(header.classList.contains("hide")){
         expandheadder();
         header.classList.toggle("expanded");
     }
+});
+
+sortBy.addEventListener("change", () => {
+    populate();
+});
+
+SortS.addEventListener("change", () => {
+    populate();
 });
 
 function filterage(){
@@ -176,6 +185,7 @@ function resetF(){
 }
 
 function populate(){
+    sort();
     green.replaceChildren();
     yellow.replaceChildren();
     red.replaceChildren();
@@ -239,7 +249,8 @@ function makeFig(place, m){
 
             foto = document.createElement('img');
             foto.src = "assets/" + DATA[m][2] + ".jpg";
-            foto.alt = "";
+            foto.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
+            foto.alt = "movie cover of " + DATA[m][1] + " " + OTHER[DATA[m][0]][2];
             fig.appendChild(foto);
             
             div2 = document.createElement('div');
@@ -305,5 +316,11 @@ function hasTags(index) {
         }
     }
     return false;
+}
 
+function sort() {
+    direction = SortS.value;
+    console.log(direction);
+    theme = sortBy.value;
+    console.log(theme);
 }

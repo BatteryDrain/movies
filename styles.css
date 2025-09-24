@@ -5,11 +5,14 @@
 body {
     margin: 0;
     font-family: "Mulish", Arial, sans-serif;
+    background-color: rgb(138, 169, 247);
+}
+
+#content {
     background-color: pink;
 }
 
 header {
-    background-color: rgb(138, 169, 247);
     margin: 0;
 }
 

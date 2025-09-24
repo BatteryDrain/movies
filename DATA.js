@@ -25,7 +25,11 @@ DATA = [
     [22, "Ron’s Gone Wrong", "RonGoneWrong", "https://www.imdb.com/title/tt7504818/", 1],
     [23, "Carry-On", "Carry-On", "https://www.imdb.com/title/tt21382296/", 1],
     [24, "Klaus", "Klaus", "https://www.imdb.com/title/tt4729430/", 1],
-    [25, "Kingsman: The Golden Circle", "Kingsman1", "https://www.imdb.com/title/tt4649466/", 1]
+    [25, "Kingsman: The Golden Circle", "Kingsman1", "https://www.imdb.com/title/tt4649466/", 1],
+    [26, "Kingsman: The Secret Service 2014", "Kingsman0", "https://www.imdb.com/title/tt2802144/", 1],
+    [27, "The LEGO Movie", "TheLEGOMovie", "https://www.imdb.com/title/tt1490017/", 1],
+    [28, "The Expendables", "TheExpendables", "https://www.imdb.com/title/tt1320253/", 1],
+    [29, "The Expendables 2", "TheExpendables2", "https://www.imdb.com/title/tt1320253/", 1]
 ]
 
 DATASORTED = DATA;
@@ -82,7 +86,11 @@ MOVIETAGS = [
     [22, 0, 2, 18, 15], 
     [23, 1, 3, 5, 14],
     [24, 0, 2, 18],
-    [25, 3, 6, 19, 5]
+    [25, 3, 6, 19, 5],
+    [26, 3, 0, 6, 5],
+    [27, 3, 0, 11],
+    [28, 3, 0],
+    [29, 3, 0]
 ]
 
 OTHER = [
@@ -112,7 +120,11 @@ OTHER = [
     [22, "PG", 2021, 100, "an"],
     [23, "R", 2024, 99, "la"],
     [24, "PG", 2019, 90, "an"],
-    [25, "R", 2017, 80, "la"]
+    [25, "R", 2017, 80, "la"],
+    [26, "R", 2014, 90, "la"],
+    [27, "PG", 2014, 85, "an"],
+    [28, "R", 2010, 70, "la"],
+    [29, "R", 2012, 85, "la"]
 ]
 
 AGERATE = [

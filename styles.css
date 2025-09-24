@@ -15,6 +15,7 @@ header {
 
 header p {
     margin: 0;
+    margin-left: 5px;
 }
 
 header button {

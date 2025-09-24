@@ -196,6 +196,10 @@ input:checked + .slider::before {
     margin-left: 5px;
 }
 
+#sort select {
+    margin-left: 5px;
+}
+
 #filterTags {
     display: flex;
     flex-direction: row;

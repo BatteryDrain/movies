@@ -82,7 +82,7 @@ Ftags.addEventListener("change", () => {
 
 window.addEventListener("scroll", () => {
     // console.log("scroll");
-    if(header.classList.contains("hide")){
+    if(!header.classList.contains("hide")){
         expandheadder();
         header.classList.toggle("expanded");
     }

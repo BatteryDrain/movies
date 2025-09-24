@@ -328,32 +328,42 @@ function sort() {
     if(theme == "score"){
         organizeS();
     }
-    else{
-
+    if(theme == "year"){
+        organizeY();
     }
 }
 
 function organizeS() {
+    //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 
-        // Last i elements are already in place  
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            // Checking if the item at present iteration 
-            // is greater than the next iteration
             if (OTHER[DATASORTED[j][0]][3] < OTHER[DATASORTED[j+1][0]][3]) {
     
-                // If the condition is true
-                // then swap them
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
                 DATASORTED[j+1] = temp;
             }
         }
     }
+}
+
+function organizeY() {
+    console.log("sorting by year");
+    //bubble
+    for (var i = 0; i < DATASORTED.length; i++) {
+
+        for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-    // Print the sorted array
-// console.log("DATASORTED " + DATASORTED);
+            if (OTHER[DATASORTED[j][0]][2] < OTHER[DATASORTED[j+1][0]][2]) {
+    
+                temp = DATASORTED[j];
+                DATASORTED[j] = DATASORTED[j+1];
+                DATASORTED[j+1] = temp;
+            }
+        }
+    }
 }
 
 function grouping() {

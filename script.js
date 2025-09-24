@@ -4,6 +4,7 @@ CHECKLIVE = true;
 TAGINUSE = [];
 TAGCOUNT = 0;
 GROUPEDDATA = [[]];
+EXPANDED = false;
 
 filterage();
 
@@ -81,10 +82,10 @@ Ftags.addEventListener("change", () => {
 });
 
 window.addEventListener("scroll", () => {
-    // console.log("scroll");
-    if(!header.classList.contains("hide")){
+    if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");
+        EXPANDED = false;
     }
 });
 
@@ -138,6 +139,7 @@ function tooltipT(rate){
 showOhide.addEventListener("click", function(){
     expandheadder();
     header.classList.toggle("expanded");
+    EXPANDED = true;
 });
 
 function expandheadder(){

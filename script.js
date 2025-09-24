@@ -3,6 +3,7 @@ CHECKANIMATED = true;
 CHECKLIVE = true;
 TAGINUSE = [];
 TAGCOUNT = 0;
+GROUPEDDATA = [[]];
 
 filterage();
 
@@ -190,13 +191,13 @@ function populate(){
     yellow.replaceChildren();
     red.replaceChildren();
 
-    for(m=0; m<DATA.length; m++){
-        if(AGE.includes(OTHER[DATA[m][0]][1])){
+    for(m=0; m<DATASORTED.length; m++){
+        if(AGE.includes(OTHER[DATASORTED[m][0]][1])){
 
-            score = OTHER[DATA[m][0]][3];
+            score = OTHER[DATASORTED[m][0]][3];
             if(score <= max.value && score >= min.value){
 
-                film = OTHER[DATA[m][0]][4];
+                film = OTHER[DATASORTED[m][0]][4];
                 if(CHECKANIMATED && film == "an" || film == "la"){
                     if(CHECKLIVE && film == "la" || film == "an"){
 
@@ -205,7 +206,7 @@ function populate(){
                         // console.log("length " + (TAGINUSE.length == 0));
                         if((TAGINUSE.length == 0) || has){
 
-                            recomend = DATA[m][4];
+                            recomend = DATASORTED[m][4];
                             if(recomend == 1){
                                 makeFig("green", m);
                             }
@@ -215,6 +216,7 @@ function populate(){
                             if(recomend == -1){
                                 makeFig("red", m);
                             }
+                            count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
                         }
                     }
                 }
@@ -229,49 +231,48 @@ function makeFig(place, m){
             div = document.createElement('div');
             div.classList.add("figTop");
                 figT = document.createElement('figcaption');
-                figT.innerHTML = DATA[m][1] + " " + OTHER[DATA[m][0]][2];
+                figT.innerHTML = DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                spn.innerHTML = OTHER[DATA[m][0]][3];
+                spn.innerHTML = OTHER[DATASORTED[m][0]][3];
                 div.appendChild(spn);
             fig.appendChild(div);
 
             div1 = document.createElement('div');
             div1.classList.add("tags");
-                for(t=1; t<MOVIETAGS[DATA[m][0]].length; t++){
+                for(t=1; t<MOVIETAGS[DATASORTED[m][0]].length; t++){
                     spn = document.createElement('span');
-                    spn.innerHTML = TAGS[MOVIETAGS[DATA[m][0]][t]][1];
+                    spn.innerHTML = TAGS[MOVIETAGS[DATASORTED[m][0]][t]][1];
                     div1.appendChild(spn);
                 }
             fig.appendChild(div1);
             
 
             foto = document.createElement('img');
-            foto.src = "assets/" + DATA[m][2] + ".jpg";
-            foto.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
-            foto.alt = "movie cover of " + DATA[m][1] + " " + OTHER[DATA[m][0]][2];
+            foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
+            foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
+            foto.alt = "movie cover of " + DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
             fig.appendChild(foto);
             
             div2 = document.createElement('div');
             div2.classList.add("div2");
                 but = document.createElement('button');
                 but.innerHTML = "more info"
-                but.setAttribute("onclick", "goToLink(" + DATA[m][0] + ")");
+                but.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 div2.appendChild(but);
 
                 p = document.createElement('p');
                 p.classList.add("ageTag");
-                p.innerHTML = OTHER[DATA[m][0]][1];
+                p.innerHTML = OTHER[DATASORTED[m][0]][1];
                 div2.appendChild(p);
             fig.appendChild(div2);
-        // fig.classList.add("");
         pace.appendChild(fig);
 }
 
 function goToLink(number){
     console.log("button " + number + " clicked");
-    window.open(DATA[number][3],"_blank");
+    window.open(DATASORTED[number][3],"_blank");
 }
 
 function away(oldid){
@@ -319,8 +320,42 @@ function hasTags(index) {
 }
 
 function sort() {
-    direction = SortS.value;
-    console.log(direction);
+    M2L = SortS.value;
+    // console.log(M2L);
     theme = sortBy.value;
-    console.log(theme);
+    // console.log(theme);
+    // DATASORTED = [];
+    if(theme == "score"){
+        organizeS();
+    }
+    else{
+
+    }
+}
+
+function organizeS() {
+    for (var i = 0; i < DATASORTED.length; i++) {
+
+        // Last i elements are already in place  
+        for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
+    
+            // Checking if the item at present iteration 
+            // is greater than the next iteration
+            if (OTHER[DATASORTED[j][0]][3] < OTHER[DATASORTED[j+1][0]][3]) {
+    
+                // If the condition is true
+                // then swap them
+                temp = DATASORTED[j];
+                DATASORTED[j] = DATASORTED[j+1];
+                DATASORTED[j+1] = temp;
+            }
+        }
+    }
+    
+    // Print the sorted array
+// console.log("DATASORTED " + DATASORTED);
+}
+
+function grouping() {
+
 }

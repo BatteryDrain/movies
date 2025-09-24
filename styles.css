@@ -9,13 +9,19 @@ body {
 }
 
 header {
-    background-color: lightcyan;
+    background-color: rgb(138, 169, 247);
     margin: 0;
 }
 
 header p {
     margin: 0;
+    margin-bottom: 5px;
     margin-left: 5px;
+    background-color: white;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 0 5px;
+
 }
 
 header button {
@@ -33,6 +39,7 @@ header.expanded {
 h1 {
     text-align: center;
     margin: 0;
+    color: white;
 }
 
 #ageS {
@@ -43,6 +50,10 @@ h1 {
 #ageS p {
     margin: 0;
     margin-right: 10px;
+}
+
+#ageS button {
+    margin-left: 5px;
 }
 
 .hide {
@@ -191,6 +202,10 @@ input:checked + .slider::before {
 
 #filterTags p {
     margin: 0;
+}
+
+#filterTags select {
+    margin: 0 5px;
 }
 
 #tagHere button {

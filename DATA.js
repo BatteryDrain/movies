@@ -27,6 +27,7 @@ DATA = [
 ]
 
 DATASORTED = DATA;
+DATAGROUPED = [[]];
 
 TAGS = [
     //id, tag, description,

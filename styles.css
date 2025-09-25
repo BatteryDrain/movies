@@ -122,6 +122,11 @@ flex-direction: row;
 
 #filterScore p {
     margin: 0;
+    padding: 4px 0;
+}
+
+#filterScore input{
+    height: fit-content;
 }
 
 input {
@@ -131,6 +136,7 @@ input {
     height: 30px;
     font-size: 20px; 
     border: 1px solid rgb(83, 83, 83);
+
 }
 
 #filters {

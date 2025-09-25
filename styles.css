@@ -337,6 +337,7 @@ h2 {
 
 footer p {
     text-align: center;
+    color: white;
 }
 
 @media screen and (min-width: 800px) {

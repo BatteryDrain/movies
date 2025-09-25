@@ -193,39 +193,51 @@ function populate(){
     yellow.replaceChildren();
     red.replaceChildren();
 
-    for(m=0; m<DATA.length; m++){
-        if(AGE.includes(OTHER[DATASORTED[m][0]][1])){
+    if(M2L){
+        for(m=0; m<DATA.length; m++){
+            build(m);
+        }
+    }else {
+        temp = DATA.length;
+        for(let m=temp-1; m>=0; m--){
+            build(m);
+        }
+    }
+}
 
-            score = OTHER[DATASORTED[m][0]][3];
-            if(score <= max.value && score >= min.value){
+function build(m) {
+    if(AGE.includes(OTHER[DATASORTED[m][0]][1])){
 
-                film = OTHER[DATASORTED[m][0]][4];
-                if(CHECKANIMATED && film == "an" || film == "la"){
-                    if(CHECKLIVE && film == "la" || film == "an"){
+        score = OTHER[DATASORTED[m][0]][3];
+        if(score <= max.value && score >= min.value){
 
-                        has = hasTags(m);
-                        // console.log("has " + has);
-                        // console.log("length " + (TAGINUSE.length == 0));
-                        if((TAGINUSE.length == 0) || has){
+            film = OTHER[DATASORTED[m][0]][4];
+            if(CHECKANIMATED && film == "an" || film == "la"){
+                if(CHECKLIVE && film == "la" || film == "an"){
 
-                            recomend = DATASORTED[m][4];
-                            if(recomend == 1){
-                                makeFig("green", m);
-                            }
-                            if(recomend == 0){
-                                makeFig("yellow", m);
-                            }
-                            if(recomend == -1){
-                                makeFig("red", m);
-                            }
-                            count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
+                    has = hasTags(m);
+                    // console.log("has " + has);
+                    // console.log("length " + (TAGINUSE.length == 0));
+                    if((TAGINUSE.length == 0) || has){
+
+                        recomend = DATASORTED[m][4];
+                        if(recomend == 1){
+                            makeFig("green", m);
                         }
+                        if(recomend == 0){
+                            makeFig("yellow", m);
+                        }
+                        if(recomend == -1){
+                            makeFig("red", m);
+                        }
+                        count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
                     }
                 }
             }
         }
     }
 }
+
 
 function makeFig(place, m){
     pace = document.getElementById(place);
@@ -322,7 +334,7 @@ function hasTags(index) {
 }
 
 function sort() {
-    M2L = SortS.value;
+    M2L = SortS.checked;
     // console.log(M2L);
     theme = sortBy.value;
     // console.log(theme);
@@ -352,7 +364,6 @@ function organizeS() {
 }
 
 function organizeY() {
-    console.log("sorting by year");
     //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 

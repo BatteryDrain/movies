@@ -41,7 +41,8 @@ DATA = [
     //missing CentralIntelligence figure
     [38, "Lift", "Lift", "https://www.imdb.com/title/tt14371878/", 1],
     [39, "Tintin", "Tintin",  "https://www.imdb.com/title/tt0983193/", 1],
-    [40, "American Made", "AmericanMade", "https://www.imdb.com/title/tt3532216/", 1]
+    [40, "American Made", "AmericanMade", "https://www.imdb.com/title/tt3532216/", 1],
+    [41, "Megamind", "Megamind", "", 1]
 ]
 
 DATASORTED = DATA;
@@ -70,7 +71,8 @@ TAGS = [
     [18, "community", ""],
     [19, "Suspense", ""],
     [20, "based on book", ""],
-    [21, "True Story", ""]
+    [21, "True Story", ""],
+    [22, "Superhero", ""]
 ]
 
 MOVIETAGS = [
@@ -115,7 +117,8 @@ MOVIETAGS = [
     [37, 3, 9, 8],
     [38, 3, 0, 5],
     [39, 3, 0, 5],
-    [40, 21, 0, 3, 5]
+    [40, 21, 0, 3, 5],
+    [41, 3, 22]
 ]
 
 OTHER = [
@@ -160,7 +163,8 @@ OTHER = [
     [37, "PG-13", 2016, 80, "la"],
     [38, "PG-13", 2024, 90, "la"],
     [39, "PG", 2011, 90, "la"],
-    [40, "R", 2017, 90, "la"]
+    [40, "R", 2017, 90, "la"],
+    [41, "PG", 2010, 95, "an"]
 ]
 
 AGERATE = [

@@ -189,9 +189,7 @@ function resetF(){
 
 function populate(){
     sort();
-    green.replaceChildren();
-    yellow.replaceChildren();
-    red.replaceChildren();
+    placeHere.replaceChildren();
 
     if(M2L){
         for(m=0; m<DATA.length; m++){
@@ -235,12 +233,12 @@ function build(m) {
             }
         }
     }
-    count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
+    count.innerHTML = content.childElementCount + " movies";
 }
 
 
 function makeFig(place, m){
-    pace = document.getElementById(place);
+    cont = document.getElementById("placeHere");
     fig = document.createElement('figure');
             div = document.createElement('div');
             div.classList.add("figTop");
@@ -294,7 +292,7 @@ function makeFig(place, m){
             if(DATASORTED[m][1] == "Central Intelligence"){
                 console.log("here");
             }
-        pace.appendChild(fig);
+            cont.appendChild(fig);
 }
 
 function goToLink(number){

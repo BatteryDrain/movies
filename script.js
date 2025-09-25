@@ -262,12 +262,13 @@ function makeFig(place, m){
                 }
             fig.appendChild(div1);
             
-
-            foto = document.createElement('img');
-            foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
-            foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
-            foto.alt = "movie cover of " + DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
-            fig.appendChild(foto);
+            if(DATASORTED[m][2] != null){
+                foto = document.createElement('img');
+                foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
+                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
+                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
+                fig.appendChild(foto);
+            }
             
             div2 = document.createElement('div');
             div2.classList.add("div2");

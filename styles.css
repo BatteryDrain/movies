@@ -335,6 +335,10 @@ h2 {
     width: fit-content;
 }
 
+footer p {
+    text-align: center;
+}
+
 @media screen and (min-width: 800px) {
     figure:hover {
         transform: scale(1.2);

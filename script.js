@@ -193,7 +193,7 @@ function populate(){
     yellow.replaceChildren();
     red.replaceChildren();
 
-    for(m=0; m<DATASORTED.length; m++){
+    for(m=0; m<DATA.length; m++){
         if(AGE.includes(OTHER[DATASORTED[m][0]][1])){
 
             score = OTHER[DATASORTED[m][0]][3];

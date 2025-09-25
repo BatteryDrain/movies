@@ -29,7 +29,15 @@ DATA = [
     [26, "Kingsman: The Secret Service 2014", "Kingsman0", "https://www.imdb.com/title/tt2802144/", 1],
     [27, "The LEGO Movie", "TheLEGOMovie", "https://www.imdb.com/title/tt1490017/", 1],
     [28, "The Expendables", "TheExpendables", "https://www.imdb.com/title/tt1320253/", 1],
-    [29, "The Expendables 2", "TheExpendables2", "https://www.imdb.com/title/tt1320253/", 1]
+    [29, "The Expendables 2", "TheExpendables2", "https://www.imdb.com/title/tt1320253/", 1],
+    [30, "Avatar", "Avatar", "https://www.imdb.com/title/tt0499549/", 1],
+    [31, "Martian", "Martian", "https://www.imdb.com/title/tt3659388/", 1],
+    [32, "My Spy", "MySpy", "https://www.imdb.com/title/tt8242084/", 1],
+    [33, "Nice Guys", "NiceGuys", "https://www.imdb.com/title/tt3799694/", 1],
+    [34, "The Adam Project", "TheAdamProject", "https://www.imdb.com/title/tt2463208/", 1],
+    [35, "The Man From Toronto", "TheManFromToronto", "https://www.imdb.com/title/tt11671006/", 1],
+    [36, "The Old Guard", "TheOldGuard", "https://www.imdb.com/title/tt7556122/", 1],
+    [37, "Central Intelligence", "CentralIntelligence", "https://www.imdb.com/title/tt1489889/"]
 ]
 
 DATASORTED = DATA;
@@ -56,7 +64,8 @@ TAGS = [
     [16, "time", ""],
     [17, "mystery", ""],
     [18, "community", ""],
-    [19, "Suspense", ""]
+    [19, "Suspense", ""],
+    [20, "based on book", ""]
 ]
 
 MOVIETAGS = [
@@ -90,7 +99,15 @@ MOVIETAGS = [
     [26, 3, 0, 6, 5],
     [27, 3, 0, 11],
     [28, 3, 0],
-    [29, 3, 0]
+    [29, 3, 0],
+    [30, 3, 0, 11, 15],
+    [31, 0, 20, 14],
+    [32, 9, 3, 2],
+    [33, 3, 8, 9],
+    [34, 3, 8, 16],
+    [35, 3, 0, 9],
+    [36, 3, 0, 16],
+    [37, 3, 9, 8]
 ]
 
 OTHER = [
@@ -124,7 +141,15 @@ OTHER = [
     [26, "R", 2014, 90, "la"],
     [27, "PG", 2014, 85, "an"],
     [28, "R", 2010, 70, "la"],
-    [29, "R", 2012, 85, "la"]
+    [29, "R", 2012, 85, "la"],
+    [30, "PG-13", 2009, 90, "la"],
+    [31, "PG-13", 2015, 77, "la"],
+    [32, "PG-13", 2020, 90, "la"],
+    [33, "R", 2016, 80, "la"],
+    [34, "PG-13", 2022, 90, "la"],
+    [35, "PG-13", 2022, 90, "la"],
+    [36, "R", 2020, 90, "la"],
+    [37, "PG-13", 2016, 80, "la"]
 ]
 
 AGERATE = [
@@ -166,7 +191,7 @@ RATE = [
     [24, 5, "R18", 2],
     [25, 5, "R18+", 118],
     [26, 5, "A", 9],
-    [27, 5, "NC-17", 0]
+    [27, 5, "NC-17", 0],
 ]
 
 SYSTEM = [

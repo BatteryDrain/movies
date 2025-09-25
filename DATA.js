@@ -37,7 +37,8 @@ DATA = [
     [34, "The Adam Project", "TheAdamProject", "https://www.imdb.com/title/tt2463208/", 1],
     [35, "The Man From Toronto", "TheManFromToronto", "https://www.imdb.com/title/tt11671006/", 1],
     [36, "The Old Guard", "TheOldGuard", "https://www.imdb.com/title/tt7556122/", 1],
-    [37, "Central Intelligence", "CentralIntelligence", "https://www.imdb.com/title/tt1489889/"]
+    [37, "Central Intelligence", "CentralIntelligence", "https://www.imdb.com/title/tt1489889/"],
+    [38, "Lift", "Lift", "", 1]
 ]
 
 DATASORTED = DATA;
@@ -107,7 +108,8 @@ MOVIETAGS = [
     [34, 3, 8, 16],
     [35, 3, 0, 9],
     [36, 3, 0, 16],
-    [37, 3, 9, 8]
+    [37, 3, 9, 8],
+    [38, 3, 0, 5]
 ]
 
 OTHER = [
@@ -149,7 +151,8 @@ OTHER = [
     [34, "PG-13", 2022, 90, "la"],
     [35, "PG-13", 2022, 90, "la"],
     [36, "R", 2020, 90, "la"],
-    [37, "PG-13", 2016, 80, "la"]
+    [37, "PG-13", 2016, 80, "la"],
+    [38, "PG-13", 2024, 90, "la"]
 ]
 
 AGERATE = [

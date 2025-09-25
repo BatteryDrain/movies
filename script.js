@@ -282,6 +282,15 @@ function makeFig(place, m){
                 p.innerHTML = OTHER[DATASORTED[m][0]][1];
                 div2.appendChild(p);
             fig.appendChild(div2);
+            if(place == "green"){
+                fig.style.backgroundColor = "rgb(115, 169, 102)";
+            }
+            if(place == "yellow"){
+                fig.style.backgroundColor = "rgb(162, 169, 102)";
+            }
+            if(place == "red"){
+                fig.style.backgroundColor = "rgb(169, 102, 102)";
+            }
         pace.appendChild(fig);
 }
 

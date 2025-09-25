@@ -230,12 +230,12 @@ function build(m) {
                         if(recomend == -1){
                             makeFig("red", m);
                         }
-                        count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
                     }
                 }
             }
         }
     }
+    count.innerHTML = green.childElementCount + yellow.childElementCount + red.childElementCount + " movies";
 }
 
 

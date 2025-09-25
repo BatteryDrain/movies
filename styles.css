@@ -65,7 +65,7 @@ h1 {
 
 #ageList p {
     margin: 2px;
-    background-color: gray;
+    background-color: black;
     color: white;
     padding: 2px;
     border-radius: 15px;
@@ -311,9 +311,9 @@ figure button {
 .div2 p {
     margin: 10px 0;
     margin-left: auto;
-    background-color: white;
+    background-color: black;
     border-radius: 15px;
-    color: black;
+    color: white;
     height: fit-content;
     padding: 2px;
 }

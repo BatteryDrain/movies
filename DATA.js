@@ -45,7 +45,8 @@ DATA = [
     [41, "Megamind", "Megamind", "https://www.imdb.com/title/tt1001526/", 1],
     [42, "Horton Hears a Who", "HortonHearsaWho", "https://www.imdb.com/title/tt0451079/", 1],
     [43, "Skyscraper", "Skyscraper", "https://www.imdb.com/title/tt5758778/", 1],
-    [44, "I Am Mother", "IAmMother", "https://www.imdb.com/title/tt6292852/", 1]
+    [44, "I Am Mother", "IAmMother", "https://www.imdb.com/title/tt6292852/", 1],
+    [45, "Damsel", "Damsel", "https://www.imdb.com/title/tt13452446/", 1]
 ]
 
 DATASORTED = DATA;
@@ -66,7 +67,7 @@ TAGS = [
     [10, "spy", ""],
     [11, "family", ""],
     [12, "AI", ""],
-    [13, "gore", ""],
+    [13, "medieval", ""],
     [14, "suspence", ""],
     [15, "emotional", ""],
     [16, "time", ""],
@@ -124,7 +125,8 @@ MOVIETAGS = [
     [41, 3, 22],
     [42, 0, 2, 15],
     [43, 3, 9, 14],
-    [44, 3, 20, 0, 14]
+    [44, 3, 20, 0, 14],
+    [45, 3, 13, 8]
 ]
 
 OTHER = [
@@ -173,7 +175,8 @@ OTHER = [
     [41, "PG", 2010, 95, "an"],
     [42, "PG", 2008, 100, "an"],
     [43, "PG-13", 2018, 85, "la"],
-    [44, "PG-13", 2019, 90, "la"]
+    [44, "PG-13", 2019, 90, "la"],
+    [45, "PG-13", 2024, 90, "la"]
 ]
 
 AGERATE = [

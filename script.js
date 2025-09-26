@@ -338,7 +338,7 @@ function hasTags(index) {
         currentTags.push(TAGS[MOVIETAGS[DATASORTED[index][0]][k]][1]);
     }
 
-    console.log(currentTags);
+    // console.log(currentTags);
     for(x=0; x<TAGINUSE.length; x++){
         if(!currentTags.includes(TAGINUSE[x])){
             return false;

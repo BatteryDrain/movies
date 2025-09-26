@@ -1,7 +1,7 @@
 SMALLARRAY = [];
-DATA = [];
-MOVIETAGS = [];
-OTHER = [];
+DATA = [[]];
+MOVIETAGS = [[]];
+OTHER = [[]];
 TABLEWIDTH = 10;
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';
@@ -39,11 +39,12 @@ function csvToBIGARRAY(csvString) {
             smallOther.push(SMALLARRAY[i]);
         }
         if(smallOther.length == 5){
-            DATA.push(smallOther);
+            OTHER.push(smallOther);
             smallOther = [];
         }
     }
-    console.log(DATA);
+    console.log("DATA " + DATA);
+    console.log("OTHER " + OTHER);
 
     loadScript("DATA2.js", () => {
         // loadScript("script.js");

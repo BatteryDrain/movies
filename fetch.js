@@ -36,7 +36,7 @@ function csvToBIGARRAY(csvString) {
         for(j=0; j<10; j++){
             tempList.push(SMALLARRAY[(j + (i * 10))]);
         }
-        BIGARRAY.push
+        BIGARRAY.push(tempList);
     }
     // for(row = 0; row < (ROWS + 2); row++){
     //     for(i = 0; i < 100; i++){

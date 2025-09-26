@@ -5,7 +5,6 @@ MINVAL = 0;
 DATA = "no values,";
 OLDDATA = "no values,";
 SMALLARRAY = [];
-TOTALSARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 DATA = [];
 MOVIETAGS = [];
 OTHER = [];
@@ -42,6 +41,7 @@ function csvToBIGARRAY(csvString) {
             DATA.push(smallData);
         }
     }
+    console.log(DATA);
 
     loadScript("DATA2.js", () => {
         // loadScript("script.js");

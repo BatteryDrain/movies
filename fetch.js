@@ -31,12 +31,19 @@ function csvToBIGARRAY(csvString) {
 
     console.log(SMALLARRAY);
 
-    for(row = 0; row < (ROWS + 2); row++){
-        for(i = 0; i < 100; i++){
-            console.log("row = " + row + " value = " + SMALLARRAY[i + 42 * row]);
-            BIGARRAY[i].push(SMALLARRAY[i + 42 * row]);
+    for(i=0; i<100; i++){
+        tempList = [];
+        for(j=0; j<10; j++){
+            tempList.push(SMALLARRAY[(j + (i * 10))]);
         }
+        BIGARRAY.push
     }
+    // for(row = 0; row < (ROWS + 2); row++){
+    //     for(i = 0; i < 100; i++){
+    //         console.log("row = " + row + " value = " + SMALLARRAY[i + 42 * row]);
+    //         BIGARRAY[i].push(SMALLARRAY[i + 42 * row]);
+    //     }
+    // }
 
     loadScript("DATA2.js", () => {
         // loadScript("script.js");

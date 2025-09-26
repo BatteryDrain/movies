@@ -5,6 +5,7 @@ STOP = false;
 RATE = 10;
 MAXVAL = 0;
 MINVAL = 0;
+
 DATA = "no values,";
 OLDDATA = "no values,";
 lineGraph = null;
@@ -16,6 +17,8 @@ function resetArrays(){
     COLORS = ["blue","red","limegreen","pink","purple","orange","pink","brown","cyan","magenta","lime","black","green","yellow",];
     RUNTOTAL = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 }
+
+ARRAY = ["name", "points",];
 
 function getdata(){
     const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWpkVgP8kZvSW-uAyznifIDcgRzT7BHZVwlEWr7zSKTyDRTLZCah_YDnhB6fYvwzQhmAXJ6eQoNS6m/pub?output=csv';
@@ -35,6 +38,7 @@ function getdata(){
 }
 
 function csvToBIGARRAY(csvString) {
+    resetArrays();
     console.log("to arrays");
     SMALLARRAY = csvString
     .split("\\r\\n")  // Split into rows

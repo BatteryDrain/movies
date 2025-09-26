@@ -1,17 +1,10 @@
+ROWS = 0;
 TABLE_1_OFFSET_X = 1;
 TABLE_1_OFFSET_Y = 1;
 STOP = false;
 RATE = 10;
 MAXVAL = 0;
 MINVAL = 0;
-let P1P = 0;
-let P2P = 0;
-let P3P = 0;
-let P4P = 0;
-let P5P = 0;
-let P6P = 0;
-let P7P = 0;
-let P8P = 0;
 DATA = "no values,";
 OLDDATA = "no values,";
 lineGraph = null;
@@ -53,7 +46,7 @@ function csvToBIGARRAY(csvString) {
 
     console.log(SMALLARRAY);
 
-    for(row = 0; row < (NUMBER_OF_ROUNDS + 2); row++){
+    for(row = 0; row < (ROWS + 2); row++){
         for(i = 0; i < 43; i++){
             console.log("row = " + row + " value = " + SMALLARRAY[i + 42 * row]);
             BIGARRAY[i].push(SMALLARRAY[i + 42 * row]);

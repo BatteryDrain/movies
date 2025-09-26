@@ -1,1 +1,1 @@
-consolelog("DATA2");
+console.log("DATA2");

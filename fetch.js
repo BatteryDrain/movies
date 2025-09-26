@@ -8,21 +8,19 @@ SMALLARRAY = [];
 TOTALSARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 BIGARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 
+const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWpkVgP8kZvSW-uAyznifIDcgRzT7BHZVwlEWr7zSKTyDRTLZCah_YDnhB6fYvwzQhmAXJ6eQoNS6m/pub?output=csv';
 
-function getdata(){
-    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWpkVgP8kZvSW-uAyznifIDcgRzT7BHZVwlEWr7zSKTyDRTLZCah_YDnhB6fYvwzQhmAXJ6eQoNS6m/pub?output=csv';
-  
-    fetch(url)
-    .then(response => response.text())
-    .then(temp => {
-        DATA = temp;
-        console.log("DATA = " + DATA);
-        csvToBIGARRAY(DATA);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
+fetch(url)
+.then(response => response.text())
+.then(temp => {
+    DATA = temp;
+    console.log("DATA = " + DATA);
+    csvToBIGARRAY(DATA);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+
 
 function csvToBIGARRAY(csvString) {
     console.log("to arrays");

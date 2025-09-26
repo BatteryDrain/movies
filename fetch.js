@@ -21,7 +21,6 @@ function getdata(){
     })
     .catch(error => {
         console.error('Error:', error);
-
     });
 }
 
@@ -40,4 +39,15 @@ function csvToBIGARRAY(csvString) {
             BIGARRAY[i].push(SMALLARRAY[i + 42 * row]);
         }
     }
+
+    loadScript("DATA2.js", () => {
+        // loadScript("script.js");
+      });
 }
+
+function loadScript(src, callback) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = callback;
+    document.body.appendChild(script);
+  }

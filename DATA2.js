@@ -1,1 +1,1 @@
-console.log("DATA2");
+console.log("inside DATA2");

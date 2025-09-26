@@ -1,13 +1,10 @@
 ROWS = 0;
-TABLE_1_OFFSET_X = 1;
-TABLE_1_OFFSET_Y = 1;
 STOP = false;
-RATE = 10;
 MAXVAL = 0;
 MINVAL = 0;
 DATA = "no values,";
 OLDDATA = "no values,";
-lineGraph = null;
+
 function resetArrays(){
     SMALLARRAY = [];
     TOTALSARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];

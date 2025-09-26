@@ -28,15 +28,19 @@ function csvToBIGARRAY(csvString) {
     smallData = [];
     smallOther = [];
     for(i=0; i<100; i++){
+        temp = SMALLARRAY[i];
+        if(temp.includes("\r\n")){
+            temp = temp.charAt(temp.length - 1);
+        }
         if(i%TABLEWIDTH >= 0 && i%TABLEWIDTH <= 5){
-            smallData.push(SMALLARRAY[i]);
+            smallData.push(temp);
         }
         if(smallData.length == 5){
             DATA.push(smallData);
             smallData = [];
         }
         if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 6 && i%TABLEWIDTH <= 9){
-            smallOther.push(SMALLARRAY[i]);
+            smallOther.push(temp);
         }
         if(smallOther.length == 5){
             OTHER.push(smallOther);

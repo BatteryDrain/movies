@@ -1,5 +1,3 @@
-NUMBER_OF_USERS = 0;
-NUMBER_OF_ROUNDS = 0;
 TABLE_1_OFFSET_X = 1;
 TABLE_1_OFFSET_Y = 1;
 STOP = false;
@@ -26,13 +24,6 @@ function resetArrays(){
     RUNTOTAL = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 }
 
-function createRounds(){
-    ROUNDS = [];
-    for(i = 0; i < NUMBER_OF_ROUNDS; i++){
-        ROUNDS.push(i+1);
-    }
-}
-
 ARRAY = ["name", "points",];
 
 function getdata(){
@@ -49,6 +40,7 @@ function getdata(){
         console.error('Error:', error);
 
     });
+    csvToBIGARRAY(DATA);
 }
 
 function csvToBIGARRAY(csvString) {

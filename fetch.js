@@ -6,7 +6,9 @@ DATA = "no values,";
 OLDDATA = "no values,";
 SMALLARRAY = [];
 TOTALSARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
-BIGARRAY = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
+DATA = [];
+MOVIETAGS = [];
+OTHER = [];
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';
 
@@ -32,18 +34,14 @@ function csvToBIGARRAY(csvString) {
     console.log(SMALLARRAY);
 
     for(i=0; i<100; i++){
-        tempList = [];
-        for(j=0; j<10; j++){
-            tempList.push(SMALLARRAY[(j + (i * 10))]);
+        smallData = [];
+        if(i%10 >= 0 && i%10 <= 5){
+            smallData.push(SMALLARRAY[i]);
         }
-        BIGARRAY.push(tempList);
+        if(smallData.length == 5){
+            DATA.push(smallData);
+        }
     }
-    // for(row = 0; row < (ROWS + 2); row++){
-    //     for(i = 0; i < 100; i++){
-    //         console.log("row = " + row + " value = " + SMALLARRAY[i + 42 * row]);
-    //         BIGARRAY[i].push(SMALLARRAY[i + 42 * row]);
-    //     }
-    // }
 
     loadScript("DATA2.js", () => {
         // loadScript("script.js");

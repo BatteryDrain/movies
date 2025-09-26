@@ -1,9 +1,3 @@
-ROWS = 0;
-STOP = false;
-MAXVAL = 0;
-MINVAL = 0;
-DATA = "no values,";
-OLDDATA = "no values,";
 SMALLARRAY = [];
 DATA = [];
 MOVIETAGS = [];
@@ -15,13 +9,13 @@ const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3Llu
 fetch(url)
 .then(response => response.text())
 .then(temp => {
-    DATA = temp;
-    console.log("DATA = " + DATA);
-    csvToBIGARRAY(DATA);
+    console.log("CSV text:", temp);
+    csvToBIGARRAY(temp);
 })
 .catch(error => {
     console.error('Error:', error);
 });
+
 
 
 function csvToBIGARRAY(csvString) {

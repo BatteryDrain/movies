@@ -42,7 +42,7 @@ function csvToBIGARRAY(csvString) {
             DATA.push(smallData);
             smallData = [];
         }
-        if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 6 i%TABLEWIDTH <= 9){
+        if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 6 && i%TABLEWIDTH <= 9){
             smallOther.push(SMALLARRAY[i]);
         }
         if(smallOther.length == 5){

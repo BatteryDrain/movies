@@ -17,7 +17,6 @@ fetch(url)
 });
 
 
-
 function csvToBIGARRAY(csvString) {
     console.log("to arrays");
     SMALLARRAY = csvString

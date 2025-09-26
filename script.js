@@ -214,7 +214,7 @@ function build(m) {
                 if(CHECKLIVE && film == "la" || film == "an"){
 
                     has = hasTags(m);
-                    // console.log("has " + has);
+                    // console.log("has  = " + has);
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
@@ -334,18 +334,17 @@ function away(oldid){
 
 function hasTags(index) {
     currentTags = [];
-    for(k=1; k<MOVIETAGS[DATA[index][0]].length; k++){
-        currentTags.push(TAGS[MOVIETAGS[DATA[index][0]][k]][1]);
+    for(k=1; k<MOVIETAGS[DATASORTED[index][0]].length; k++){
+        currentTags.push(TAGS[MOVIETAGS[DATASORTED[index][0]][k]][1]);
     }
 
-    // console.log(currentTags);
+    console.log(currentTags);
     for(x=0; x<TAGINUSE.length; x++){
-        // console.log("error here " + currentTags.includes(TAGINUSE[x]));
-        if(currentTags.includes(TAGINUSE[x])){
-            return true;
+        if(!currentTags.includes(TAGINUSE[x])){
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 function sort() {

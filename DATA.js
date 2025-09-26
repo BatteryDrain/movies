@@ -42,7 +42,10 @@ DATA = [
     [38, "Lift", "Lift", "https://www.imdb.com/title/tt14371878/", 1],
     [39, "Tintin", "Tintin",  "https://www.imdb.com/title/tt0983193/", 1],
     [40, "American Made", "AmericanMade", "https://www.imdb.com/title/tt3532216/", 1],
-    [41, "Megamind", "Megamind", "", 1]
+    [41, "Megamind", "Megamind", "https://www.imdb.com/title/tt1001526/", 1],
+    [42, "Horton Hears a Who", "HortonHearsaWho", "https://www.imdb.com/title/tt0451079/", 1],
+    [43, "Skyscraper", "Skyscraper", "https://www.imdb.com/title/tt5758778/", 1],
+    [44, "I Am Mother", "IAmMother", "https://www.imdb.com/title/tt6292852/", 1]
 ]
 
 DATASORTED = DATA;
@@ -69,7 +72,7 @@ TAGS = [
     [16, "time", ""],
     [17, "mystery", ""],
     [18, "community", ""],
-    [19, "Suspense", ""],
+    [19, "null", ""],
     [20, "based on book", ""],
     [21, "True Story", ""],
     [22, "Superhero", ""]
@@ -102,7 +105,7 @@ MOVIETAGS = [
     [22, 0, 2, 18, 15], 
     [23, 1, 3, 5, 14],
     [24, 0, 2, 18],
-    [25, 3, 6, 19, 5],
+    [25, 3, 6, 14, 5],
     [26, 3, 0, 6, 5],
     [27, 3, 0, 11],
     [28, 3, 0],
@@ -116,9 +119,12 @@ MOVIETAGS = [
     [36, 3, 0, 16],
     [37, 3, 9, 8],
     [38, 3, 0, 5],
-    [39, 3, 0, 5],
+    [39, 3, 0, 5, 20],
     [40, 21, 0, 3, 5],
-    [41, 3, 22]
+    [41, 3, 22],
+    [42, 0, 2, 15],
+    [43, 3, 9, 14],
+    [44, 3, 20, 0, 14]
 ]
 
 OTHER = [
@@ -164,7 +170,10 @@ OTHER = [
     [38, "PG-13", 2024, 90, "la"],
     [39, "PG", 2011, 90, "la"],
     [40, "R", 2017, 90, "la"],
-    [41, "PG", 2010, 95, "an"]
+    [41, "PG", 2010, 95, "an"],
+    [42, "PG", 2008, 100, "an"],
+    [43, "PG-13", 2018, 85, "la"],
+    [44, "PG-13", 2019, 90, "la"]
 ]
 
 AGERATE = [
@@ -206,7 +215,7 @@ RATE = [
     [24, 5, "R18", 2],
     [25, 5, "R18+", 118],
     [26, 5, "A", 9],
-    [27, 5, "NC-17", 0],
+    [27, 5, "NC-17", 0]
 ]
 
 SYSTEM = [

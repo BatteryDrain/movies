@@ -284,8 +284,9 @@ figcaption {
 }
 
 .tags {
+    margin-top: 2px;
+    width: 100%;
     height: fit-content;
-    width: 200px;
 }
 
 .tags span {
@@ -293,13 +294,11 @@ figcaption {
     color: black;
     border-radius: 15px;
     padding: 0 3px;
-    width: fit-content;
     margin: 0 1px;
 }
 
 figure img {
     margin-top: 5px;
-    /* max-width: 500px; */
 }
 
 figure button {

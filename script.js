@@ -233,7 +233,7 @@ function build(m) {
             }
         }
     }
-    count.innerHTML = content.childElementCount + " movies";
+    count.innerHTML = placeHere.childElementCount + " movies";
 }
 
 
@@ -296,8 +296,12 @@ function makeFig(place, m){
 }
 
 function goToLink(number){
-    console.log("button " + number + " clicked");
-    window.open(DATASORTED[number][3],"_blank");
+    console.log("button id: " + number + " clicked");
+    for(index=0; index<DATA.length; index++){
+        if(DATA[index][0] == number){
+            window.open(DATA[index][3],"_blank");
+        }
+    }
 }
 
 function away(oldid){

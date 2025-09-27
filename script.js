@@ -384,7 +384,7 @@ function organizeY() {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (OTHER[DATASORTED[j][0]][2] < OTHER[DATASORTED[j+1][0]][2]) {
+            if (DATASORTED[j][6] < DATASORTED[j][6]) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

@@ -106,7 +106,8 @@ function filterage(){
     for(ii=0; ii < RATE.length; ii++){
         if(RATE[ii][1] <= val){
             txt = document.createElement('p');
-            txt.id = ii + "AR" txt.classList.add("tooltip");
+            txt.id = ii + "AR";
+            txt.classList.add("tooltip");
             txt.innerHTML = RATE[ii][2];
             const tooltipSpan = tooltipT(ii);
             if (tooltipSpan) { 

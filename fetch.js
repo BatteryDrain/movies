@@ -1,5 +1,6 @@
 SMALLARRAY = [];
 DATA = [[]];
+DATASORTED = [[]];
 MOVIETAGS = [[]];
 MOVIETAGS = [[]];
 

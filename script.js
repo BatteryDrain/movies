@@ -205,6 +205,7 @@ function populate(){
 
 function build(m) {
     if(AGE.includes(DATASORTED[m][5])){
+        console.log("here");
 
         score = DATASORTED[m][7];
         if(score <= max.value && score >= min.value){

@@ -1,7 +1,6 @@
 SMALLARRAY = [];
 DATA = [[]];
 MOVIETAGS = [[]];
-OTHER = [[]];
 TABLEWIDTH = 10;
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';
@@ -23,8 +22,9 @@ function csvToBIGARRAY(csvString) {
     .toString().split("\r\n")
     .map(r => r.split(","));
     
+    DATA = SMALLARRAY;
+
     console.log("DATA " + DATA);
-    console.log("OTHER " + OTHER);
 
     loadScript("DATA2.js", () => {
         // loadScript("script.js");

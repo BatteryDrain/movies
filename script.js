@@ -368,7 +368,7 @@ function organizeS() {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (OTHER[DATASORTED[j][0]][3] < OTHER[DATASORTED[j+1][0]][3]) {
+            if (DATASORTED[j][7] < DATASORTED[j][7]) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

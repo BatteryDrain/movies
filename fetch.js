@@ -29,7 +29,7 @@ function csvToBIGARRAY(csvString) {
         temp = [DATASORTED[i][0]];
         for(j=0; j<4; j++){
             if(DATASORTED[i][j + 9] != null){
-                temp.push(phraseInt(DATASORTED[i][j + 9]));
+                temp.push(DATASORTED[i][j + 9]);
             }
         }
         TAGS.push(temp);

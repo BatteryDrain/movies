@@ -2,6 +2,7 @@ SMALLARRAY = [];
 DATA = [[]];
 MOVIETAGS = [[]];
 TABLEWIDTH = 10;
+TAGS = [[]];
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';
 
@@ -24,7 +25,10 @@ function csvToBIGARRAY(csvString) {
     
     DATA = SMALLARRAY;
     DATASORTED = DATA;
-    console.log("DATA " + DATA);
+    for(i=0; i<DATASORTED.length; i++){
+        TAGS.push(DATASORTED[i][0] + DATASORTED[i][9] + DATASORTED[i][10] + DATASORTED[i][11] + DATASORTED[i][12] + DATASORTED[i][13]);
+    }
+    console.log("TAGS " + TAGS);
 
     loadScript("script.js", () => {
 

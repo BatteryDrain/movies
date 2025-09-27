@@ -25,8 +25,8 @@ function csvToBIGARRAY(csvString) {
     DATA = SMALLARRAY;
     DATASORTED = DATA;
 
-    for(i=0; i<DATASORTED.length; i++){
-        temp = [DATASORTED[i][0]];
+    for(i=1; i<DATASORTED.length; i++){
+        temp = [parseInt(DATASORTED[i][0])];
         for(j=0; j<4; j++){
             if(DATASORTED[i][j + 9] != ''){
                 temp.push(parseInt(DATASORTED[i][j + 9]));

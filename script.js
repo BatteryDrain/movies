@@ -205,7 +205,7 @@ function populate(){
 }
 
 function build(m) {
-    if(AGE.includes(OTHER[DATASORTED[m][0]][1])){
+    if(AGE.includes(DATASORTED[m][5])){
 
         score = OTHER[DATASORTED[m][0]][3];
         if(score <= max.value && score >= min.value){

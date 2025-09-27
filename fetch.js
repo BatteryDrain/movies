@@ -21,13 +21,13 @@ function csvToBIGARRAY(csvString) {
     console.log("to arrays");
     SMALLARRAY = csvString
     .split("\\r\\n")  // Split into rows
-    .map(row => row.split(","))  // Split each row into columns (2D array)
+    .array.forEach(row => row.split(","));  // Split each row into columns (2D array)
     // .flat();  // Flatten into a 1D array
 
     console.log(SMALLARRAY);
     smallData = [];
     smallOther = [];
-    for(i=0; i<100; i++){
+    for(i=0; i<SMALLARRAY; i++){
         temp = SMALLARRAY[i];
         if(temp.includes("\r\n")){
             temp = temp.charAt(temp.length - 1);

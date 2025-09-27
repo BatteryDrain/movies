@@ -208,8 +208,9 @@ function build(m) {
 
         score = DATASORTED[m][7];
         score = parseInt(score);
-        console.log("max: " + max.value + " min: " + min.value + " score: " + score);
+        console.log("max: " + parseInt(max.value) + " min: " + parseInt(min.value) + " score: " + score);
         if(score <= parseInt(max.value) && score >= parseInt(min.value)){
+
             film = DATASORTED[m][8];
             if(CHECKANIMATED && film == "an" || film == "la"){
                 if(CHECKLIVE && film == "la" || film == "an"){

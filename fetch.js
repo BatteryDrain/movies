@@ -28,7 +28,9 @@ function csvToBIGARRAY(csvString) {
     for(i=0; i<DATASORTED.length; i++){
         temp=DATASORTED[i][0];
         for(j=0; j<4; j++){
-            temp = temp + ", " + DATASORTED[i][j + 9];
+            if(DATASORTED[i][j + 9] != null){
+                temp = temp + ", " + DATASORTED[i][j + 9];
+            }
         }
         TAGS.push(temp);
     }

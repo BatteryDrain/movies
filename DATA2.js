@@ -105,3 +105,7 @@ COUNTRY = [
     [8, "🇩🇪", "Germany"],
     [9, "🇮🇳", "India"]
 ]
+
+loadScript("script.js", () => {
+    
+  });

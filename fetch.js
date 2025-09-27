@@ -1,7 +1,7 @@
 SMALLARRAY = [];
 DATA = [[]];
 MOVIETAGS = [[]];
-TABLEWIDTH = 10;
+TABLEWIDTH = 14;
 TAGS = [[]];
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';

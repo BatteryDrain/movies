@@ -20,9 +20,8 @@ fetch(url)
 function csvToBIGARRAY(csvString) {
     console.log("to arrays");
     SMALLARRAY = csvString
-    .split("\\r\\n")  // Split into rows
-    // .array.forEach(row => row.split(","))  // Split each row into columns (2D array)
-    // .flat();  // Flatten into a 1D array
+    .toString().split("\r\n")
+    .map(r => r.split(,));
 
     console.log(SMALLARRAY);
     smallData = [];

@@ -291,9 +291,6 @@ function makeFig(place, m){
             if(place == "red"){
                 fig.style.backgroundColor = "rgb(169, 102, 102)";
             }
-            if(DATASORTED[m][1] == "Central Intelligence"){
-                console.log("here");
-            }
             cont.appendChild(fig);
 }
 

@@ -210,7 +210,7 @@ function build(m) {
         score = DATASORTED[m][7];
         if(score <= max.value && score >= min.value){
 
-            film = OTHER[DATASORTED[m][0]][4];
+            film = DATASORTED[m][8];
             if(CHECKANIMATED && film == "an" || film == "la"){
                 if(CHECKLIVE && film == "la" || film == "an"){
 
@@ -244,11 +244,11 @@ function makeFig(place, m){
             div = document.createElement('div');
             div.classList.add("figTop");
                 figT = document.createElement('figcaption');
-                figT.innerHTML = DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
+                figT.innerHTML = DATASORTED[m][1] + " " + DATASORTED[m][6];
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                spn.innerHTML = OTHER[DATASORTED[m][0]][3];
+                spn.innerHTML = DATASORTED[m][7];
                 div.appendChild(spn);
             fig.appendChild(div);
 
@@ -265,7 +265,7 @@ function makeFig(place, m){
                 foto = document.createElement('img');
                 foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
-                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + OTHER[DATASORTED[m][0]][2];
+                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
                 fig.appendChild(foto);
             }
             

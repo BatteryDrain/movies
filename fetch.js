@@ -23,7 +23,7 @@ function csvToBIGARRAY(csvString) {
     .map(r => r.split(","));
     
     DATA = SMALLARRAY;
-
+    DATASORTED = DATA;
     console.log("DATA " + DATA);
 
     loadScript("DATA2.js", () => {

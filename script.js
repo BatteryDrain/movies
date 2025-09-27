@@ -205,8 +205,7 @@ function populate(){
 }
 
 function build(m) {
-    //if(AGE.includes(DATASORTED[m][5])){
-        console.log("in");
+    if(AGE.includes(DATASORTED[m][5])){
 
         score = DATASORTED[m][7];
         if(score <= max.value && score >= min.value){
@@ -234,7 +233,7 @@ function build(m) {
                 }
             }
         }
-    //}
+    }
     count.innerHTML = placeHere.childElementCount + " movies";
 }
 

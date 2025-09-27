@@ -70,7 +70,7 @@ RATE = [
 ]
 
 SYSTEM = [
-    //id, country1, country2, country3, ...
+    //id, country1, country2, country3...
     [0, 0],
     [1, 1],
     [2, 2],

@@ -278,7 +278,7 @@ function makeFig(place, m){
 
                 p = document.createElement('p');
                 p.classList.add("ageTag");
-                p.innerHTML = OTHER[DATASORTED[m][0]][1];
+                p.innerHTML = DATASORTED[m][5];
                 div2.appendChild(p);
             fig.appendChild(div2);
             if(place == "green"){

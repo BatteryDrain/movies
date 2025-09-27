@@ -22,30 +22,7 @@ function csvToBIGARRAY(csvString) {
     SMALLARRAY = csvString
     .toString().split("\r\n")
     .map(r => r.split(","));
-
-    console.log(SMALLARRAY);
-    smallData = [];
-    smallOther = [];
-    for(i=0; i<SMALLARRAY; i++){
-        temp = SMALLARRAY[i];
-        if(temp.includes("\r\n")){
-            temp = temp.charAt(temp.length - 1);
-        }
-        if(i%TABLEWIDTH >= 0 && i%TABLEWIDTH <= 6){
-            smallData.push(temp);
-        }
-        if(smallData.length == 5){
-            DATA.push(smallData);
-            smallData = [];
-        }
-        if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 7 && i%TABLEWIDTH <= 9){
-            smallOther.push(temp);
-        }
-        if(smallOther.length == 5){
-            OTHER.push(smallOther);
-            smallOther = [];
-        }
-    }
+    
     console.log("DATA " + DATA);
     console.log("OTHER " + OTHER);
 

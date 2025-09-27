@@ -5,6 +5,7 @@ TAGINUSE = [];
 TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
+RATE = [];
 
 filterage();
 

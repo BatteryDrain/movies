@@ -21,7 +21,7 @@ function csvToBIGARRAY(csvString) {
     console.log("to arrays");
     SMALLARRAY = csvString
     .toString().split("\r\n")
-    .map(r => r.split(,));
+    .map(r => r.split(","));
 
     console.log(SMALLARRAY);
     smallData = [];

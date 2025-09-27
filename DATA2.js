@@ -1,4 +1,4 @@
-console.log("inside DATA2");
+console.log("inside DATA2.js");
 
 TAGS = [
     //id, tag, description,

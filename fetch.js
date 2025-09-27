@@ -18,27 +18,33 @@ fetch(url)
 
 function csvToBIGARRAY(csvString) {
     console.log("to arrays");
-    SMALLARRAY = csvString
-    .toString().split("\r\n")
-    .map(r => r.split(","));
-    
-    DATA = SMALLARRAY;
-    DATASORTED = DATA;
 
-    for(i=1; i<DATASORTED.length; i++){
-        temp = [parseInt(DATASORTED[i][0])];
-        for(j=0; j<4; j++){
-            if(DATASORTED[i][j + 9] != ''){
-                temp.push(parseInt(DATASORTED[i][j + 9]));
+    Papa.parse(csvString, {
+        skipEmptyLines: true,   // ✅ ignore blank rows
+        complete: function(results) {
+            DATA = results.data;
+            DATASORTED = DATA;
+
+            for (let i = 1; i < DATASORTED.length; i++) {
+                let temp = [parseInt(DATASORTED[i][0])];
+                for (let j = 0; j < 5; j++) {   // columns 9 → 13
+                    let val = DATASORTED[i][j + 9];
+                    if (val !== "" && !isNaN(val)) {
+                        temp.push(parseInt(val));
+                    }
+                }
+                TAGS.push(temp);
             }
+
+            console.log("TAGS", TAGS);
+
+            loadScript("DATA2.js", () => {
+                loadScript("script.js");
+            });
         }
-        TAGS.push(temp);
-    }
-
-    loadScript("script.js", () => {
-
-      });
+    });
 }
+
 
 function loadScript(src, callback) {
     const script = document.createElement("script");

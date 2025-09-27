@@ -1,3 +1,4 @@
+console.log("inside script.js");
 AGE = ["G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"];
 CHECKANIMATED = true;
 CHECKLIVE = true;

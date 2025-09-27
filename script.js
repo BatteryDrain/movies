@@ -207,9 +207,8 @@ function build(m) {
     if(AGE.includes(DATASORTED[m][5])){
 
         score = DATASORTED[m][7];
-        console.log("here");
         if(score <= max.value && score >= min.value){
-
+            console.log("here");
             film = DATASORTED[m][8];
             if(CHECKANIMATED && film == "an" || film == "la"){
                 if(CHECKLIVE && film == "la" || film == "an"){

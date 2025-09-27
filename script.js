@@ -206,9 +206,7 @@ function populate(){
 function build(m) {
     if(AGE.includes(DATASORTED[m][5])){
 
-        score = DATASORTED[m][7];
-        score = parseInt(score);
-        console.log("max: " + parseInt(max.value) + " min: " + parseInt(min.value) + " score: " + score);
+        score = parseInt(DATASORTED[m][7]);
         if(score <= parseInt(max.value) && score >= parseInt(min.value)){
 
             film = DATASORTED[m][8];

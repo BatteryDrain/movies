@@ -100,10 +100,13 @@ SortS.addEventListener("change", () => {
 });
 
 function filterage(){
-    AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
-    if(val == "*"){val = 5}
+    if(val == "*"){
+        val = 5
+    } else{
+        AGE = [];
+    }
     for(ii=0; ii < RATE.length; ii++){
         if(RATE[ii][1] <= val){
             txt = document.createElement('p');

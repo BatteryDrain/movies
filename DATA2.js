@@ -28,7 +28,7 @@ TAGS = [
 ]
 
 AGERATE = [
-    //id, str, rate id,
+    //id, str,
     [0, "all ages"],
     [1, "with guidence"],
     [2, "preteen"],

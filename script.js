@@ -188,7 +188,6 @@ function resetF(){
 }
 
 function populate(){
-    console.log("pop");
     sort();
     placeHere.replaceChildren();
 
@@ -349,7 +348,6 @@ function hasTags(index) {
 }
 
 function sort() {
-    console.log("sort");
     M2L = SortS.checked;
     // console.log(M2L);
     theme = sortBy.value;

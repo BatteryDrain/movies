@@ -106,6 +106,3 @@ COUNTRY = [
     [9, "🇮🇳", "India"]
 ]
 
-loadScript("script.js", () => {
-    
-  });

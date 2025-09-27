@@ -39,7 +39,7 @@ function csvToBIGARRAY(csvString) {
     }
 
     loadScript("DATA2.js", () => {
-        
+        loadScript("script.js");
       });
 }
 

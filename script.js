@@ -102,11 +102,7 @@ SortS.addEventListener("change", () => {
 function filterage(){
     ageList.replaceChildren();
     val = ageRate.value;
-    if(val == "*"){
-        val = 5
-    } else{
-        AGE = [];
-    }
+    val = phraseInt(val);
     for(ii=0; ii < RATE.length; ii++){
         if(RATE[ii][1] <= val){
             txt = document.createElement('p');

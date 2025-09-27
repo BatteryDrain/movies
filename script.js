@@ -98,26 +98,24 @@ SortS.addEventListener("change", () => {
     populate();
 });
 
-function filterage(){
+function filterage(){ 
+    AGE = [];
     ageList.replaceChildren();
     val = ageRate.value;
-    val = parseInt(val);
+    if(val == "*"){val = 5}
     for(ii=0; ii < RATE.length; ii++){
         if(RATE[ii][1] <= val){
             txt = document.createElement('p');
-            txt.id = ii + "AR"
-            txt.classList.add("tooltip");
+            txt.id = ii + "AR" txt.classList.add("tooltip");
             txt.innerHTML = RATE[ii][2];
             const tooltipSpan = tooltipT(ii);
-            if (tooltipSpan) {
+            if (tooltipSpan) { 
                 txt.appendChild(tooltipSpan);
+
             }
-            ageList.appendChild(txt);
-            AGE.push(RATE[ii][2]);
+            ageList.appendChild(txt); AGE.push(RATE[ii][2]);
         }
     }
-    console.log("AGE = " + AGE);
-    populate();
 }
 
 function tooltipT(rate){

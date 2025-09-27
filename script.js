@@ -118,7 +118,7 @@ function filterage(){
             AGE.push(RATE[ii][2]);
         }
     }
-    console.log(AGE);
+    console.log("AGE = " + AGE);
     populate();
 }
 

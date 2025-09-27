@@ -32,14 +32,14 @@ function csvToBIGARRAY(csvString) {
         if(temp.includes("\r\n")){
             temp = temp.charAt(temp.length - 1);
         }
-        if(i%TABLEWIDTH >= 0 && i%TABLEWIDTH <= 5){
+        if(i%TABLEWIDTH >= 0 && i%TABLEWIDTH <= 6){
             smallData.push(temp);
         }
         if(smallData.length == 5){
             DATA.push(smallData);
             smallData = [];
         }
-        if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 6 && i%TABLEWIDTH <= 9){
+        if(i%TABLEWIDTH == 0 || i%TABLEWIDTH >= 7 && i%TABLEWIDTH <= 9){
             smallOther.push(temp);
         }
         if(smallOther.length == 5){

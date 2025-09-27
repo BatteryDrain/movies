@@ -195,11 +195,11 @@ function populate(){
     placeHere.replaceChildren();
 
     if(M2L){
-        for(m=0; m<DATA.length; m++){
+        for(m=0; m<DATASORTED.length; m++){
             build(m);
         }
     }else {
-        temp = DATA.length;
+        temp = DATASORTED.length;
         for(let m=temp-1; m>=0; m--){
             build(m);
         }
@@ -208,6 +208,7 @@ function populate(){
 
 function build(m) {
     if(AGE.includes(DATASORTED[m][5])){
+        console.log("in");
 
         score = DATASORTED[m][7];
         if(score <= max.value && score >= min.value){

@@ -26,7 +26,7 @@ function csvToBIGARRAY(csvString) {
     DATA = SMALLARRAY;
     DATASORTED = DATA;
     for(i=0; i<DATASORTED.length; i++){
-        TAGS.push(DATASORTED[i][0] + DATASORTED[i][9] + DATASORTED[i][10] + DATASORTED[i][11] + DATASORTED[i][12] + DATASORTED[i][13]);
+        TAGS.push(DATASORTED[i][0] + ", " + DATASORTED[i][9] + ", " + DATASORTED[i][10] + ", " + DATASORTED[i][11] + ", " + DATASORTED[i][12] + ", " + DATASORTED[i][13]);
     }
     console.log("TAGS " + TAGS);
 

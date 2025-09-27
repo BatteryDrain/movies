@@ -207,7 +207,7 @@ function populate(){
 function build(m) {
     if(AGE.includes(DATASORTED[m][5])){
 
-        score = OTHER[DATASORTED[m][0]][3];
+        score = DATASORTED[m][7];
         if(score <= max.value && score >= min.value){
 
             film = OTHER[DATASORTED[m][0]][4];

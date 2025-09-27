@@ -255,9 +255,9 @@ function makeFig(place, m){
 
             div1 = document.createElement('div');
             div1.classList.add("tags");
-                for(t=1; t<MOVIETAGS[DATASORTED[m][0]].length; t++){
+                for(t=1; t<MOVIETAGS[FindTagID(DATASORTED[m][0])].length; t++){
                     spn = document.createElement('span');
-                    spn.innerHTML = TAGS[MOVIETAGS[DATASORTED[m][0]][t]][1];
+                    spn.innerHTML = TAGS[MOVIETAGS[FindTagID(DATASORTED[m][0])][t]][1];
                     div1.appendChild(spn);
                 }
             fig.appendChild(div1);
@@ -300,6 +300,12 @@ function goToLink(number){
         if(DATA[index][0] == number){
             window.open(DATA[index][3],"_blank");
         }
+    }
+}
+
+function FindTagID(tagID) {
+    for(i=0; i<DATASORTED.length; i++){
+        if(DATASORTED[i][0] == tagID){return i;}
     }
 }
 

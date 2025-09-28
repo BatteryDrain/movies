@@ -19,14 +19,14 @@ TAGS = [
     [13, "medieval", ""],
     [8, "mystery", ""],
     [1, "romance", ""],
-    [6, "spy", ""],
-    [10, "null 10", ""],
-    [17, "null 17", ""],
     [19, "sex", ""],
+    [6, "spy", ""],
     [22, "Superhero", ""],
     [14, "suspence", ""],
     [16, "time", ""],
-    [21, "True Story", ""]
+    [21, "True Story", ""],
+    [10, "null 10", ""],
+    [17, "null 17", ""],
 ]
 
 AGERATE = [

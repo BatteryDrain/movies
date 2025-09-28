@@ -254,9 +254,9 @@ function makeFig(place, m){
 
             div1 = document.createElement('div');
             div1.classList.add("tags");
-                for(t=1; t<MOVIETAGS[FindTagID(parseInt(DATASORTED[m][0]))].length; t++){
+                for(t=1; t<MOVIETAGS[FindTagID(FindMovieID(DATASORTED[m][0]))].length; t++){
                     spn = document.createElement('span');
-                    spn.innerHTML = TAGS[MOVIETAGS[FindTagID(DATASORTED[m][0])][t]][1];
+                    spn.innerHTML = TAGS[MOVIETAGS[FindTagID(FindMovieID(DATASORTED[m][0]))][t]][1];
                     div1.appendChild(spn);
                 }
             fig.appendChild(div1);
@@ -302,9 +302,15 @@ function goToLink(number){
     }
 }
 
-function FindTagID(m) {
+function FindMcvieID(m) {
     for(i=0; i<DATASORTED.length; i++){
         if(MOVIETAGS[i][0] == m){return i;}
+    }
+}
+
+function FindTagID(m) {
+    for(i=0; i<DATASORTED.length; i++){
+        if(TAGS[i][0] == m){return i;}
     }
 }
 

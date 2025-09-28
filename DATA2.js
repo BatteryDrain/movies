@@ -24,7 +24,8 @@ TAGS = [
     [19, "null", ""],
     [20, "based on book", ""],
     [21, "True Story", ""],
-    [22, "Superhero", ""]
+    [22, "Superhero", ""],
+    [23, "Court", ""]
 ]
 
 AGERATE = [

@@ -302,7 +302,7 @@ function goToLink(number){
     }
 }
 
-function FindMcvieID(m) {
+function FindMovieID(m) {
     for(i=0; i<DATASORTED.length; i++){
         if(MOVIETAGS[i][0] == m){return i;}
     }

@@ -31,6 +31,7 @@ function setOptInFilterTag(){
 filterage();
 ageRate.addEventListener("change", () => {
     filterage();
+    populate();
 });
 
 HideAgeTags.addEventListener("click", () => {

@@ -253,9 +253,9 @@ function makeFig(place, m){
 
             div1 = document.createElement('div');
             div1.classList.add("tags");
-                for(t=1; t<MOVIETAGS[FindTagID(DATASORTED[m][0])].length; t++){
+                for(t=1; t<MOVIETAGS[parseInt(DATASORTED[m][0])].length; t++){
                     spn = document.createElement('span');
-                    spn.innerHTML = TAGS[MOVIETAGS[FindTagID(DATASORTED[m][0])][t]][1];
+                    spn.innerHTML = TAGS[MOVIETAGS[parseInt(DATASORTED[m][0])][t]][1];
                     div1.appendChild(spn);
                 }
             fig.appendChild(div1);

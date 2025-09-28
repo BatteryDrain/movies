@@ -365,13 +365,12 @@ function sort() {
 }
 
 function organizeS() {
-    console.log("here");
     //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (DATASORTED[j][7] < DATASORTED[j][7]) {
+            if (DATASORTED[j][7] < DATASORTED[j+1][7]) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
@@ -387,7 +386,7 @@ function organizeY() {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (DATASORTED[j][6] < DATASORTED[j][6]) {
+            if (DATASORTED[j][6] < DATASORTED[j+1][6]) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

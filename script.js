@@ -370,7 +370,7 @@ function organizeS() {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (DATASORTED[j][7] < DATASORTED[j+1][7]) {
+            if (parseInt(DATASORTED[j][7]) < parseInt(DATASORTED[j+1][7])) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
@@ -386,7 +386,7 @@ function organizeY() {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (DATASORTED[j][6] < DATASORTED[j+1][6]) {
+            if (parseInt(DATASORTED[j][6]) < parseInt(DATASORTED[j+1][6])) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

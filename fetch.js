@@ -9,7 +9,7 @@ const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3Llu
 fetch(url)
 .then(response => response.text())
 .then(temp => {
-    console.log("CSV text:", temp);
+    // console.log("CSV text:", temp);
     csvToBIGARRAY(temp);
 })
 .catch(error => {
@@ -42,10 +42,3 @@ function csvToBIGARRAY(csvString) {
         loadScript("script.js");
       });
 }
-
-function loadScript(src, callback) {
-    const script = document.createElement("script");
-    script.src = src;
-    script.onload = callback;
-    document.body.appendChild(script);
-  }

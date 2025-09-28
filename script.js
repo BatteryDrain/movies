@@ -260,7 +260,7 @@ function makeFig(place, m){
                 }
             fig.appendChild(div1);
             
-            if(DATASORTED[m][2] != null){
+            if(DATASORTED[m][2] != ""){
                 foto = document.createElement('img');
                 foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");

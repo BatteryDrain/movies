@@ -42,3 +42,10 @@ function csvToBIGARRAY(csvString) {
         loadScript("script.js");
       });
 }
+
+function loadScript(src, callback) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = callback;
+    document.body.appendChild(script);
+  }

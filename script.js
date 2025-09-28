@@ -345,7 +345,7 @@ function away(oldid){
 function hasTags(index) {
     currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
-        currentTags.push(TAGS[MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k]][1]);
+        currentTags.push(TAGS[MOVIETAGS[FindTagIndex(FindMovieIndex(DATASORTED[index][0]))][k]][1]);
     }
 
     // console.log(currentTags);

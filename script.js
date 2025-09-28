@@ -365,6 +365,7 @@ function sort() {
 }
 
 function organizeS() {
+    console.log("here");
     //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 

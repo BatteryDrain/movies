@@ -263,7 +263,7 @@ function makeFig(place, m){
             if(DATASORTED[m][2] != ""){
                 foto = document.createElement('img');
                 foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
-                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
+                foto.setAttribute("href", "=" DATASORTED[m][0]);
                 foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
                 fig.appendChild(foto);
             }

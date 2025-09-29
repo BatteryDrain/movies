@@ -264,7 +264,7 @@ figure {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-figure p {
+.time {
     color: black;
     background-color: white;
     border-radius: 15px;

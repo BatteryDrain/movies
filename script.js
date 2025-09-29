@@ -278,14 +278,15 @@ function makeFig(place, m){
                 div2.appendChild(but);
 
                 p = document.createElement('p');
+                p.innerHTML = DATASORTED[m][9];
+                div2.appendChild(p);
+
+                p = document.createElement('p');
                 p.classList.add("ageTag");
                 p.innerHTML = DATASORTED[m][5];
                 div2.appendChild(p);
             fig.appendChild(div2);
 
-            p = document.createElement('p');
-            p.innerHTML = DATASORTED[m][9];
-            fig.appendChild(p);
             if(place == "green"){
                 fig.style.backgroundColor = "rgb(115, 169, 102)";
             }

@@ -264,15 +264,6 @@ figure {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.time {
-    color: black;
-    background-color: white;
-    border-radius: 15px;
-    margin: 0;
-    width: fit-content;
-    padding: 0 2px;
-}
-
 figcaption {
     width: fit-content;
 }
@@ -321,6 +312,11 @@ figure button {
     margin-left: 0;
 }
 
+.div2 {
+    display: flex;
+    flex-direction: row;
+}
+
 .div2 p {
     margin: 10px 0;
     margin-left: auto;
@@ -331,9 +327,13 @@ figure button {
     padding: 2px;
 }
 
-.div2 {
-    display: flex;
-    flex-direction: row;
+.div2 p.time {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0;
+    width: fit-content;
+    padding: 0 2px;
 }
 
 select {

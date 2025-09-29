@@ -264,6 +264,13 @@ figure {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+figure p {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0;
+}
+
 figcaption {
     width: fit-content;
 }

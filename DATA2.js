@@ -23,7 +23,7 @@ TAGS = [
     [22, "Superhero", ""],
     [14, "suspence", ""],
     [16, "time", ""],
-    [21, "True Story", ""],
+    [21, "true-story", ""],
     [10, "null", ""],
     [17, "null", ""],
     [19, "null", ""],

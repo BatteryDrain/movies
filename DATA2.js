@@ -19,12 +19,12 @@ TAGS = [
     [13, "medieval", ""],
     [8, "mystery", ""],
     [1, "romance", ""],
+    [10, "school", ""],
     [6, "spy", ""],
     [22, "Superhero", ""],
     [14, "suspence", ""],
     [16, "time", ""],
     [21, "true-story", ""],
-    [10, "null", ""],
     [17, "null", ""],
     [19, "null", ""],
 ]

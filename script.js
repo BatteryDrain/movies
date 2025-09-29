@@ -256,7 +256,8 @@ function makeFig(place, m){
             div1.classList.add("tags");
                 for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
                     spn = document.createElement('span');
-                    spn.innerHTML = TAGS[MOVIETAGS[FindTagIndex(FindMovieIndex(DATASORTED[m][0]))][t]][1];
+                    tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][0];
+                    spn.innerHTML = TAGS[FindTagIndex(tagID)[t]][1];
                     div1.appendChild(spn);
                 }
             fig.appendChild(div1);

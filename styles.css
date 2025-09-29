@@ -270,7 +270,7 @@ figure p {
     border-radius: 15px;
     margin: 0;
     width: fit-content;
-    padding: 2px 0;
+    padding: 0 2px;
 }
 
 figcaption {

@@ -31,8 +31,8 @@ function csvToBIGARRAY(csvString) {
     for(i=1; i<DATASORTED.length; i++){
         temp = [parseInt(DATASORTED[i][0])];
         for(j=0; j<5; j++){
-            if(DATASORTED[i][j + 9] != ''){
-                temp.push(parseInt(DATASORTED[i][j + 9]));
+            if(DATASORTED[i][j + 10] != ''){
+                temp.push(parseInt(DATASORTED[i][j + 10]));
             }
         }
         MOVIETAGS.push(temp);

@@ -331,7 +331,7 @@ figure button {
     color: black;
     background-color: white;
     border-radius: 15px;
-    margin: 0;
+    margin-top: 5px;
     width: fit-content;
     padding: 0 2px;
 }

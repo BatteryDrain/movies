@@ -269,6 +269,8 @@ figure p {
     background-color: white;
     border-radius: 15px;
     margin: 0;
+    width: fit-content;
+    padding: 2px 0;
 }
 
 figcaption {

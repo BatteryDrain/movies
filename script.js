@@ -302,15 +302,15 @@ function goToLink(number){
     }
 }
 
-function FindMovieIndex(m) {
+function FindMovieIndex(ID) {
     for(i=0; i<DATASORTED.length; i++){
-        if(MOVIETAGS[i][0] == m){return i;}
+        if(MOVIETAGS[i][0] == ID){return i;}
     }
 }
 
-function FindTagIndex(m) {
+function FindTagIndex(ID) {
     for(i=0; i<DATASORTED.length; i++){
-        if(TAGS[i][0] == m){return i;}
+        if(TAGS[i][0] == ID){return i;}
     }
 }
 
@@ -345,7 +345,8 @@ function away(oldid){
 function hasTags(index) {
     currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
-        currentTags.push(TAGS[FindTagIndex(MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k])][1]);
+        tagID = MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k];
+        currentTags.push(TAGS[FindTagIndex(tagID)][1]);
     }
 
     // console.log(currentTags);

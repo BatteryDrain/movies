@@ -279,7 +279,7 @@ function makeFig(place, m){
 
                 p = document.createElement('p');
                 p.classList.add("time");
-                p.innerHTML = DATASORTED[m][9];
+                p.innerHTML = DATASORTED[m][9].substring(1, DATASORTED[m][9].length);
                 div2.appendChild(p);
 
                 p = document.createElement('p');

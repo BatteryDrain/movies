@@ -30,13 +30,13 @@ TAGS = [
 ]
 
 AGERATE = [
-    //id, str,test
+    //id, str
     [0, "all ages"],
     [1, "with guidence"],
     [2, "preteen"],
     [3, "teen"],
     [4, "mature teen"],
-    [5, "18+"]
+    [5, "18+ only"]
 ]
 
 RATE = [

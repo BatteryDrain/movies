@@ -5,6 +5,7 @@ TAGS = [
     [3, "action", ""],
     [0, "adventure", ""],
     [12, "AI", ""],
+    [17, "alien", ""],
     [20, "based on book", ""],
     [7, "business", ""],
     [9, "comedy", ""],
@@ -25,7 +26,6 @@ TAGS = [
     [14, "suspence", ""],
     [16, "time", ""],
     [21, "true-story", ""],
-    [17, "null", ""],
     [19, "null", ""],
 ]
 

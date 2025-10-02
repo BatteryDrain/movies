@@ -371,11 +371,20 @@ function sort() {
     theme = sortBy.value;
     // console.log(theme);
     // DATASORTED = [];
+    if(theme == "added"){
+        organizeD();
+    }
     if(theme == "score"){
         organizeS();
     }
     if(theme == "year"){
         organizeY();
+    }
+}
+
+function organizeD() {
+    for(i=DATA.length; i > -1; i--){
+        DATASORTED.push(DATA[i]);
     }
 }
 

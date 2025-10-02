@@ -18,6 +18,7 @@ TAGS = [
     [2, "love", ""],
     [24, "magic", ""],
     [13, "medieval", ""],
+    [25, "musical", ""],
     [8, "mystery", ""],
     [19, "racing", ""],
     [1, "romance", ""],

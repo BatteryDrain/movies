@@ -25,6 +25,7 @@ function csvToBIGARRAY(csvString) {
     
     DATA = SMALLARRAY;
     for(d=1; d<DATA.length; d++){
+        console.log(DATA[d])
         DATASORTED.push(DATA[d]);
     }
     if(DATASORTED[0] == []){

@@ -317,10 +317,12 @@ function FindMovieIndex(ID) {
 
 function FindTagIndex(ID) {
     ID = parseInt(ID);
-    for(i=0; i<DATASORTED.length; i++){
-        console.log("i = "+i+" ID = "+ID);
-        if(TAGS[i][0] == ID){return i;}
+    for (let i = 0; i < TAGS.length; i++) {
+        if (TAGS[i] && TAGS[i][0] == ID) {
+            return i;
+        }
     }
+    return -1;
 }
 
 function away(oldid){

@@ -380,9 +380,13 @@ function sort() {
     theme = sortBy.value;
     // console.log(theme);
     // DATASORTED = [];
-    // if(theme == "added"){
-    //     organizeD();
-    // }
+    if(DATASORTED[0] == []){
+        console.lod("is in");
+    }
+
+    if(theme == "added"){
+        organizeD();
+    }
     if(theme == "score"){
         organizeS();
     }
@@ -391,12 +395,12 @@ function sort() {
     }
 }
 
-// function organizeD() {
-//     DATASORTED = [];
-//     for(i=DATA.length; i > 0; i--){
-//         DATASORTED.push(DATA[i]);
-//     }
-// }
+function organizeD() {
+    DATASORTED = [];
+    for(i=DATA.length; i > 0; i--){
+        DATASORTED.push(DATA[i]);
+    }
+}
 
 function organizeS() {
     //bubble

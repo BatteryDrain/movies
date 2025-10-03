@@ -380,9 +380,7 @@ function sort() {
     theme = sortBy.value;
     // console.log(theme);
     // DATASORTED = [];
-    if(DATASORTED[0] == []){
-        console.lod("is in");
-    }
+    console.log(DATASORTED[0]);
 
     if(theme == "added"){
         organizeD();

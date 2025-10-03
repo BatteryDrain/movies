@@ -361,6 +361,7 @@ function hasTags(index) {
     currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k];
+        console.log(FindTagIndex(tagID));
         currentTags.push(TAGS[FindTagIndex(tagID)][1]);
     }
 

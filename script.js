@@ -316,8 +316,9 @@ function FindMovieIndex(ID) {
 }
 
 function FindTagIndex(ID) {
+    ID = parseInt(ID);
     for(i=0; i<DATASORTED.length; i++){
-        console.log("i = "+i+"ID = "+ID);
+        console.log("i = "+i+" ID = "+ID);
         if(TAGS[i][0] == ID){return i;}
     }
 }

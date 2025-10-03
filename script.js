@@ -383,6 +383,7 @@ function sort() {
 }
 
 function organizeD() {
+    DATASORTED = [];
     for(i=DATA.length; i > -1; i--){
         DATASORTED.push(DATA[i]);
     }

@@ -310,9 +310,13 @@ function goToLink(number){
 }
 
 function FindMovieIndex(ID) {
+    ID = parseInt(ID);
     for(i=0; i<DATASORTED.length; i++){
-        if(MOVIETAGS[i][0] == ID){return i;}
+        if(MOVIETAGS[i] && MOVIETAGS[i][0] == ID){
+            return i;
+        }
     }
+    return -1;
 }
 
 function FindTagIndex(ID) {

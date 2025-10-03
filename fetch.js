@@ -24,8 +24,11 @@ function csvToBIGARRAY(csvString) {
     .map(r => r.split(","));
     
     DATA = SMALLARRAY;
-    for(d=2; d<DATA.length; d++){
+    for(d=1; d<DATA.length; d++){
         DATASORTED.push(DATA[d]);
+    }
+    if(DATASORTED[0] == []){
+        console.lod("is in");
     }
 
     for(i=1; i<DATASORTED.length; i++){

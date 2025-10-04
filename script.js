@@ -380,11 +380,11 @@ function sort() {
     theme = sortBy.value;
     // console.log(theme);
     // DATASORTED = [];
-    console.log(DATASORTED[0]);
-    // if(DATASORTED[0].length == 0){
-    //     console.log("true");
-    //     DATASORTED.splice(0, 1);
-    // }
+    // console.log(DATASORTED[0]);
+    if(DATASORTED[0].length == 0){
+        console.log("true");
+        DATASORTED.splice(0, 1);
+    }
 
     if(theme == "added"){
         organizeD();

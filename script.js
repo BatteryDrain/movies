@@ -383,7 +383,7 @@ function sort() {
     console.log(DATASORTED[0]);
     if(DATASORTED[0].length == 0){
         console.log("true");
-        // DATASORTED.splice(0, 1);
+        DATASORTED.splice(0, 1);
     }
 
     if(theme == "added"){

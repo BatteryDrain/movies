@@ -310,23 +310,15 @@ function goToLink(number){
 }
 
 function FindMovieIndex(ID) {
-    ID = parseInt(ID);
     for(i=0; i<DATASORTED.length; i++){
-        if(MOVIETAGS[i] && MOVIETAGS[i][0] == ID){
-            return i;
-        }
+        if(MOVIETAGS[i][0] == ID){return i;}
     }
-    return -1;
 }
 
 function FindTagIndex(ID) {
-    ID = parseInt(ID);
-    for (let i = 0; i < TAGS.length; i++) {
-        if (TAGS[i] && TAGS[i][0] == ID) {
-            return i;
-        }
+    for(i=0; i<DATASORTED.length; i++){
+        if(TAGS[i][0] == ID){return i;}
     }
-    return -1;
 }
 
 function away(oldid){
@@ -361,7 +353,6 @@ function hasTags(index) {
     currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k];
-        // console.log(FindTagIndex(tagID) + " TAGid = " + tagID);
         currentTags.push(TAGS[FindTagIndex(tagID)][1]);
     }
 
@@ -380,12 +371,6 @@ function sort() {
     theme = sortBy.value;
     // console.log(theme);
     // DATASORTED = [];
-    // console.log(DATASORTED[0]);
-    if(DATASORTED[0].length == 0){
-        console.log("true");
-        DATASORTED.splice(0, 1);
-    }
-
     if(theme == "added"){
         organizeD();
     }

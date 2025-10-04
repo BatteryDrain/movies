@@ -295,7 +295,7 @@ function makeFig(place, m){
                 fig.style.backgroundColor = "rgb(224, 227, 62)";
             }
             if(place == "red"){
-                fig.style.backgroundColor = "rgb(169, 102, 102)";
+                fig.style.backgroundColor = "rgb(205, 49, 49)";
             }
             cont.appendChild(fig);
 }

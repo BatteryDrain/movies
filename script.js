@@ -381,11 +381,11 @@ function sort() {
     // console.log(theme);
     // DATASORTED = [];
     console.log(DATASORTED[0]);
-    if(DATASORTED[0] == []){
+    if(DATASORTED[0].length == 0){
         console.log("true");
-    }else {
-        console.log("false");
+        DATASORTED.splice(0, 1);
     }
+
     if(theme == "added"){
         organizeD();
     }

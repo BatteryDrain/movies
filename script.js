@@ -383,7 +383,7 @@ function sort() {
 }
 
 function organizeD() {
-    DATASORTED = [...DATASORTED].reverse();
+    DATASORTED = [...DATA].reverse();
 }
 
 function organizeS() {

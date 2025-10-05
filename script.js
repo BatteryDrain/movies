@@ -383,9 +383,7 @@ function sort() {
 }
 
 function organizeD() {
-    for(i=DATA.length; i > -1; i--){
-        DATASORTED.push(DATA[i]);
-    }
+    DATASORTED = DATASORTED.toreversed();
 }
 
 function organizeS() {

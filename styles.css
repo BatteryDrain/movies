@@ -286,6 +286,8 @@ figcaption {
     margin-top: 2px;
     width: 100%;
     height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tags span {

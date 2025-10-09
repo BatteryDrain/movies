@@ -82,18 +82,18 @@ Ftags.addEventListener("change", () => {
     setTagsToFilter();
     populate();
 });
-value = 0;
+
 window.addEventListener("scroll", () => {
-    let lastScrollTop = 0;
-    let value = 0;
-    let st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop) {
-      // Scroll down
-      value += 1;
-    } else if (st < lastScrollTop) {
-      // Scroll up
-      value -= 1;
-    }
+    // let lastScrollTop = 0;
+    // let value = 0;
+    // let st = window.pageYOffset || document.documentElement.scrollTop;
+    // if (st > lastScrollTop) {
+    //   // Scroll down
+    //   value += 1;
+    // } else if (st < lastScrollTop) {
+    //   // Scroll up
+    //   value -= 1;
+    // }
 
     wheel.style.transform = `rotate(${value}deg)`;
     if(EXPANDED){

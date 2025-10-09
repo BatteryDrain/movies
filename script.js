@@ -85,7 +85,7 @@ Ftags.addEventListener("change", () => {
 
 window.addEventListener("scroll", () => {
     let ANGLE = window.scrollY / 10;
-    rock.style.transform = "rotate(" + ANGLE + ")";
+    wheel.style.transform = "rotate(" + ANGLE + ")";
     if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");

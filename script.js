@@ -89,10 +89,10 @@ window.addEventListener("scroll", () => {
     let st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
       // Scroll down
-      value += 25;
+      value += 1;
     } else if (st < lastScrollTop) {
       // Scroll up
-      value -= 25;
+      value -= 1;
     }
 
     wheel.style.transform = `rotate(${value}deg)`;

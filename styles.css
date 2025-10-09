@@ -358,6 +358,7 @@ footer p {
 
 #wheel {
     left: 90vw;
+    top: 100px;
     z-index: 5;
 }
 

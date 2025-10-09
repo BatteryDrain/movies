@@ -86,7 +86,6 @@ Ftags.addEventListener("change", () => {
 const link = document.getElementById("wheel");
 const icon = new Image();
 icon.src = link.href;
-icon.crossOrigin = "anonymous"; // only if loading from another domain
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
@@ -95,7 +94,7 @@ canvas.width = size;
 canvas.height = size;
 
 window.addEventListener("scroll", () => {
-    const ANGLE = window.scrollY / 50; // smaller number = faster rotation
+    const ANGLE = window.scrollY / 500;
     ctx.clearRect(0, 0, size, size);
     ctx.save();
     ctx.translate(size / 2, size / 2);
@@ -103,11 +102,8 @@ window.addEventListener("scroll", () => {
     ctx.drawImage(icon, -size / 2, -size / 2, size, size);
     ctx.restore();
 
-    // Update favicon
     link.href = canvas.toDataURL("image/webp");
 
-    // let ANGLE = window.scrollY / 10;
-    // wheel.style.transform = "rotate(" + ANGLE + ")";
     if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");

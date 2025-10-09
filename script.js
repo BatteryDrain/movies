@@ -94,7 +94,7 @@ window.addEventListener("scroll", () => {
     //   // Scroll up
     //   value -= 1;
     // }
-    wheel.style.transform = `rotate(${value}deg)`;
+    // wheel.style.transform = `rotate(${value}deg)`;
     if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");

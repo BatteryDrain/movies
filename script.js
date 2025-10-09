@@ -84,17 +84,8 @@ Ftags.addEventListener("change", () => {
 });
 
 window.addEventListener("scroll", () => {
-    // let lastScrollTop = 0;
-    // let value = 0;
-    // let st = window.pageYOffset || document.documentElement.scrollTop;
-    // if (st > lastScrollTop) {
-    //   // Scroll down
-    //   value += 1;
-    // } else if (st < lastScrollTop) {
-    //   // Scroll up
-    //   value -= 1;
-    // }
-    // wheel.style.transform = `rotate(${value}deg)`;
+    let ANGLE = window.scrollY / 10;
+    rock.style.transform = "rotate(" + ANGLE + ")";
     if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");

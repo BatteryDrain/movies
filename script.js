@@ -82,8 +82,20 @@ Ftags.addEventListener("change", () => {
     setTagsToFilter();
     populate();
 });
-
+value = 0;
 window.addEventListener("scroll", () => {
+    let lastScrollTop = 0;
+    let value = 0;
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      // Scroll down
+      value += 25;
+    } else if (st < lastScrollTop) {
+      // Scroll up
+      value -= 25;
+    }
+
+    wheel.style.transform = `rotate(${value}deg)`;
     if(EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");

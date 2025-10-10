@@ -83,19 +83,23 @@ Ftags.addEventListener("change", () => {
     populate();
 });
 
+
 const icon = new Image();
 icon.src = link.href;
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
+const size = 32;
+canvas.width = size;
+canvas.height = size;
 
 window.addEventListener("scroll", () => {
     const ANGLE = window.scrollY / 500;
-    ctx.clearRect(0, 0, 32, 32);
+    ctx.clearRect(0, 0, size, size);
     ctx.save();
-    ctx.translate(size / 2, 32 / 2);
+    ctx.translate(size / 2, size / 2);
     ctx.rotate(ANGLE);
-    ctx.drawImage(icon, -32 / 2, -32 / 2, 32, 32);
+    ctx.drawImage(icon, -size / 2, -size / 2, size, size);
     ctx.restore();
 
     wheel.href = canvas.toDataURL("image/webp");

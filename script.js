@@ -83,26 +83,22 @@ Ftags.addEventListener("change", () => {
     populate();
 });
 
-const link = document.getElementById("wheel");
 const icon = new Image();
 icon.src = link.href;
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
-const size = 32;
-canvas.width = size;
-canvas.height = size;
 
 window.addEventListener("scroll", () => {
     const ANGLE = window.scrollY / 500;
-    ctx.clearRect(0, 0, size, size);
+    ctx.clearRect(0, 0, 32, 32);
     ctx.save();
-    ctx.translate(size / 2, size / 2);
+    ctx.translate(size / 2, 32 / 2);
     ctx.rotate(ANGLE);
-    ctx.drawImage(icon, -size / 2, -size / 2, size, size);
+    ctx.drawImage(icon, -32 / 2, -32 / 2, 32, 32);
     ctx.restore();
 
-    link.href = canvas.toDataURL("image/webp");
+    wheel.href = canvas.toDataURL("image/webp");
 
     if(EXPANDED){
         expandheadder();

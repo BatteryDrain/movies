@@ -83,9 +83,9 @@ Ftags.addEventListener("change", () => {
     populate();
 });
 
-const link = document.getElementById("wheel");
+// const link = document.getElementById("wheel");
 const icon = new Image();
-icon.src = link.href;
+icon.src = wheel.href;
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
@@ -102,7 +102,7 @@ window.addEventListener("scroll", () => {
     ctx.drawImage(icon, -size / 2, -size / 2, size, size);
     ctx.restore();
 
-    link.href = canvas.toDataURL("image/webp");
+    wheel.href = canvas.toDataURL("image/webp");
 
     if(EXPANDED){
         expandheadder();

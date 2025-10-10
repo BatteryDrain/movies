@@ -83,7 +83,7 @@ Ftags.addEventListener("change", () => {
     populate();
 });
 
-
+const link = document.getElementById("wheel");
 const icon = new Image();
 icon.src = link.href;
 
@@ -102,7 +102,7 @@ window.addEventListener("scroll", () => {
     ctx.drawImage(icon, -size / 2, -size / 2, size, size);
     ctx.restore();
 
-    wheel.href = canvas.toDataURL("image/webp");
+    link.href = canvas.toDataURL("image/webp");
 
     if(EXPANDED){
         expandheadder();

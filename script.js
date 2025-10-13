@@ -243,7 +243,7 @@ function build(m) {
 
                         for(i=0; i<hasTags.length; i++){
                             for(j=0; j=TAGS.length; j++){
-                                if(TAGINUSE[j][1]==hasTags[i]){
+                                if(TAGS[j][1] == hasTags[i]){
                                     TAGCOUNT[j].push(TAGCOUNT[j] + 1);
                                 }
                             }

@@ -242,8 +242,7 @@ function build(m) {
                     if((TAGINUSE.length == 0) || has){
 
                         for(i=0; i<hasTags.length; i++){
-                            for(j=0; j=TAGS.length; j++){
-                                console.log(j);
+                            for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == hasTags[i]){
                                     TAGCOUNT[j].push(TAGCOUNT[j] + 1);
                                 }

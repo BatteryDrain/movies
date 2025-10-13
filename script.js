@@ -241,6 +241,7 @@ function build(m) {
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
+                        console.log(has);
                         for(i=0; i<has.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == has[i]){

@@ -241,9 +241,9 @@ function build(m) {
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
-                        for(i=0; i<hasTags.length; i++){
+                        for(i=0; i<has.length; i++){
                             for(j=0; j<TAGS.length; j++){
-                                if(TAGS[j][1] == hasTags[i]){
+                                if(TAGS[j][1] == has[i]){
                                     TAGCOUNT[j].push(TAGCOUNT[j] + 1);
                                 }
                             }

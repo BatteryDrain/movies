@@ -450,7 +450,7 @@ function organizeY() {
 
 function tagCountReset() {
     TAGCOUNT = [];
-    for(i=0; i<34; 1++){
+    for(i=0; i<34; i++){
         TAGCOUNT.push(0);
     }
 }

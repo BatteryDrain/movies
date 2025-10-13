@@ -6,6 +6,7 @@ TAGINUSE = [];
 TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
+TAGCOUNT = [];
 
 filterage();
 
@@ -13,6 +14,7 @@ populate();
 setOptInFilterTag();
 
 function setOptInFilterTag(){
+    tagCountReset();
     Ftags.replaceChildren();
     opt = document.createElement('option');
     opt.innerHTML = "";
@@ -239,6 +241,14 @@ function build(m) {
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
+                        for(i=0; i<hasTags.length; i++){
+                            for(j=0; j=TAGS.length; j++){
+                                if(TAGINUSE[j][1]==hasTags[i]){
+                                    TAGCOUNT[j].push(TAGCOUNT[j] + 1);
+                                }
+                            }
+                        }
+
                         recomend = DATASORTED[m][4];
                         if(recomend == 1){
                             makeFig("green", m);
@@ -438,6 +448,9 @@ function organizeY() {
     }
 }
 
-function grouping() {
-    //trying again
+function tagCountReset{
+    TAGCOUNT = [];
+    for(i=0; i<34; 1++){
+        TAGCOUNT.push(0);
+    }
 }

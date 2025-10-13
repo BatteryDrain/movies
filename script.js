@@ -448,7 +448,7 @@ function organizeY() {
     }
 }
 
-function tagCountReset{
+function tagCountReset() {
     TAGCOUNT = [];
     for(i=0; i<34; 1++){
         TAGCOUNT.push(0);

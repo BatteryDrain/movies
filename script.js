@@ -241,10 +241,11 @@ function build(m) {
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
-                        console.log(has);
-                        for(i=0; i<has.length; i++){
+                        currentTags = makeTagList(index);
+                        console.log(currentTags);
+                        for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
-                                if(TAGS[j][1] == has[i]){
+                                if(TAGS[j][1] == currentTags[i]){
                                     TAGCOUNT[j].push(TAGCOUNT[j] + 1);
                                 }
                             }
@@ -380,12 +381,17 @@ function away(oldid){
     }
 }
 
-function hasTags(index) {
-    currentTags = [];
+function makeTagList() {
+        currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k];
         currentTags.push(TAGS[FindTagIndex(tagID)][1]);
     }
+    return currentTags;
+}
+
+function hasTags(index) {
+    currentTags = makeTagList(index);
 
     // console.log(currentTags);
     for(x=0; x<TAGINUSE.length; x++){

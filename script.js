@@ -6,7 +6,7 @@ TAGINUSE = [];
 TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
-TAGCOUNT = [];
+TAGCOUNTL = [];
 
 filterage();
 
@@ -246,7 +246,7 @@ function build(m) {
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == currentTags[i]){
-                                    TAGCOUNT[j].push(TAGCOUNT[j] + 1);
+                                    TAGCOUNTL[j].push(TAGCOUNTL[j] + 1);
                                 }
                             }
                         }
@@ -456,8 +456,8 @@ function organizeY() {
 }
 
 function tagCountReset() {
-    TAGCOUNT = [];
+    TAGCOUNTL = [];
     for(i=0; i<34; i++){
-        TAGCOUNT.push(0);
+        TAGCOUNTL.push(0);
     }
 }

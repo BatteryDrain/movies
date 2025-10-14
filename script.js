@@ -468,6 +468,7 @@ function tagCountReset() {
 }
 
 const display = document.getElementById("display");
+const content = document.getElementById("content");
 const context = display.getContext("2d");
 
 const width = window.innerWidth;

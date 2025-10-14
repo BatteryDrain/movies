@@ -475,13 +475,13 @@ const width = window.innerWidth;
 const height = content.clientHeight;
 
 STARS = [];
-for (let i = 0; i < 150; i++) {
-  let s = {};
-  s.x = Math.random() * width;
-  s.y = Math.random() * height;
-  s.size = Math.random() * 2;
-  s.baseAlpha = Math.random();
-  STARS.push(s);
+for (i=0; i<150; i++) {
+    s = {};
+    s.x = Math.random() * width;
+    s.y = Math.random() * height;
+    s.size = Math.random() * 2;
+    s.baseAlpha = Math.random();
+    STARS.push(s);
 }
 
 YSCROLL = 0;

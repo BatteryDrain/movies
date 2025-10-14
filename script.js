@@ -16,7 +16,7 @@ setOptInFilterTag();
 
 function setOptInFilterTag(){
     console.log(TAGCOUNTL);
-    console.log(TAGCOUNTL[0]);
+    console.log(TAGCOUNTL[0][0]);
     Ftags.replaceChildren();
     opt = document.createElement('option');
     opt.innerHTML = "";
@@ -25,7 +25,7 @@ function setOptInFilterTag(){
     for(o=0; o < TAGS.length; o++){
         if(!TAGINUSE.includes(TAGS[o][1])){
             opt = document.createElement('option');
-            opt.innerHTML = TAGS[o][1];
+            opt.innerHTML = TAGCOUNTL[0][0] + " " + TAGS[o][1];
             opt.value = TAGS[o][1];
             Ftags.appendChild(opt);
         }
@@ -249,7 +249,7 @@ function build(m) {
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == currentTags[i]){
-                                    TAGCOUNTL[j] = (parseInt(TAGCOUNTL[j]) + 1);
+                                    TAGCOUNTL[j][0] = (parseInt(TAGCOUNTL[j][0]) + 1);
                                 }
                             }
                         }
@@ -461,6 +461,6 @@ function organizeY() {
 function tagCountReset() {
     TAGCOUNTL = [];
     for(i=0; i<34; i++){
-        TAGCOUNTL.push(0);
+        TAGCOUNTL.push([0, TAGS[i]]);
     }
 }

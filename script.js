@@ -381,7 +381,7 @@ function away(oldid){
     }
 }
 
-function makeTagList() {
+function makeTagList(index) {
         currentTags = [];
     for(k=1; k<MOVIETAGS[FindMovieIndex(DATASORTED[index][0])].length; k++){
         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[index][0])][k];

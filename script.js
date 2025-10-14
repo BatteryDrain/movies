@@ -15,6 +15,8 @@ setOptInFilterTag();
 
 function setOptInFilterTag(){
     tagCountReset();
+    console.log(TAGCOUNTL);
+    console.log(TAGCOUNTL[0]);
     Ftags.replaceChildren();
     opt = document.createElement('option');
     opt.innerHTML = "";

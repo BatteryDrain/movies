@@ -470,9 +470,8 @@ function tagCountReset() {
 const display = document.getElementById("content");
 const context = display.getContext("2d");
 
-// set canvas size once
-// width = display.width = window.innerWidth;
-// height = display.height = window.innerHeight;
+width = window.innerWidth;
+display = window.innerHeight;
 
 // make stars
 let stars = [];

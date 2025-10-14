@@ -468,7 +468,7 @@ function tagCountReset() {
 }
 
 const display = document.getElementById("content");
-const ctx = display.getContext("2d");
+const context = display.getContext("2d");
 
 // set canvas size once
 // width = display.width = window.innerWidth;
@@ -493,14 +493,14 @@ window.addEventListener("scroll", () => {
 
 // draw stars
 function draw() {
-  ctx.clearRect(0, 0, width, height);
+  context.clearRect(0, 0, width, height);
   for (let s of stars) {
     let twinkle = Math.sin(Date.now() / 200 + s.x + scrollY / 100) * 0.5 + 0.5;
     let alpha = s.baseAlpha * 0.5 + twinkle * 0.5;
-    ctx.fillStyle = `rgba(255,255,255,${alpha})`;
-    ctx.beginPath();
-    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-    ctx.fill();
+    context.fillStyle = `rgba(255,255,255,${alpha})`;
+    context.beginPath();
+    context.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+    context.fill();
   }
   requestAnimationFrame(draw);
 }

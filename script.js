@@ -86,6 +86,7 @@ Ftags.addEventListener("change", () => {
     tagCountReset();
     setTagsToFilter();
     populate();
+    setOptInFilterTag();
 });
 
 const link = document.getElementById("wheel");
@@ -248,9 +249,7 @@ function build(m) {
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == currentTags[i]){
-                                    console.log("before =" + parseInt(TAGCOUNTL[j]));
                                     TAGCOUNTL[j] = (parseInt(TAGCOUNTL[j]) + 1);
-                                    console.log("after =" + parseInt(TAGCOUNTL[j]));
                                 }
                             }
                         }

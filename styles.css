@@ -9,7 +9,7 @@ body {
 }
 
 #content {
-    background-color: gradient(0deg, blue, darkblue);
+    background-color: gradient(180deg, blue, darkblue);
 }
 
 header {

@@ -8,10 +8,13 @@ body {
     background-color: rgb(138, 169, 247);
 }
 
+canvas {
+    z z-index: 0;
+}
+
 #content {
     width: 100vw;
-    background-color: black;
-    z-index: 0;
+    z-index: 1;
 }
 
 header {

@@ -271,7 +271,6 @@ function build(m) {
         }
     }
     count.innerHTML = placeHere.childElementCount + " movies";
-    height = content.clientHeight;
 }
 
 

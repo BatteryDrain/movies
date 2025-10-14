@@ -491,7 +491,7 @@ window.addEventListener("scroll", () => {
 function draw() {
   context.clearRect(0, 0, width, height);
   for (let s of STARS) {
-    let twinkle = Math.sin(Date.now() / 200 + s.x + scrollY / 100) * 0.5 + 0.5;
+    let twinkle = Math.sin(Date.now() / 200 + s.x + YSCROLL / 100) * 0.5 + 0.5;
     let alpha = s.baseAlpha * 0.5 + twinkle * 0.5;
     context.fillStyle = `rgba(255,255,255,${alpha})`;
     context.beginPath();

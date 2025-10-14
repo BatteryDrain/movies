@@ -9,7 +9,7 @@ body {
 }
 
 #content {
-    background-color: linear-gradient(0deg, blue, darkblue);
+    background-color: pink;
 }
 
 header {
@@ -355,6 +355,12 @@ footer p {
     text-align: center;
     color: white;
 }
+
+/* #wheel {
+    left: 90vw;
+    top: 100px;
+    z-index: 5;
+} */
 
 @media screen and (min-width: 800px) {
     figure:hover {

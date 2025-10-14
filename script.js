@@ -241,7 +241,7 @@ function build(m) {
                     // console.log("length " + (TAGINUSE.length == 0));
                     if((TAGINUSE.length == 0) || has){
 
-                        currentTags = makeTagList(index);
+                        currentTags = makeTagList(m);
                         console.log(currentTags);
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){

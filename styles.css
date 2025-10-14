@@ -9,11 +9,11 @@ body {
 }
 
 #content {
-
+background-color: black;
 }
 
 #placeHere {
-        background-color: gradient(180deg, blue, darkblue);
+        /* background-color: gradient(180deg, blue, darkblue); */
 }
 
 header {
@@ -359,12 +359,6 @@ footer p {
     text-align: center;
     color: white;
 }
-
-/* #wheel {
-    left: 90vw;
-    top: 100px;
-    z-index: 5;
-} */
 
 @media screen and (min-width: 800px) {
     figure:hover {

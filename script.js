@@ -83,6 +83,7 @@ sortBy.addEventListener("change", () => {
 });
 
 Ftags.addEventListener("change", () => {
+    tagCountReset();
     setTagsToFilter();
     populate();
 });

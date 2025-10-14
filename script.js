@@ -271,6 +271,7 @@ function build(m) {
         }
     }
     count.innerHTML = placeHere.childElementCount + " movies";
+    height = content.clientHeight;
 }
 
 
@@ -472,7 +473,7 @@ const content = document.getElementById("content");
 const context = display.getContext("2d");
 
 const width = window.innerWidth;
-const height = content.clientHeight;
+let height = content.clientHeight;
 
 STARS = [];
 for (i=0; i<150; i++) {

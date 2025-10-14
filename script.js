@@ -471,7 +471,7 @@ const display = document.getElementById("content");
 const context = display.getContext("2d");
 
 const width = window.innerWidth;
-const height = display.innerHeight;
+const height = display.clientHeight;
 
 STARS = [];
 for (let i = 0; i < 150; i++) {
@@ -485,7 +485,7 @@ for (let i = 0; i < 150; i++) {
 
 YSCROLL = 0;
 window.addEventListener("scroll", () => {
-  YSCROLL = window.YSCROLL;
+  YSCROLL = window.scrollY;
 });
 
 function draw() {

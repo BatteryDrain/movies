@@ -10,11 +10,11 @@ TAGCOUNTL = [];
 
 filterage();
 
+tagCountReset();
 populate();
 setOptInFilterTag();
 
 function setOptInFilterTag(){
-    tagCountReset();
     console.log(TAGCOUNTL);
     console.log(TAGCOUNTL[0]);
     Ftags.replaceChildren();

@@ -9,10 +9,12 @@ body {
 }
 
 canvas {
-    z z-index: 0;
+    position: fixed;
+    z-index: 0;
 }
 
 #content {
+    position: relative;
     width: 100vw;
     z-index: 1;
 }

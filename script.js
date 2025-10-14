@@ -246,7 +246,7 @@ function build(m) {
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == currentTags[i]){
-                                    TAGCOUNTL[j].push(TAGCOUNTL[j] + 1);
+                                    TAGCOUNTL[j] = (TAGCOUNTL[j] + 1);
                                 }
                             }
                         }

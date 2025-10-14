@@ -14,6 +14,7 @@ canvas {
 }
 
 #content {
+    background-color: none;
     position: relative;
     width: 100vw;
     z-index: 1;

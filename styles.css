@@ -9,7 +9,7 @@ body {
 }
 
 canvas {
-    position: fixed;
+    position: relative;
     background-color: black;
     z-index: 0;
     width: 100vw;

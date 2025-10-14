@@ -242,7 +242,6 @@ function build(m) {
                     if((TAGINUSE.length == 0) || has){
 
                         currentTags = makeTagList(m);
-                        console.log(currentTags);
                         for(i=0; i<currentTags.length; i++){
                             for(j=0; j<TAGS.length; j++){
                                 if(TAGS[j][1] == currentTags[i]){

@@ -467,12 +467,12 @@ function tagCountReset() {
     }
 }
 
-const canvas = document.getElementById("content");
-ctx = canvas.getContext("2d");
+const display = document.getElementById("content");
+ctx = display.getContext("2d");
 
 // set canvas size once
-width = canvas.width = window.innerWidth;
-height = canvas.height = window.innerHeight;
+// width = display.width = window.innerWidth;
+// height = display.height = window.innerHeight;
 
 // make stars
 let stars = [];

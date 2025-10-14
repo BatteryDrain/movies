@@ -357,12 +357,6 @@ footer p {
     color: white;
 }
 
-/* #wheel {
-    left: 90vw;
-    top: 100px;
-    z-index: 5;
-} */
-
 @media screen and (min-width: 800px) {
     figure:hover {
         transform: scale(1.2);

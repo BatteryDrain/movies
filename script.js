@@ -473,8 +473,7 @@ const context = display.getContext("2d");
 const width = window.innerWidth;
 const height = display.innerHeight;
 
-// make stars
-let stars = [];
+STARS = [];
 for (let i = 0; i < 150; i++) {
   let s = {};
   s.x = Math.random() * width;
@@ -484,8 +483,7 @@ for (let i = 0; i < 150; i++) {
   stars.push(s);
 }
 
-// track scroll position
-let scrollY = 0;
+let YSCROLL = 0;
 window.addEventListener("scroll", () => {
   scrollY = window.scrollY;
 });

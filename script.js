@@ -374,7 +374,6 @@ function away(oldid){
         // console.log(TAGINUSE);
         oldid.remove(oldid);
         tagCountReset();
-        setTagsToFilter();
         populate();
         setOptInFilterTag();
     }

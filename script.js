@@ -470,59 +470,33 @@ function tagCountReset() {
 canvas = document.getElementById("content");
 ctx = canvas.getContext("2d");
 
-stars = [];
-width, height;
+// set canvas size once
+width = canvas.width = window.innerWidth;
+height = canvas.height = window.innerHeight;
 
-// resize canvas
-function resize() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-  stars = [];
-  for (let i = 0; i < 150; i++) {
-    stars.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 2,
-      baseAlpha: Math.random(),
-    });
-  }
-}
-
-const canvas = document.getElementById("display");
-const ctx = canvas.getContext("2d");
-
+// make stars
 let stars = [];
-let width, height;
-
-// resize canvas
-function resize() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-  stars = [];
-  for (let i = 0; i < 150; i++) {
-    stars.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 2,
-      baseAlpha: Math.random(),
-    });
-  }
+for (let i = 0; i < 150; i++) {
+  let s = {};
+  s.x = Math.random() * width;
+  s.y = Math.random() * height;
+  s.size = Math.random() * 2;
+  s.baseAlpha = Math.random();
+  stars.push(s);
 }
 
-window.addEventListener("resize", resize);
-resize();
-
-// scroll affects twinkle speed
+// track scroll position
 let scrollY = 0;
 window.addEventListener("scroll", () => {
   scrollY = window.scrollY;
 });
 
+// draw stars
 function draw() {
   ctx.clearRect(0, 0, width, height);
   for (let s of stars) {
-    const twinkle = Math.sin(Date.now() / 200 + s.x + scrollY / 100) * 0.5 + 0.5;
-    const alpha = s.baseAlpha * 0.5 + twinkle * 0.5;
+    let twinkle = Math.sin(Date.now() / 200 + s.x + scrollY / 100) * 0.5 + 0.5;
+    let alpha = s.baseAlpha * 0.5 + twinkle * 0.5;
     ctx.fillStyle = `rgba(255,255,255,${alpha})`;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);

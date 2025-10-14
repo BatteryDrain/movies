@@ -471,7 +471,7 @@ const display = document.getElementById("display");
 const context = display.getContext("2d");
 
 const width = window.innerWidth;
-const height = display.clientHeight;
+const height = content.clientHeight;
 
 STARS = [];
 for (let i = 0; i < 150; i++) {

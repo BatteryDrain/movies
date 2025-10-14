@@ -373,6 +373,8 @@ function away(oldid){
         TAGINUSE.splice(r, 1);
         // console.log(TAGINUSE);
         oldid.remove(oldid);
+        tagCountReset();
+        setTagsToFilter();
         populate();
         setOptInFilterTag();
     }

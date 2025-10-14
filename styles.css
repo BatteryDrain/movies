@@ -10,6 +10,7 @@ body {
 
 #content {
     background-color: pink;
+    width: 100vw;
 }
 
 header {

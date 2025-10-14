@@ -468,7 +468,7 @@ function tagCountReset() {
 }
 
 const display = document.getElementById("content");
-ctx = display.getContext("2d");
+const ctx = display.getContext("2d");
 
 // set canvas size once
 // width = display.width = window.innerWidth;

@@ -179,6 +179,9 @@ function expandheadder(){
 
 reset.addEventListener("click", function(){
     resetF();
+    tagCountReset();
+    populate();
+    setOptInFilterTag();
 });
 
 function setTagsToFilter(){

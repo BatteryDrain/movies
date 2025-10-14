@@ -8,18 +8,8 @@ body {
     background-color: rgb(138, 169, 247);
 }
 
-canvas {
-    position: absolute;
-    background-color: black;
-    z-index: 0;
-    width: 100vw;
-}
-
 #content {
-    background-color: none;
-    position: relative;
-    width: 100vw;
-    z-index: 1;
+    background-color: linear-gradient(0deg, blue, darkblue);
 }
 
 header {

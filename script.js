@@ -480,18 +480,17 @@ for (let i = 0; i < 150; i++) {
   s.y = Math.random() * height;
   s.size = Math.random() * 2;
   s.baseAlpha = Math.random();
-  stars.push(s);
+  STARS.push(s);
 }
 
-let YSCROLL = 0;
+YSCROLL = 0;
 window.addEventListener("scroll", () => {
-  scrollY = window.scrollY;
+  YSCROLL = window.YSCROLL;
 });
 
-// draw stars
 function draw() {
   context.clearRect(0, 0, width, height);
-  for (let s of stars) {
+  for (let s of STARS) {
     let twinkle = Math.sin(Date.now() / 200 + s.x + scrollY / 100) * 0.5 + 0.5;
     let alpha = s.baseAlpha * 0.5 + twinkle * 0.5;
     context.fillStyle = `rgba(255,255,255,${alpha})`;

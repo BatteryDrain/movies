@@ -9,7 +9,11 @@ body {
 }
 
 #content {
-    background-color: gradient(180deg, blue, darkblue);
+
+}
+
+#placeHere {
+        background-color: gradient(180deg, blue, darkblue);
 }
 
 header {

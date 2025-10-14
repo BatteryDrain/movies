@@ -467,7 +467,7 @@ function tagCountReset() {
     }
 }
 
-const display = document.getElementById("content");
+const display = document.getElementById("display");
 const context = display.getContext("2d");
 
 const width = window.innerWidth;

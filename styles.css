@@ -19,6 +19,7 @@ background-color: black;
 .divCol {
     display: flex;
     flex-direction: column;
+    width: auto;
 }
 
 header {

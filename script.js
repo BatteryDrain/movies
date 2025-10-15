@@ -223,7 +223,7 @@ function populate(){
     //make columbs
     cont = document.getElementById("placeHere");
     for(d=0; d<COL; d++){
-        div = createElement('div');
+        div = document.createElement('div');
         div.id = "div" + d;
         div.classList.add("divCol")
         cont.appendChild(fig);

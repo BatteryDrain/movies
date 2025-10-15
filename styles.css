@@ -363,6 +363,7 @@ footer p {
 @media screen and (min-width: 800px) {
     figure:hover {
         transform: scale(1.2);
+        z-index: 3;
     }
 
     #tagHere button span {

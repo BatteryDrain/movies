@@ -226,7 +226,7 @@ function populate(){
         div = document.createElement('div');
         div.id = "div" + d;
         div.classList.add("divCol")
-        cont.appendChild(fig);
+        cont.appendChild(div);
 
     }
     //sort

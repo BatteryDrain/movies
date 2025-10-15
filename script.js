@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 console.log("inside script.js");
 AGE = ["G", "U", "ALL", "0", "U", "PG", "PG-12", "M", "UA", "12A", "12", "PG-13", "RP13", "14A", "15", "R15+", "R13 / R15", "16", "-16", "R16", "R", "18A", "18", "-18", "R18", "R18+", "A", "NC-17"];
 CHECKANIMATED = true;
@@ -7,6 +9,7 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
+COL = window.innerWidth / 300;
 
 filterage();
 
@@ -123,6 +126,8 @@ SortS.addEventListener("change", () => {
     populate();
 });
 
+window.addEventListener('resize', populate);
+
 function filterage(){ 
     AGE = [];
     ageList.replaceChildren();
@@ -216,8 +221,18 @@ function resetF(){
 }
 
 function populate(){
-    sort();
     placeHere.replaceChildren();
+    //make columbs
+    cont = document.getElementById("placeHere");
+    for(d=0; d<COL; d++){
+        div = createElement('div');
+        div.id = "div" + d;
+        div.classList.add("divCol")
+        cont.appendChild(fig);
+
+    }
+    //sort
+    sort();
 
     if(M2L){
         for(m=0; m<DATASORTED.length; m++){
@@ -275,7 +290,7 @@ function build(m) {
 
 
 function makeFig(place, m){
-    cont = document.getElementById("placeHere");
+    colum = document.getElementById("div" + m%COL);
     fig = document.createElement('figure');
             div = document.createElement('div');
             div.classList.add("figTop");
@@ -333,7 +348,7 @@ function makeFig(place, m){
             if(place == "red"){
                 fig.style.backgroundColor = "rgb(205, 49, 49)";
             }
-            cont.appendChild(fig);
+            colum.appendChild(fig);
 }
 
 function goToLink(number){

@@ -16,6 +16,11 @@ background-color: black;
         /* background-color: gradient(180deg, blue, darkblue); */
 }
 
+.divCol {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     margin: 0;
 }

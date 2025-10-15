@@ -13,7 +13,7 @@ background-color: black;
 }
 
 #placeHere {
-        /* background-color: gradient(180deg, blue, darkblue); */
+    display: flex;
 }
 
 .divCol {
@@ -248,12 +248,6 @@ input:checked + .slider::before {
 
 #showOhide {
     float: right;
-}
-
-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(285px, 1fr));
-    grid-gap: 1rem;
 }
 
 figure {

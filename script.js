@@ -8,7 +8,9 @@ GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
 COL = window.innerWidth / 300;
+console.log(COL);
 COL = Math.floor(COL);
+console.log(COL);
 
 filterage();
 

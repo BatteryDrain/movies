@@ -7,7 +7,7 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
-COL = window.innerWidth / 310;
+COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 
 filterage();
@@ -220,7 +220,7 @@ function resetF(){
 }
 
 function populate(){
-    COL = Math.floor(window.innerWidth / 310);
+    COL = Math.floor(window.innerWidth / 320);
     console.log(COL);
     placeHere.replaceChildren();
     //make columbs

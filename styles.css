@@ -263,7 +263,7 @@ figure {
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 10px;
-    width: 300px;
+    width: 80vw;
     margin: 0;
     margin-bottom: 20px;
     /* filter: drop-shadow(18px 18px 8px black); */
@@ -376,5 +376,9 @@ footer p {
 
     #tagHere button:hover {
         background-color: grey;
+    }
+
+    figure {
+        width: 300px;
     }
 }

@@ -362,7 +362,7 @@ footer p {
     color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 639px) {
     figure {
         width: 300px;
     }

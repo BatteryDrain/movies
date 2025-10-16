@@ -220,8 +220,7 @@ function resetF(){
 }
 
 function populate(){
-    COL = window.innerWidth / 400;
-    COL = Math.floor(COL);
+    COL = Math.floor(window.innerWidth / 400);
     console.log(COL);
     placeHere.replaceChildren();
     //make columbs

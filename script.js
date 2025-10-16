@@ -234,12 +234,12 @@ function populate(){
 
     if(M2L){
         for(m=0; m<DATASORTED.length; m++){
-            build(m);
+            // build(m);
         }
     }else {
         temp = DATASORTED.length;
         for(let m=temp-1; m>=0; m--){
-            build(m);
+            // build(m);
         }
     }
 }

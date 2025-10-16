@@ -7,7 +7,7 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
-COL = window.innerWidth / 500;
+COL = window.innerWidth / 400;
 console.log(COL);
 COL = Math.floor(COL);
 console.log(COL);
@@ -222,6 +222,7 @@ function resetF(){
 }
 
 function populate(){
+    console.log("here");
     placeHere.replaceChildren();
     //make columbs
     cont = document.getElementById("placeHere");

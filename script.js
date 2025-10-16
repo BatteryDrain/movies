@@ -7,7 +7,7 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
-COL = window.innerWidth / 300;
+COL = window.innerWidth / 500;
 console.log(COL);
 COL = Math.floor(COL);
 console.log(COL);
@@ -237,12 +237,12 @@ function populate(){
 
     if(M2L){
         for(m=0; m<DATASORTED.length; m++){
-            // build(m);
+            build(m);
         }
     }else {
         temp = DATASORTED.length;
         for(let m=temp-1; m>=0; m--){
-            // build(m);
+            build(m);
         }
     }
 }

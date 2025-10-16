@@ -264,6 +264,7 @@ figure {
     padding-right: 5px;
     padding-bottom: 10px;
     width: 300px;
+    margin: 0;
     /* filter: drop-shadow(18px 18px 8px black); */
     transition: transform 0.3s ease, filter 0.3s ease;
 }

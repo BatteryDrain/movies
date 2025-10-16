@@ -363,6 +363,12 @@ footer p {
 }
 
 @media screen and (min-width: 800px) {
+    figure {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 800px) {
     figure:hover {
         transform: scale(1.2);
         z-index: 3;
@@ -376,9 +382,5 @@ footer p {
 
     #tagHere button:hover {
         background-color: grey;
-    }
-
-    figure {
-        width: 300px;
     }
 }

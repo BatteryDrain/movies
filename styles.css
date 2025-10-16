@@ -286,7 +286,6 @@ figcaption {
 
 .figTop {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .tags {
@@ -294,6 +293,7 @@ figcaption {
     width: 100%;
     height: fit-content;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tags span {

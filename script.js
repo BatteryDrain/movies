@@ -8,9 +8,7 @@ GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
 COL = window.innerWidth / 400;
-console.log(COL);
 COL = Math.floor(COL);
-console.log(COL);
 
 filterage();
 
@@ -222,7 +220,9 @@ function resetF(){
 }
 
 function populate(){
-    console.log("here");
+    COL = window.innerWidth / 400;
+    COL = Math.floor(COL);
+    console.log(COL);
     placeHere.replaceChildren();
     //make columbs
     cont = document.getElementById("placeHere");
@@ -231,7 +231,6 @@ function populate(){
         div.id = "div" + d;
         div.classList.add("divCol")
         cont.appendChild(div);
-
     }
     //sort
     sort();

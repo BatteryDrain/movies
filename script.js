@@ -291,7 +291,7 @@ function build(m, n) {
     }
     total = 0;
     for(i=0; i<COL; i++){
-        div = getElementById('div' + i);
+        div = document.getElementById('div' + i);
         total = total + div.childElementCount;
     }
     count.innerHTML = total + " movies";

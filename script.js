@@ -250,7 +250,7 @@ function populate(){
     }
 }
 
-function build(m n) {
+function build(m, n) {
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);

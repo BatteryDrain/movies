@@ -9,6 +9,7 @@ EXPANDED = false;
 TAGCOUNTL = [];
 COL = window.innerWidth / 320;
 COL = Math.floor(COL);
+Mindex = 0;
 
 filterage();
 
@@ -233,20 +234,23 @@ function populate(){
     }
     //sort
     sort();
+    Mindex = 0;
 
     if(M2L){
         for(m=0; m<DATASORTED.length; m++){
-            build(m);
+            build(m, Mindex);
+            Mindex++;
         }
     }else {
         temp = DATASORTED.length;
         for(let m=temp-1; m>=0; m--){
-            build(m);
+            build(m, Mindex);
+            Mindex++;
         }
     }
 }
 
-function build(m) {
+function build(m n) {
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
@@ -272,25 +276,30 @@ function build(m) {
 
                         recomend = DATASORTED[m][4];
                         if(recomend == 1){
-                            makeFig("green", m);
+                            makeFig("green", m, n);
                         }
                         if(recomend == 0){
-                            makeFig("yellow", m);
+                            makeFig("yellow", m, n);
                         }
                         if(recomend == -1){
-                            makeFig("red", m);
+                            makeFig("red", m, n);
                         }
                     }
                 }
             }
         }
     }
-    count.innerHTML = placeHere.childElementCount + " movies";
+    total = 0;
+    for(i=0; i<COL; i++){
+        div = getElementById('div' + i);
+        total = total + div.childElementCount;
+    }
+    count.innerHTML = total + " movies";
 }
 
 
-function makeFig(place, m){
-    colum = document.getElementById("div" + m%COL);
+function makeFig(place, m, n){
+    colum = document.getElementById("div" + n%COL);
     fig = document.createElement('figure');
             div = document.createElement('div');
             div.classList.add("figTop");

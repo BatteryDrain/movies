@@ -9,7 +9,7 @@ EXPANDED = false;
 TAGCOUNTL = [];
 COL = window.innerWidth / 320;
 COL = Math.floor(COL);
-Mindex = 0;
+// VISIBLE_INDEX = 0;
 
 filterage();
 
@@ -223,6 +223,7 @@ function resetF(){
 function populate(){
     COL = Math.floor(window.innerWidth / 320);
     console.log(COL);
+    VISIBLE_INDEX = 0;
     placeHere.replaceChildren();
     //make columbs
     cont = document.getElementById("placeHere");
@@ -234,18 +235,15 @@ function populate(){
     }
     //sort
     sort();
-    Mindex = 0;
 
     if(M2L){
         for(m=0; m<DATASORTED.length; m++){
-            build(m, Mindex);
-            Mindex++;
+            build(m, VISIBLE_INDEX);
         }
     }else {
         temp = DATASORTED.length;
         for(let m=temp-1; m>=0; m--){
-            build(m, Mindex);
-            Mindex++;
+            build(m, VISIBLE_INDEX);
         }
     }
 }
@@ -284,6 +282,7 @@ function build(m, n) {
                         if(recomend == -1){
                             makeFig("red", m, n);
                         }
+                        VISIBLE_INDEX++;
                     }
                 }
             }

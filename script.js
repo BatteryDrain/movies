@@ -299,6 +299,7 @@ function build(m, n) {
 
 
 function makeFig(place, m, n){
+    console.log("n:", n, "COL:", COL, "n % COL:", n % COL);
     colum = document.getElementById("div" + (n % COL));
     fig = document.createElement('figure');
             div = document.createElement('div');

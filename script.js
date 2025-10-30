@@ -423,6 +423,9 @@ function sort() {
     if(theme == "added"){
         organizeD();
     }
+    if(theme == "recommendation"){
+        organizeR();
+    }
     if(theme == "score"){
         organizeS();
     }
@@ -458,6 +461,22 @@ function organizeY() {
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
             if (parseInt(DATASORTED[j][6]) < parseInt(DATASORTED[j+1][6])) {
+    
+                temp = DATASORTED[j];
+                DATASORTED[j] = DATASORTED[j+1];
+                DATASORTED[j+1] = temp;
+            }
+        }
+    }
+}
+
+function organizeR() {
+    //bubble
+    for (var i = 0; i < DATASORTED.length; i++) {
+
+        for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
+    
+            if (parseInt(DATASORTED[j][4]) < parseInt(DATASORTED[j+1][4])) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

@@ -340,7 +340,7 @@ function makeFig(place, m, n){
             fig.appendChild(div2);
 
             if(place == 1){
-                fig.style.backgroundColor = "hsl(108, 28, 53.1)";
+                fig.style.backgroundColor = `hsl(${108}, ${28}%, ${53.1}%)`;
             }
             if(place == 0.5){
                 fig.style.backgroundColor = "rgb(224, 227, 62)";

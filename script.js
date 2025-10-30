@@ -471,13 +471,12 @@ function organizeY() {
 }
 
 function organizeR() {
-    console.log("in");
     //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
     
-            if (parseInt(DATASORTED[j][4]) < parseInt(DATASORTED[j+1][4])) {
+            if (parseFloat(DATASORTED[j][4]) < parseFloat(DATASORTED[j+1][4])) {
     
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];

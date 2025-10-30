@@ -222,7 +222,7 @@ function resetF(){
 
 function populate(){
     COL = Math.floor(window.innerWidth / 320);
-    console.log(COL);
+    // console.log(COL);
     VISIBLE_INDEX = 0;
     placeHere.replaceChildren();
     //make columbs
@@ -471,6 +471,7 @@ function organizeY() {
 }
 
 function organizeR() {
+    console.log("in");
     //bubble
     for (var i = 0; i < DATASORTED.length; i++) {
 

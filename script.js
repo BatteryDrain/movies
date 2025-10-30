@@ -273,15 +273,7 @@ function build(m, n) {
                         }
 
                         recomend = DATASORTED[m][4];
-                        if(recomend == 1){
-                            makeFig("green", m, n);
-                        }
-                        if(recomend == 0){
-                            makeFig("yellow", m, n);
-                        }
-                        if(recomend == -1){
-                            makeFig("red", m, n);
-                        }
+                        makeFig(recomend, m, n);
                         VISIBLE_INDEX++;
                     }
                 }
@@ -347,13 +339,13 @@ function makeFig(place, m, n){
                 div2.appendChild(p);
             fig.appendChild(div2);
 
-            if(place == "green"){
-                fig.style.backgroundColor = "rgb(115, 169, 102)";
+            if(place == 1){
+                fig.style.backgroundColor = "hsl(108, 28, 53.1)";
             }
-            if(place == "yellow"){
+            if(place == 0.5){
                 fig.style.backgroundColor = "rgb(224, 227, 62)";
             }
-            if(place == "red"){
+            if(place == 0){
                 fig.style.backgroundColor = "rgb(205, 49, 49)";
             }
             colum.appendChild(fig);

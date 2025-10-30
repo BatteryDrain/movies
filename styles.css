@@ -362,6 +362,10 @@ footer p {
     color: white;
 }
 
+#sortBy {
+    width: fit-content;
+}
+
 @media screen and (min-width: 639px) {
     figure {
         width: 300px;

@@ -343,10 +343,10 @@ function makeFig(place, m, n){
                 fig.style.backgroundColor = `hsl(${108}, ${28}%, ${53.1}%)`;
             }
             if(place == 0.5){
-                fig.style.backgroundColor = "rgb(224, 227, 62)";
+                fig.style.backgroundColor = `hsl(${61}, ${28}%, ${53.1}%)`;
             }
             if(place == 0){
-                fig.style.backgroundColor = "rgb(205, 49, 49)";
+                fig.style.backgroundColor = `hsl(${0}, ${28}%, ${53.1}%)`;
             }
             colum.appendChild(fig);
 }

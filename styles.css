@@ -323,11 +323,11 @@ figure button {
     display: flex;
     flex-direction: row;
     margin-top: 5px;
+    justify-content: space-between;
 }
 
 .div2 p {
     margin: 0;
-    margin-left: auto;
     background-color: grey;
     border-radius: 15px;
     color: white;

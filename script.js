@@ -92,6 +92,11 @@ Ftags.addEventListener("change", () => {
 
 helpShow.addEventListener("click", () => {
     help.classList.toggle("hide");
+    if(help.classList.contains("hide")) {
+        helpShow.innerHTML = "show help";
+    } else {
+        helpShow.innerHTML = "hide help";        
+    }
 });
 
 const link = document.getElementById("wheel");

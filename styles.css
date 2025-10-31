@@ -370,11 +370,12 @@ footer p {
 }
 
 #help {
-    background: linear-gradient(to right, hsl(108, 65%, 58.4%), hsl(0, 65%, 58.4%));
+    background: linear-gradient(to bottom, hsl(108, 65%, 58.4%), hsl(0, 65%, 58.4%));
 }
 
 #rect {
     background-color: black;
+    height: 430px;
 }
 
 @media screen and (min-width: 639px) {

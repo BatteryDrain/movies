@@ -231,6 +231,7 @@ function populate(){
     placeHere.replaceChildren();
     //make columbs
     cont = document.getElementById("placeHere");
+    addHelp();
     for(d=0; d<COL; d++){
         div = document.createElement('div');
         div.id = "div" + d;
@@ -289,13 +290,14 @@ function build(m, n) {
         div = document.getElementById('div' + i);
         total = total + div.childElementCount;
     }
+    if(!help.classList.contains("hide")) {total = total - 1;}
     count.innerHTML = total + " movies";
 }
 
 
 function makeFig(place, m, n){
     colum = document.getElementById("div" + (n % COL));
-    fig = document.createElement('figure');
+        fig = document.createElement('figure');
             div = document.createElement('div');
             div.classList.add("figTop");
                 figT = document.createElement('figcaption');
@@ -328,7 +330,7 @@ function makeFig(place, m, n){
             div2 = document.createElement('div');
             div2.classList.add("div2");
                 but = document.createElement('button');
-                but.innerHTML = "more info"
+                but.innerHTML = "more info";
                 but.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 div2.appendChild(but);
 
@@ -343,8 +345,8 @@ function makeFig(place, m, n){
                 div2.appendChild(p);
             fig.appendChild(div2);
 
-            fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
-            colum.appendChild(fig);
+        fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
+        colum.appendChild(fig);
 }
 
 function goToLink(number){
@@ -495,4 +497,52 @@ function tagCountReset() {
     for(i=0; i<34; i++){
         TAGCOUNTL.push([0, TAGS[i]]);
     }
+}
+
+function addHelp() {
+colum = document.getElementById("div0");
+    fig = document.createElement('figure');
+    fig.id = "help";
+    fig.classList.add("hide");
+            div = document.createElement('div');
+            div.classList.add("figTop");
+                figT = document.createElement('figcaption');
+                figT.innerHTML = "name of movie";
+                div.appendChild(figT);
+
+                spn = document.createElement('span');
+                spn.innerHTML = "score";
+                div.appendChild(spn);
+            fig.appendChild(div);
+
+            div1 = document.createElement('div');
+            div1.classList.add("tags");
+                for(t=1; t<3; t++){
+                    spn = document.createElement('span');
+                    spn.innerHTML = "tag";
+                    div1.appendChild(spn);
+                }
+            fig.appendChild(div1);
+            
+            foto = document.createElement('rectangle');
+            foto.id = "rect";
+            fig.appendChild(foto);
+            
+            div2 = document.createElement('div');
+            div2.classList.add("div2");
+                but = document.createElement('button');
+                but.innerHTML = "more info";
+                div2.appendChild(but);
+
+                p = document.createElement('p');
+                p.classList.add("time");
+                p.innerHTML = "runtime";
+                div2.appendChild(p);
+
+                p = document.createElement('p');
+                p.classList.add("ageTag");
+                p.innerHTML = "age ratting";
+                div2.appendChild(p);
+            fig.appendChild(div2);
+        colum.appendChild(fig);
 }

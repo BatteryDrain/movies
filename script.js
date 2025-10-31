@@ -90,6 +90,10 @@ Ftags.addEventListener("change", () => {
     setOptInFilterTag();
 });
 
+helpShow.addEventListener("click", () => {
+    help.classList.toggle("hide");
+});
+
 const link = document.getElementById("wheel");
 const icon = new Image();
 icon.src = link.href;

@@ -365,10 +365,12 @@ footer p {
 #helpShow {
     float: right;
     background-color: lightgray;
+    border: 0;
+    border-radius: 15px;
 }
 
 #help {
-    background: linear-gradient(to right, hsl(108, 65, 58.4), hsl(0, 65, 58.4));
+    background: linear-gradient(to right, hsl(108, 65%, 58.4%), hsl(0, 65%, 58.4%));
 }
 
 #rect {

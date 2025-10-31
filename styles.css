@@ -335,7 +335,7 @@ figure button {
     padding: 2px;
 }
 
-.div2 p.time {
+.div2 .time {
     color: black;
     background-color: white;
     border-radius: 15px;

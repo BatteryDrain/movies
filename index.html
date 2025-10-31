@@ -83,23 +83,49 @@
                 <h2 class="yellow">maybe recommend</h2>
                 <h2 class="red">don't recommend</h2>
                 <button id="helpShow">show help</button>
-                <figure id="help" class="hide" title="the color of the card tells you how much I recommend it">
-                        <div class="figTop">
-                            <figcaption>name of movie</figcaption>
-                            <span title="this is how well the movie was made">score</span>
-                        </div>
-                        <div class="tags" title="this is where tags go">
-                            <span>tag</span>
-                            <span>tag</span>
-                            <span>tag</span>
-                        </div>
-                        <rectangle id="rect" title="the image goes here and if clicked you go to see more info">image</rectangle>
-                        <div class="div2">
-                            <button>more info</button>
-                            <span>runtime</span>
-                            <span title="if you don't regognize the age ratting more info is in filters">age ratting</span>
-                        </div>
-                    </figure>
+                <figure id="help" class="hide">
+                <div class="figTop">
+                    <figcaption class="tooltip">
+                    name of movie
+                    <span class="tooltiptext">The name of the movie</span>
+                    </figcaption>
+
+                    <span class="tooltip">
+                    score
+                    <span class="tooltiptext">This is how well the movie was made</span>
+                    </span>
+                </div>
+
+                <div class="tags tooltip">
+                    <span>tag</span>
+                    <span>tag</span>
+                    <span>tag</span>
+                    <span class="tooltiptext">This is where tags go</span>
+                </div>
+
+                <div id="rect" class="tooltip">
+                    image
+                    <span class="tooltiptext">
+                    The image goes here. Click to see more info.
+                    </span>
+                </div>
+
+                <div class="div2">
+                    <button class="tooltip">
+                    more info
+                    <span class="tooltiptext">Opens detailed info</span>
+                    </button>
+
+                    <span>runtime</span>
+
+                    <span class="tooltip">
+                    age rating
+                    <span class="tooltiptext">
+                        If you don’t recognize the age rating, see the filters above.
+                    </span>
+                    </span>
+                </div>
+                </figure>
                 <section id="placeHere">
 
                 </section>

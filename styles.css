@@ -369,6 +369,12 @@ footer p {
     border-radius: 15px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
 #help {
     background: linear-gradient(to right, hsl(108, 65%, 58.4%), hsl(54, 65%, 58.4%), hsl(0, 65%, 58.4%));
 }
@@ -389,7 +395,7 @@ footer p {
 }
 
 @media screen and (min-width: 800px) {
-    figure:hover {
+    .fig:hover {
         transform: scale(1.2);
         z-index: 3;
     }

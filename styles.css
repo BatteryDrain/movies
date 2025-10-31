@@ -363,7 +363,7 @@ footer p {
 }
 
 #helpShow {
-    float: right;
+    margin-left: auto;
     background-color: lightgray;
     border: 0;
     border-radius: 15px;

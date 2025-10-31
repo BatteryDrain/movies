@@ -362,6 +362,14 @@ footer p {
     color: white;
 }
 
+#help {
+    background-color: hsl(108, 65, 58.4), hsl(0, 65, 58.4);
+}
+
+#rect {
+    background-color: black;
+}
+
 @media screen and (min-width: 639px) {
     figure {
         width: 300px;

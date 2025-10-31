@@ -364,11 +364,11 @@ footer p {
 
 #helpShow {
     float: right;
-    background-color: grey;
+    background-color: lightgray;
 }
 
 #help {
-    background-color: hsl(108, 65, 58.4), hsl(0, 65, 58.4);
+    background-color: linear-gradient(direction,hsl(108, 65, 58.4), hsl(0, 65, 58.4));
 }
 
 #rect {

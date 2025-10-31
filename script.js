@@ -290,7 +290,6 @@ function build(m, n) {
         div = document.getElementById('div' + i);
         total = total + div.childElementCount;
     }
-    if(!help.classList.contains("hide")) {total = total - 1;}
     count.innerHTML = total + " movies";
 }
 

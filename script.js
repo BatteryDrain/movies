@@ -7,7 +7,6 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
-SEEN = [];
 COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
@@ -32,6 +31,11 @@ function setOptInFilterTag(){
             Ftags.appendChild(opt);
         }
     }
+}
+
+SEEN = [];
+for(i=0; i<DATASORTED.length; i++){
+    SEEN.push(false);
 }
 
 filterage();
@@ -371,7 +375,6 @@ function FindMovieIndex(ID) {
 
 function FindTagIndex(ID) {
     for(i=0; i<TAGS.length; i++){
-        console.log(TAGS[i][0]);
         if(TAGS[i][0] == ID){return i;}
     }
     return -1;

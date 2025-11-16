@@ -374,7 +374,7 @@ function FindTagIndex(ID) {
         console.log(TAGS[i][0]);
         if(TAGS[i][0] == ID){return i;}
     }
-    return 0;
+    return -1;
 }
 
 function away(oldid){

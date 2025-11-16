@@ -7,6 +7,7 @@ TAGCOUNT = 0;
 GROUPEDDATA = [[]];
 EXPANDED = false;
 TAGCOUNTL = [];
+SEEN = [];
 COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;

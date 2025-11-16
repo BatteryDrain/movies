@@ -23,7 +23,7 @@ function setOptInFilterTag(){
     opt.innerHTML = "";
     opt.value = "*";
     Ftags.appendChild(opt);
-    for(o=1; o < TAGS.length - 1; o++){
+    for(o=1; o < TAGS.length; o++){
         if(!TAGINUSE.includes(TAGS[o][1])){
             opt = document.createElement('option');
             opt.innerHTML = TAGCOUNTL[o][0] + " " + TAGS[o][1];

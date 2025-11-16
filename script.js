@@ -373,15 +373,12 @@ function goToLink(number){
 function saw(number){
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
-    // console.log(all + all.type);
-    console.log(all.classList);
     if (SEEN[number]) {
         all.classList.remove("hide");
-        console.log("no hide");
     } else {
         all.classList.add("hide");
-        console.log("has hide");
     }
+    console.log(all.classList);
 }
 
 function FindMovieIndex(ID) {

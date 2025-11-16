@@ -319,6 +319,7 @@ function makeFig(place, m, n){
             fig.appendChild(div);
 
             all = document.createElement('div');
+            all.id = m + "all";
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
@@ -371,6 +372,8 @@ function goToLink(number){
 
 function saw(number){
     SEEN[number] = !SEEN[number];
+    all = document.getElementById(number + "all");
+    all.classList.toggle("hide");
 }
 
 function FindMovieIndex(ID) {

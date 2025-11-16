@@ -2,6 +2,7 @@ console.log("inside DATA2.js");
 
 TAGS = [
     //id, tag, description,
+    [0, "", ""],
     [3, "action", ""],
     [0, "adventure", ""],
     [12, "AI", ""],

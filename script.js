@@ -369,7 +369,7 @@ function FindMovieIndex(ID) {
 }
 
 function FindTagIndex(ID) {
-    for(i=0; i<DATASORTED.length - 1; i++){
+    for(i=0; i<TAGS.length - 1; i++){
         console.log(TAGS[i][0]);
         if(TAGS[i][0] == ID){return i;}
     }

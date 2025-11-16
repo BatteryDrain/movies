@@ -319,7 +319,6 @@ function makeFig(place, m, n){
             fig.appendChild(div);
 
             all = document.createElement('div');
-            all.classList.add("test");
             all.id = m + "all";
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
@@ -376,7 +375,7 @@ function saw(number){
     all = document.getElementById(number + "all");
     // console.log(all + all.type);
     console.log(all.classList);
-    if (all.classList.contains("hide")) {
+    if (SEEN[number]) {
         all.classList.remove("hide");
         console.log("no hide");
     } else {

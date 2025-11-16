@@ -318,41 +318,43 @@ function makeFig(place, m, n){
                 div.appendChild(spn);
             fig.appendChild(div);
 
-            div1 = document.createElement('div');
-            div1.classList.add("tags");
-                for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
-                    spn = document.createElement('span');
-                    tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][t];
-                    spn.innerHTML = TAGS[FindTagIndex(tagID)][1];
-                    div1.appendChild(spn);
+            all = document.createElement('div');
+                div1 = document.createElement('div');
+                div1.classList.add("tags");
+                    for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
+                        spn = document.createElement('span');
+                        tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][t];
+                        spn.innerHTML = TAGS[FindTagIndex(tagID)][1];
+                        div1.appendChild(spn);
+                    }
+                fig.appendChild(div1);
+                
+                if(DATASORTED[m][2] != ""){
+                    foto = document.createElement('img');
+                    foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
+                    foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
+                    foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
+                    fig.appendChild(foto);
                 }
-            fig.appendChild(div1);
-            
-            if(DATASORTED[m][2] != ""){
-                foto = document.createElement('img');
-                foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
-                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
-                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
-                fig.appendChild(foto);
-            }
-            
-            div2 = document.createElement('div');
-            div2.classList.add("div2");
-                but = document.createElement('button');
-                but.innerHTML = "more info";
-                but.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
-                div2.appendChild(but);
+                
+                div2 = document.createElement('div');
+                div2.classList.add("div2");
+                    but = document.createElement('button');
+                    but.innerHTML = "seen it";
+                    but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+                    div2.appendChild(but);
 
-                p = document.createElement('p');
-                p.classList.add("time");
-                p.innerHTML = DATASORTED[m][9].substring(1, DATASORTED[m][9].length);
-                div2.appendChild(p);
+                    p = document.createElement('p');
+                    p.classList.add("time");
+                    p.innerHTML = DATASORTED[m][9].substring(1, DATASORTED[m][9].length);
+                    div2.appendChild(p);
 
-                p = document.createElement('p');
-                p.classList.add("ageTag");
-                p.innerHTML = DATASORTED[m][5];
-                div2.appendChild(p);
-            fig.appendChild(div2);
+                    p = document.createElement('p');
+                    p.classList.add("ageTag");
+                    p.innerHTML = DATASORTED[m][5];
+                    div2.appendChild(p);
+                fig.appendChild(div2);
+            fig.appendChild(all);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);
@@ -365,6 +367,10 @@ function goToLink(number){
             window.open(DATA[index][3], "_self");
         }
     }
+}
+
+function saw(number){
+    SEEN[number] = !SEEN[number];
 }
 
 function FindMovieIndex(ID) {
@@ -455,7 +461,7 @@ function organizeD() {
 }
 
 function organizeS() {
-    //bubble
+    //bubble sort for score
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
@@ -471,7 +477,7 @@ function organizeS() {
 }
 
 function organizeY() {
-    //bubble
+    //bubble sort for year
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
@@ -487,7 +493,7 @@ function organizeY() {
 }
 
 function organizeR() {
-    //bubble
+    //bubble sort for recomendation
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {

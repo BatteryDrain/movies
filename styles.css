@@ -85,13 +85,12 @@ h1 {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
   }
   
   .tooltip .tooltiptext {
     visibility: hidden;
     width: fit-content;
-    background-color: black;
+    background-color: darkblue;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -373,6 +372,7 @@ footer p {
   position: relative;
   display: inline-block;
   cursor: pointer;
+
 }
 
 #help {

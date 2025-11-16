@@ -376,7 +376,13 @@ function saw(number){
     all = document.getElementById(number + "all");
     console.log(all + all.type);
     console.log(all.classList);
-    all.classList.toggle("hide");
+    if (all.classList.contains("hide")) {
+        all.classList.remove("hide");
+        console.log("no hide");
+    } else {
+        all.classList.add("hide");
+        console.log("has hide");
+    }
 }
 
 function FindMovieIndex(ID) {

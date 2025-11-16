@@ -319,6 +319,7 @@ function makeFig(place, m, n){
             fig.appendChild(div);
 
             all = document.createElement('div');
+            all.classList.add("test");
             all.id = m + "all";
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
@@ -373,6 +374,7 @@ function goToLink(number){
 function saw(number){
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
+    console.log(all.classList);
     all.classList.toggle("hide");
 }
 

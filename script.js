@@ -374,7 +374,7 @@ function goToLink(number){
 function saw(number){
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
-    console.log(all + all.type);
+    // console.log(all + all.type);
     console.log(all.classList);
     if (all.classList.contains("hide")) {
         all.classList.remove("hide");

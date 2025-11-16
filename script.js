@@ -23,7 +23,7 @@ function setOptInFilterTag(){
     opt.innerHTML = "";
     opt.value = "*";
     Ftags.appendChild(opt);
-    for(o=0; o < TAGS.length; o++){
+    for(o=1; o < TAGS.length - 1; o++){
         if(!TAGINUSE.includes(TAGS[o][1])){
             opt = document.createElement('option');
             opt.innerHTML = TAGCOUNTL[o][0] + " " + TAGS[o][1];
@@ -369,7 +369,7 @@ function FindMovieIndex(ID) {
 }
 
 function FindTagIndex(ID) {
-    for(i=0; i<TAGS.length - 1; i++){
+    for(i=0; i<TAGS.length; i++){
         console.log(TAGS[i][0]);
         if(TAGS[i][0] == ID){return i;}
     }

@@ -320,6 +320,13 @@ function makeFig(place, m, n){
                 div.appendChild(spn);
             fig.appendChild(div);
 
+            but = document.createElement('button');
+            but.innerHTML = "show";
+            but.id = DATASORTED[m][0] + "show";
+            but.classList.add("hide");
+            but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+            but.appendChild('');
+
             all = document.createElement('div');
             all.id = DATASORTED[m][0] + "all";
             all.classList.add("all");
@@ -359,7 +366,7 @@ function makeFig(place, m, n){
                     div2.appendChild(p);
                 all.appendChild(div2);
             fig.appendChild(all);
-            
+
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);
@@ -378,10 +385,13 @@ function saw(number){
     console.log("number " + number);
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
+    show = document.getElementById(number + "show");
     if (SEEN[number]) {
         all.classList.add("hide");
+        show.classList.remove("hide");
     } else {
         all.classList.remove("hide");
+        show.classList.add("hide");
     }
     console.log(all.classList);
 }

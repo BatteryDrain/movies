@@ -325,7 +325,7 @@ function makeFig(place, m, n){
             but.id = DATASORTED[m][0] + "show";
             but.classList.add("hide");
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-            but.appendChild('');
+            but.appendChild('fig');
 
             all = document.createElement('div');
             all.id = DATASORTED[m][0] + "all";

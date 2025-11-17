@@ -305,7 +305,8 @@ figcaption {
 
 .all img {
     margin-top: 5px;
-    max-width: 300px;
+    width: 290px;
+    height: auto;
 }
 
 figure button {

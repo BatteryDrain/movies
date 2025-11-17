@@ -11,6 +11,11 @@ COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
 
+SEEN = [];
+for(i=0; i<DATASORTED.length; i++){
+    SEEN.push(false);
+}
+
 filterage();
 
 tagCountReset();
@@ -31,11 +36,6 @@ function setOptInFilterTag(){
             Ftags.appendChild(opt);
         }
     }
-}
-
-SEEN = [];
-for(i=0; i<DATASORTED.length; i++){
-    SEEN.push(false);
 }
 
 filterage();

@@ -389,7 +389,9 @@ function saw(number){
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
         all.classList.add("hide");
-        show.classList.remove("hide");
+        if(show.classList.contains("hide")){
+            show.classList.remove("hide");
+        }
     } else {
         all.classList.remove("hide");
         show.classList.add("hide");

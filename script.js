@@ -359,6 +359,7 @@ function makeFig(place, m, n){
                     div2.appendChild(p);
                 all.appendChild(div2);
             fig.appendChild(all);
+            
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);

@@ -320,16 +320,10 @@ function makeFig(place, m, n){
                 div.appendChild(spn);
             fig.appendChild(div);
 
-            but = document.createElement('button');
-            but.innerHTML = "show";
-            but.id = DATASORTED[m][0] + "show";
-            but.classList.add("hide");
-            but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-            but.appendChild(fig);
-
             all = document.createElement('div');
             all.id = DATASORTED[m][0] + "all";
             all.classList.add("all");
+            if(SEEN[DATASORTED[m][0]]){all.classList.add("hide");}
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
@@ -366,6 +360,13 @@ function makeFig(place, m, n){
                     div2.appendChild(p);
                 all.appendChild(div2);
             fig.appendChild(all);
+
+            but = document.createElement('button');
+            but.innerHTML = "show";
+            but.id = DATASORTED[m][0] + "show";
+            but.classList.add("hide");
+            but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+            but.appendChild(fig);
 
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;

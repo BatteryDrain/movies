@@ -319,7 +319,7 @@ function makeFig(place, m, n){
             fig.appendChild(div);
 
             all = document.createElement('div');
-            all.id = m + "all";
+            all.id = DATASORTED[m][0] + "all";
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){

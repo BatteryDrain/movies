@@ -371,6 +371,7 @@ function goToLink(number){
 }
 
 function saw(number){
+    console.log("number" + number);
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
     if (SEEN[number]) {

@@ -371,13 +371,13 @@ function goToLink(number){
 }
 
 function saw(number){
-    console.log("number" + number);
+    console.log("number " + number);
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
     if (SEEN[number]) {
-        all.classList.remove("hide");
-    } else {
         all.classList.add("hide");
+    } else {
+        all.classList.remove("hide");
     }
     console.log(all.classList);
 }

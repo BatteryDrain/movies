@@ -328,14 +328,14 @@ function makeFig(place, m, n){
                         spn.innerHTML = TAGS[FindTagIndex(tagID)][1];
                         div1.appendChild(spn);
                     }
-                fig.appendChild(div1);
+                all.appendChild(div1);
                 
                 if(DATASORTED[m][2] != ""){
                     foto = document.createElement('img');
                     foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
                     foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                     foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
-                    fig.appendChild(foto);
+                    all.appendChild(foto);
                 }
                 
                 div2 = document.createElement('div');
@@ -354,7 +354,7 @@ function makeFig(place, m, n){
                     p.classList.add("ageTag");
                     p.innerHTML = DATASORTED[m][5];
                     div2.appendChild(p);
-                fig.appendChild(div2);
+                all.appendChild(div2);
             fig.appendChild(all);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;

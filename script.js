@@ -227,6 +227,8 @@ function resetF(){
     max.value = 100;
     Can.checked = true;
     Cla.checked = true;
+    CHECKANIMATED = true;
+    CHECKLIVE = true;
     TAGCOUNT = 0;
     tagHere.replaceChildren();
     setOptInFilterTag();

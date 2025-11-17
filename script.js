@@ -368,7 +368,6 @@ function makeFig(place, m, n){
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 
-
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);
 }

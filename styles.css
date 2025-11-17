@@ -396,7 +396,7 @@ footer p {
 
 @media screen and (min-width: 800px) {
     .fig:hover {
-        transform: scale(1.1);
+        transform: scale(1.15);
         z-index: 3;
     }
 

@@ -303,8 +303,9 @@ figcaption {
     margin: 1px;
 }
 
-figure img {
+.all img {
     margin-top: 5px;
+    max-width: 300px;
 }
 
 figure button {

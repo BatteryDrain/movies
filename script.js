@@ -364,7 +364,7 @@ function makeFig(place, m, n){
             but = document.createElement('button');
             but.innerHTML = "show";
             but.id = DATASORTED[m][0] + "show";
-            if(SEEN[!DATASORTED[m][0]]){show.classList.add("hide");}
+            show.classList.add("hide");
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 
@@ -382,7 +382,6 @@ function goToLink(number){
 }
 
 function saw(number){
-    console.log("number " + number);
     SEEN[number] = !SEEN[number];
     all = document.getElementById(number + "all");
     show = document.getElementById(number + "show");
@@ -539,5 +538,3 @@ function tagCountReset() {
         TAGCOUNTL.push([0, TAGS[i]]);
     }
 }
-
-//test

@@ -378,11 +378,14 @@ function goToLink(number){
 
 function saw(number){
     SEEN[number] = !SEEN[number];
+    all = document.getElementById(number + "all");
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
         show.innerHTML = "show";
+        all.classList.add("hide");
     } else {
         show.innerHTML = "seen it";
+        all.classList.remove("hide");
     }
     console.log(all.classList);
 }

@@ -344,10 +344,6 @@ function makeFig(place, m, n){
                 
                 div2 = document.createElement('div');
                 div2.classList.add("div2");
-                    but = document.createElement('button');
-                    but.innerHTML = "seen it";
-                    but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-                    div2.appendChild(but);
 
                     p = document.createElement('p');
                     p.classList.add("time");
@@ -362,11 +358,7 @@ function makeFig(place, m, n){
             fig.appendChild(all);
 
             but = document.createElement('button');
-            but.innerHTML = "show";
             but.id = DATASORTED[m][0] + "show";
-            if(SEEN[!DATASORTED[m][0]]){
-                but.classList.add("hide");
-            }
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 
@@ -385,16 +377,11 @@ function goToLink(number){
 
 function saw(number){
     SEEN[number] = !SEEN[number];
-    all = document.getElementById(number + "all");
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
-        all.classList.add("hide");
-        if(show.classList.contains("hide")){
-            show.classList.remove("hide");
-        }
+        but.innerHTML = "show";
     } else {
-        all.classList.remove("hide");
-        show.classList.add("hide");
+        but.innerHTML = "seen it";
     }
     console.log(all.classList);
 }

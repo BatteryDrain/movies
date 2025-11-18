@@ -359,6 +359,7 @@ function makeFig(place, m, n){
 
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
+            but.innerHTML = "seen it";
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 
@@ -379,9 +380,9 @@ function saw(number){
     SEEN[number] = !SEEN[number];
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
-        but.innerHTML = "show";
+        show.innerHTML = "show";
     } else {
-        but.innerHTML = "seen it";
+        show.innerHTML = "seen it";
     }
     console.log(all.classList);
 }

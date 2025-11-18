@@ -325,6 +325,8 @@ figure button {
     flex-direction: row;
     margin-top: 5px;
     justify-content: space-between;
+    width: 50%;
+    float: right;
 }
 
 .div2 p {

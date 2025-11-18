@@ -361,7 +361,6 @@ function makeFig(place, m, n){
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "seen it";
             but.classList.add("sOh");
-            but.style.cssFloat = "left";
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 

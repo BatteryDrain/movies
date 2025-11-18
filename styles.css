@@ -389,7 +389,7 @@ footer p {
 }
 
 .sOh {
-    z-index: 2;
+    float: left;
 }
 
 @media screen and (min-width: 639px) {

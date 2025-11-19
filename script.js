@@ -344,6 +344,10 @@ function makeFig(place, m, n){
                 
                 div2 = document.createElement('div');
                 div2.classList.add("div2");
+                    but = document.createElement('button');
+                    but.innerHTML = "seen it";
+                    but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+                    div2.appendChild(but);
 
                     p = document.createElement('p');
                     p.classList.add("time");
@@ -359,6 +363,7 @@ function makeFig(place, m, n){
 
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
+            but.innerHTML = "show";
             if(!SEEN[DATASORTED[m][0]]){
                 but.innerHTML = "seen it";
                 but.classList.add("sOh");
@@ -386,12 +391,10 @@ function saw(number){
     all = document.getElementById(number + "all");
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
-        show.innerHTML = "show";
-        show.classList.remove("sOh");
+        show.classList.remove("hide");
         all.classList.add("hide");
     } else {
-        show.innerHTML = "seen it";
-        show.classList.add("sOh");
+        show.classList.add("hide");
         all.classList.remove("hide");
     }
     console.log(all.classList);

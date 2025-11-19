@@ -383,9 +383,11 @@ function saw(number){
     show = document.getElementById(number + "show");
     if (SEEN[number]) {
         show.innerHTML = "show";
+        show.classList.remove("sOh");
         all.classList.add("hide");
     } else {
         show.innerHTML = "seen it";
+        show.classList.add("sOh");
         all.classList.remove("hide");
     }
     console.log(all.classList);

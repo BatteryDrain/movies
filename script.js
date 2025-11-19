@@ -365,9 +365,7 @@ function makeFig(place, m, n){
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "show";
             if(!SEEN[DATASORTED[m][0]]){
-                but.innerHTML = "seen it";
-            } else {
-                but.innerHTML = "show";
+                but.classList.add("hide");
             }
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);

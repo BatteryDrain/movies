@@ -360,7 +360,7 @@ function makeFig(place, m, n){
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "seen it";
-            but.classList.add("sOh");
+            if(!SEEN[DATASORTED[m][0]]){but.classList.add("sOh");}
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 

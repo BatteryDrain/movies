@@ -386,11 +386,6 @@ footer p {
     height: 430px;
 }
 
-.sOh {
-    position: relative;
-    top: -21px;
-}
-
 @media screen and (min-width: 639px) {
     figure {
         width: 300px;

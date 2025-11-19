@@ -366,7 +366,6 @@ function makeFig(place, m, n){
             but.innerHTML = "show";
             if(!SEEN[DATASORTED[m][0]]){
                 but.innerHTML = "seen it";
-                but.classList.add("sOh");
             } else {
                 but.innerHTML = "show";
             }

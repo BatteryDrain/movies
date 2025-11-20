@@ -344,7 +344,18 @@ function makeFig(place, m, n){
                 
                 if(DATASORTED[m][2] != ""){
                     foto = document.createElement('img');
-                    foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
+                    const fs = require('fs');
+                    try {
+                        source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".webp", 'utf-8');
+                        console.log(content);
+                    } catch (err) {
+                        if (err.code === 'file not found') {
+                            source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".jpg", 'utf-8');
+                        } else {
+                            throw err; // Rethrow other errors
+                        }
+                    }
+                    foto.src = source;
                     foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                     foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
                     all.appendChild(foto);

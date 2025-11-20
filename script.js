@@ -109,7 +109,7 @@ helpShow.addEventListener("click", () => {
 
 coo.addEventListener("change", () => {
     COOKIES = !COOKIES;
-    saveSeenCookie(SEEN);
+    if(COOKIES){saveSeenCookie(SEEN);}
 });
 
 const link = document.getElementById("wheel");

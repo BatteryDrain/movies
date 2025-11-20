@@ -19,6 +19,7 @@ if(document.cookie == ""){
     }
 } else {
     SEEN = document.cookie;
+    nocook.innerHTML = "clear cookies";
 }
 
 filterage();
@@ -147,6 +148,11 @@ sortBy.addEventListener("change", () => {
 
 SortS.addEventListener("change", () => {
     populate();
+});
+
+nocook.addEventListener("click", () => {
+    document.cookie = "";
+    nocook.innerHTML = "no cookies";
 });
 
 window.addEventListener('resize', populate);

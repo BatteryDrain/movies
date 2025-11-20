@@ -346,11 +346,11 @@ function makeFig(place, m, n){
                     foto = document.createElement('img');
                     const fs = require('fs');
                     try {
-                        source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".webp", 'utf-8');
+                        source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".webp");
                         console.log(content);
                     } catch (err) {
                         if (err.code === 'file not found') {
-                            source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".jpg", 'utf-8');
+                            source = fs.readFileSync("assets/" + DATASORTED[m][2] + ".jpg");
                         } else {
                             throw err; // Rethrow other errors
                         }

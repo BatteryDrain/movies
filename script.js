@@ -10,6 +10,7 @@ TAGCOUNTL = [];
 COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
+COOKIES = false;
 
 SEEN = [];
 if(document.cookie == ""){
@@ -106,6 +107,10 @@ helpShow.addEventListener("click", () => {
     } else {
         helpShow.innerHTML = "hide help";        
     }
+});
+
+coo.addEventListener("change", () => {
+    COOKIES = !COOKIES;
 });
 
 const link = document.getElementById("wheel");

@@ -109,6 +109,14 @@ helpShow.addEventListener("click", () => {
     }
 });
 
+unhide.addEventListener("click", () => {
+    SEEN = loadSeenCookie();
+
+    if (!SEEN) {
+        SEEN = Array(DATASORTED.length).fill(false);
+    }
+});
+
 coo.addEventListener("change", () => {
     COOKIES = !COOKIES;
     if(COOKIES){saveSeenCookie(SEEN);}

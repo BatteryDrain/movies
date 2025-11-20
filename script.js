@@ -375,7 +375,6 @@ function makeFig(place, m, n){
 }
 
 function goToLink(number){
-    console.log("button id: " + number + " clicked");
     for(index=0; index<DATA.length; index++){
         if(DATA[index][0] == number){
             window.open(DATA[index][3], "_self");
@@ -394,7 +393,6 @@ function saw(number){
         show.classList.add("hide");
         all.classList.remove("hide");
     }
-    console.log(all.classList);
 }
 
 function FindMovieIndex(ID) {

@@ -12,8 +12,12 @@ COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
 
 SEEN = [];
-for(i=0; i<DATASORTED.length; i++){
-    SEEN.push(false);
+if(document.cookie == ""){
+    for(i=0; i<DATASORTED.length; i++){
+        SEEN.push(false);
+    }
+} else {
+    SEEN = document.cookie;
 }
 
 filterage();
@@ -393,6 +397,7 @@ function saw(number){
         show.classList.add("hide");
         all.classList.remove("hide");
     }
+    document.cookie = SEEN;
 }
 
 function FindMovieIndex(ID) {

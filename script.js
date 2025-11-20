@@ -147,11 +147,6 @@ SortS.addEventListener("change", () => {
     populate();
 });
 
-nocook.addEventListener("click", () => {
-    document.cookie = "";
-    nocook.innerHTML = 
-});
-
 window.addEventListener('resize', populate);
 
 function filterage(){ 

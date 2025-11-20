@@ -402,7 +402,7 @@ function saw(number){
         show.classList.add("hide");
         all.classList.remove("hide");
     }
-    document.cookie = SEEN;
+    if(COOKIES){document.cookie = SEEN;}
 }
 
 function FindMovieIndex(ID) {

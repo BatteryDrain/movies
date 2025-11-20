@@ -12,14 +12,11 @@ COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
 COOKIES = false;
 
-SEEN = [];
-if(document.cookie == ""){
-    for(i=0; i<DATASORTED.length; i++){
-        SEEN.push(false);
-    }
-} else {
-    SEEN = document.cookie;
-    nocook.innerHTML = "clear cookies";
+
+SEEN = loadSeenCookie();
+
+if (!SEEN) {
+    SEEN = Array(DATASORTED.length).fill(false);
 }
 
 filterage();
@@ -152,7 +149,7 @@ SortS.addEventListener("change", () => {
 
 nocook.addEventListener("click", () => {
     document.cookie = "";
-    nocook.innerHTML = "no cookies";
+    nocook.innerHTML = 
 });
 
 window.addEventListener('resize', populate);
@@ -399,8 +396,10 @@ function goToLink(number){
 
 function saw(number){
     SEEN[number] = !SEEN[number];
+
     all = document.getElementById(number + "all");
     show = document.getElementById(number + "show");
+
     if (SEEN[number]) {
         show.classList.remove("hide");
         all.classList.add("hide");
@@ -408,8 +407,12 @@ function saw(number){
         show.classList.add("hide");
         all.classList.remove("hide");
     }
-    if(COOKIES){document.cookie = SEEN;}
+
+    if (COOKIES) {
+        saveSeenCookie(SEEN);
+    }
 }
+
 
 function FindMovieIndex(ID) {
     for(i=0; i<DATASORTED.length; i++){
@@ -550,5 +553,19 @@ function tagCountReset() {
     TAGCOUNTL = [];
     for(i=0; i<34; i++){
         TAGCOUNTL.push([0, TAGS[i]]);
+    }
+}
+
+function saveSeenCookie(arr) {
+    document.cookie = "seen=" + JSON.stringify(arr) + "; path=/; max-age=31536000";
+}
+
+function loadSeenCookie() {
+    const match = document.cookie.match(/seen=([^;]+)/);
+    if (!match) return null;
+    try {
+        return JSON.parse(match[1]);
+    } catch (e) {
+        return null;
     }
 }

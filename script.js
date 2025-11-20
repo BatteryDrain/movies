@@ -11,6 +11,7 @@ COL = window.innerWidth / 320;
 COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
 COOKIES = false;
+HELP = false;
 
 
 SEEN = loadSeenCookie();
@@ -99,8 +100,9 @@ Ftags.addEventListener("change", () => {
 });
 
 helpShow.addEventListener("click", () => {
+    HELP = !HELP;
     help.classList.toggle("hide");
-    if(help.classList.contains("hide")) {
+    if(HELP) {
         helpShow.innerHTML = "show help";
     } else {
         helpShow.innerHTML = "hide help";        

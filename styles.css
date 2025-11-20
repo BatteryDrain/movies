@@ -389,9 +389,11 @@ footer p {
 #nom {
     display: flex;
     flex-direction: row;
+    margin: 5px;
 }
 #nom p {
     color: white;
+    margin: 0;
 }
 
 @media screen and (min-width: 639px) {

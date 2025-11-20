@@ -386,6 +386,14 @@ footer p {
     height: 430px;
 }
 
+#nom {
+    display: flex;
+    flex-direction: row;
+}
+#nom p {
+    color: white;
+}
+
 @media screen and (min-width: 639px) {
     figure {
         width: 300px;

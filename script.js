@@ -142,6 +142,30 @@ window.addEventListener("scroll", () => {
     }
 });
 
+//if wheel
+window.addEventListener("wheel", (e) => {
+    if (window.scrollY === 0 && e.deltaY < 0) {
+        console.log("User tried to scroll up at the top!");
+    }
+});
+
+//if touch
+let touchStartY = 0;
+window.addEventListener("touchstart", (e) => {
+    touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchmove", (e) => {
+    const touchY = e.touches[0].clientY;
+    const delta = touchY - touchStartY;
+
+    if (window.scrollY === 0 && delta > 0) {
+        console.log("User tried to scroll up at the top on mobile!");
+    }
+
+    touchStartY = touchY;
+});
+
 sortBy.addEventListener("change", () => {
     populate();
 });

@@ -436,10 +436,10 @@ function FindTagIndex(ID) {
     return -1;
 }
 
-function away(oldid){
-    if (oldid) {
-        // console.log(oldid.innerHTML);
-        tag = oldid.innerHTML;
+function away(button){
+    if (button) {
+        // console.log(button.innerHTML);
+        tag = button.innerHTML;
         temp = "";
         console.log(tag + " " + typeof(tag));
 
@@ -458,15 +458,15 @@ function away(oldid){
         console.log(temp + " " + index);
         TAGINUSE.splice(index, 1);
         console.log(TAGINUSE);
-        //remove can be blank because oldid is an object (I think)
-        oldid.remove();
+        //remove can be blank because button is an object (I think)
+        button.remove();
         tagCountReset();
         populate();
         setOptInFilterTag();
     }
     else {
         console.log("no id found");
-        console.log("id = " + oldid + typeof(oldid));
+        console.log("id = " + button + typeof(button));
     }
 }
 

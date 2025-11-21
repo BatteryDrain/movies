@@ -387,8 +387,9 @@ function makeFig(place, m, n){
 
 function addTag(number){
     tag = TAGS[FindTagIndex(number)][1];
+    tag = cleanString(tag);
     if(!TAGINUSE.includes(tag)){
-        TAGINUSE.push(cleanString(tag));
+        TAGINUSE.push(tag);
         populate();
         setTagsToFilter(tag);
     }

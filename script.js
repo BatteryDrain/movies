@@ -386,7 +386,7 @@ function makeFig(place, m, n){
 }
 
 function addTag(number){
-    tag = TAGS[FindTagIndex(tagID)][1];
+    tag = TAGS[FindTagIndex(number)][1];
     if(!TAGINUSE.includes(tag)){
         TAGINUSE.push(tag);
         populate();

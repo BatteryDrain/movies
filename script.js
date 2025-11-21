@@ -621,9 +621,9 @@ function cleanString(str) {
 }
 
 function openTop() {
-    if(EXPANDED){
+    if(!EXPANDED){
         expandheadder();
         header.classList.toggle("expanded");
-        EXPANDED = false;
+        EXPANDED = true;
     }
 }

@@ -218,7 +218,7 @@ function setTagsToFilter(input){
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
-        but.setAttribute("onclick", "away(" + but.id + ")");
+        but.setAttribute("onclick", "away(this)");
         but.innerHTML = tag;
             spn = document.createElement('span');
             spn.innerHTML = "x";

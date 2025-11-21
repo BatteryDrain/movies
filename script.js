@@ -440,6 +440,8 @@ function away(oldid){
         // console.log(oldid.innerHTML);
         tag = oldid.innerHTML;
         temp = "";
+        console.log(tag + " " + typeof(tag));
+
         f = 0;
         while(tag[f] != "<"){
             temp = temp + tag[f];

@@ -458,7 +458,8 @@ function away(oldid){
         console.log(temp + " " + index);
         TAGINUSE.splice(index, 1);
         console.log(TAGINUSE);
-        oldid.remove(oldid);
+        //remove can be blank because oldid is an object (I think)
+        oldid.remove();
         tagCountReset();
         populate();
         setOptInFilterTag();

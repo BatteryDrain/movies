@@ -340,6 +340,7 @@ function makeFig(place, m, n){
                         spn = document.createElement('span');
                         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][t];
                         spn.innerHTML = TAGS[FindTagIndex(tagID)][1];
+                        spn.setAttribute("onclick", "addTag(" + tagID + ")");
                         div1.appendChild(spn);
                     }
                 all.appendChild(div1);
@@ -382,6 +383,14 @@ function makeFig(place, m, n){
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);
+}
+
+function addTag(number){
+    tag = TAGS[FindTagIndex(tagID)][1];
+    if(!TAGINUSE.contains(tag)){
+        TAGINUSE.push(tag);
+        populate();
+    }
 }
 
 function goToLink(number){

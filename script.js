@@ -219,7 +219,7 @@ function tooltipT(rate){
 showOhide.addEventListener("click", function(){
     expandheadder();
     header.classList.toggle("expanded");
-    EXPANDED = true;
+    EXPANDED = !EXPANDED;
 });
 
 function expandheadder(){

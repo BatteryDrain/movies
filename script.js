@@ -218,7 +218,7 @@ function setTagsToFilter(input){
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
-        but.setAttribute("onclick", "away(" + but.id + ")");
+        but.setAttribute("onclick", "away(this)");
         but.innerHTML = tag;
             spn = document.createElement('span');
             spn.innerHTML = "x";
@@ -436,16 +436,13 @@ function FindTagIndex(ID) {
     return -1;
 }
 
-function away(buttonId){
-    const button = document.getElementById(buttonId);
-
-    if(button){
+function away(button) {
+    if (button) {
         // get the tag text (without the span)
         let temp = "";
         const tagText = button.innerHTML;
         let f = 0;
-
-        while(tagText[f] != "<" && f < tagText.length){
+        while(tagText[f] != "<" && f < tagText.length) {
             temp += tagText[f];
             f++;
         }
@@ -465,9 +462,10 @@ function away(buttonId){
         populate();
         setOptInFilterTag();
     } else {
-        console.log("No button found with ID: " + buttonId);
+        console.log("No button element found");
     }
 }
+
 
 
 function makeTagList(index) {

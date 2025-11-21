@@ -390,6 +390,7 @@ function addTag(number){
     if(!TAGINUSE.includes(tag)){
         TAGINUSE.push(tag);
         populate();
+        setOptInFilterTag();
     }
 }
 

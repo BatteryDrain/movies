@@ -248,7 +248,7 @@ input:checked + .slider::before {
 }
 
 #showOhide {
-    left: 100%;
+    right: 5px;
     position: absolute;
 }
 

@@ -113,7 +113,12 @@ helpShow.addEventListener("click", () => {
 
 coo.addEventListener("change", () => {
     COOKIES = !COOKIES;
-    if(COOKIES){saveSeenCookie(SEEN);}
+    if(COOKIES){
+        saveSeenCookie(SEEN);
+    } else {
+        document.cookie = "seen=; path=/; max-age=0";
+
+    }
 });
 
 const link = document.getElementById("wheel");

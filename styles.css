@@ -249,6 +249,7 @@ input:checked + .slider::before {
 
 #showOhide {
     float: right;
+    position: absolute;
 }
 
 figure {

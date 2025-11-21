@@ -135,16 +135,13 @@ window.addEventListener("scroll", () => {
 
     link.href = canvas.toDataURL("image/webp");
 
-    if(EXPANDED){
-        expandheadder();
-        header.classList.toggle("expanded");
-        EXPANDED = false;
-    }
+    openTop();
 });
 
 //if wheel
 window.addEventListener("wheel", (e) => {
     if (window.scrollY === 0 && e.deltaY < 0) {
+        openTop();
         console.log("User tried to scroll up at the top!");
     }
 });
@@ -157,9 +154,10 @@ window.addEventListener("touchstart", (e) => {
 
 window.addEventListener("touchmove", (e) => {
     const touchY = e.touches[0].clientY;
-    const delta = touchY - touchStartY;
+    const dif = touchY - touchStartY;
 
-    if (window.scrollY === 0 && delta > 0) {
+    if (window.scrollY === 0 && dif > 0) {
+        openTop();
         console.log("User tried to scroll up at the top on mobile!");
     }
 
@@ -620,4 +618,12 @@ function cleanString(str) {
         .normalize("NFC")                 
         // strip leading/trailing spaces
         .trim();
+}
+
+function openTop() {
+    if(EXPANDED){
+        expandheadder();
+        header.classList.toggle("expanded");
+        EXPANDED = false;
+    }
 }

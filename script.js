@@ -214,7 +214,7 @@ reset.addEventListener("click", function(){
 });
 
 function setTagsToFilter(input){
-    tag = input;
+    tag = cleanString(input);
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
@@ -449,12 +449,12 @@ function away(oldid){
             f++;
         }
         // console.log(temp);
-        r = 0;
+        index = 0;
         while(temp != TAGINUSE[r]){
-            r++;
+            index++;
         }
-        console.log(temp + " " + r);
-        TAGINUSE.splice(r, 1);
+        console.log(temp + " " + index);
+        TAGINUSE.splice(index, 1);
         console.log(TAGINUSE);
         oldid.remove(oldid);
         tagCountReset();
@@ -579,4 +579,22 @@ function loadSeenCookie() {
     } catch (e) {
         return null;
     }
+}
+
+function cleanString(str) {
+    if (!str) return "";
+
+    return str
+        // remove any accidental HTML tags
+        .replace(/<[^>]*>/g, "")
+        // replace &nbsp; with normal space
+        .replace(/[\u00A0]/g, " ")
+        // remove zero-width chars
+        .replace(/[\u200B-\u200F]/g, "")  
+        // remove BOM
+        .replace(/[\uFEFF]/g, "")         
+        // normalize Unicode
+        .normalize("NFC")                 
+        // strip leading/trailing spaces
+        .trim();
 }

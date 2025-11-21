@@ -448,14 +448,14 @@ function away(oldid){
             temp = temp + tag[f];
             f++;
         }
-        console.log(temp);
+        // console.log(temp);
         r = 0;
         while(temp != TAGINUSE[r]){
             r++;
         }
-        // console.log(temp + " " + r);
+        console.log(temp + " " + r);
         TAGINUSE.splice(r, 1);
-        // console.log(TAGINUSE);
+        console.log(TAGINUSE);
         oldid.remove(oldid);
         tagCountReset();
         populate();

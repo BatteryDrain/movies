@@ -218,7 +218,7 @@ function setTagsToFilter(input){
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
-        but.setAttribute("onclick", "away(" + but.id + ")");
+        but.setAttribute("onclick", "away(" + but.id + "," + tag + ")");
         but.innerHTML = tag;
             spn = document.createElement('span');
             spn.innerHTML = "x";
@@ -435,21 +435,12 @@ function FindTagIndex(ID) {
     return -1;
 }
 
-function away(oldid){
+function away(oldid, tagText){
     if (oldid) {
         // console.log(oldid.innerHTML);
-        tag = oldid.innerHTML;
-        temp = "";
-        console.log(tag + " " + typeof(tag));
-
-        f = 0;
-        while(tag[f] != "<"){
-            temp = temp + tag[f];
-            f++;
-        }
-        // console.log(temp);
+        console.log(tagText + " " + typeof(tagText));
         r = 0;
-        while(temp != TAGINUSE[r]){
+        while(tagText != TAGINUSE[r]){
             r++;
         }
         // console.log(temp + " " + r);

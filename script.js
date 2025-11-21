@@ -450,7 +450,7 @@ function away(oldid){
         }
         // console.log(temp);
         index = 0;
-        while(temp != TAGINUSE[r]){
+        while(temp != TAGINUSE[index]){
             index++;
         }
         console.log(temp + " " + index);

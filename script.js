@@ -449,6 +449,7 @@ function away(oldid){
             temp = temp + tag[f];
             f++;
         }
+        temp = cleanString(temp);
         // console.log(temp);
         index = 0;
         while(temp != TAGINUSE[index]){

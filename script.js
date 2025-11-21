@@ -135,7 +135,11 @@ window.addEventListener("scroll", () => {
 
     link.href = canvas.toDataURL("image/webp");
 
-    openTop();
+    if(EXPANDED){
+        expandheadder();
+        header.classList.toggle("expanded");
+        EXPANDED = false;
+    }
 });
 
 //if wheel

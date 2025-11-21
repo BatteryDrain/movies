@@ -94,7 +94,7 @@ sortBy.addEventListener("change", () => {
 
 Ftags.addEventListener("change", () => {
     tagCountReset();
-    setTagsToFilter();
+    setTagsToFilter(Ftags.value);
     populate();
     setOptInFilterTag();
 });
@@ -213,8 +213,8 @@ reset.addEventListener("click", function(){
     setOptInFilterTag();
 });
 
-function setTagsToFilter(){
-    tag = Ftags.value;
+function setTagsToFilter(input){
+    tag = input;
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
@@ -390,7 +390,7 @@ function addTag(number){
     if(!TAGINUSE.includes(tag)){
         TAGINUSE.push(tag);
         populate();
-        setOptInFilterTag();
+        setTagsToFilter(tag);
     }
 }
 

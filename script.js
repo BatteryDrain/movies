@@ -15,9 +15,7 @@ HELP = false;
 
 
 if(document.cookie == "") {
-    if (!SEEN) {
     SEEN = Array(DATASORTED.length).fill(false);
-    }
 } else {
     SEEN = loadSeenCookie();
     coo.checked = true;

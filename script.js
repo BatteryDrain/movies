@@ -389,7 +389,7 @@ function addTag(number){
     tag = TAGS[FindTagIndex(number)][1];
     tag = cleanString(tag);
     if(!TAGINUSE.includes(tag)){
-        TAGINUSE.push(tag);
+        // TAGINUSE.push(tag);
         populate();
         setTagsToFilter(tag);
     }
@@ -438,7 +438,7 @@ function FindTagIndex(ID) {
 
 function away(button) {
     if (button) {
-        // get the tag text (without the span)
+        // get the tag text
         let temp = "";
         const tagText = button.innerHTML;
         let f = 0;
@@ -448,16 +448,15 @@ function away(button) {
         }
         const tag = cleanString(temp);
 
-        // Remove from TAGINUSE
+        //TAGINUSE - tag
         const index = TAGINUSE.indexOf(tag);
         if(index !== -1){
             TAGINUSE.splice(index, 1);
         }
 
-        // Remove button from DOM
+        // Remove button from filters
         button.remove();
 
-        // Reset counters and refresh UI
         tagCountReset();
         populate();
         setOptInFilterTag();

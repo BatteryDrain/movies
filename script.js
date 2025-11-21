@@ -218,7 +218,7 @@ function setTagsToFilter(input){
     if(tag != null){
         but = document.createElement('button');
         but.id = "TAG" + TAGCOUNT;
-        but.setAttribute("onclick", "away(this)");
+        but.setAttribute("onclick", "away(" + but.id + ")");
         but.innerHTML = tag;
             spn = document.createElement('span');
             spn.innerHTML = "x";
@@ -436,39 +436,39 @@ function FindTagIndex(ID) {
     return -1;
 }
 
-function away(button){
-    if (button) {
-        // console.log(button.innerHTML);
-        tag = button.innerHTML;
-        temp = "";
-        console.log(tag + " " + typeof(tag));
+function away(buttonId){
+    const button = document.getElementById(buttonId);
 
-        //this gets the tag text
-        f = 0;
-        while(tag[f] != "<"){
-            temp = temp + tag[f];
+    if(button){
+        // get the tag text (without the span)
+        let temp = "";
+        const tagText = button.innerHTML;
+        let f = 0;
+
+        while(tagText[f] != "<" && f < tagText.length){
+            temp += tagText[f];
             f++;
         }
-        temp = cleanString(temp);
-        // console.log(temp);
-        index = 0;
-        while(temp != TAGINUSE[index]){
-            index++;
+        const tag = cleanString(temp);
+
+        // Remove from TAGINUSE
+        const index = TAGINUSE.indexOf(tag);
+        if(index !== -1){
+            TAGINUSE.splice(index, 1);
         }
-        console.log(temp + " " + index);
-        TAGINUSE.splice(index, 1);
-        console.log(TAGINUSE);
-        //remove can be blank because button is an object (I think)
+
+        // Remove button from DOM
         button.remove();
+
+        // Reset counters and refresh UI
         tagCountReset();
         populate();
         setOptInFilterTag();
-    }
-    else {
-        console.log("no id found");
-        console.log("id = " + button + typeof(button));
+    } else {
+        console.log("No button found with ID: " + buttonId);
     }
 }
+
 
 function makeTagList(index) {
         currentTags = [];

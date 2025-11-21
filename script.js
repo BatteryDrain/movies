@@ -14,10 +14,14 @@ COOKIES = false;
 HELP = false;
 
 
-SEEN = loadSeenCookie();
-
-if (!SEEN) {
+if(document.cookie == "") {
+    if (!SEEN) {
     SEEN = Array(DATASORTED.length).fill(false);
+    }
+} else {
+    SEEN = loadSeenCookie();
+    coo.checked = true;
+    COOKIES = true;
 }
 
 filterage();

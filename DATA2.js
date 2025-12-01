@@ -29,7 +29,8 @@ TAGS = [
     [14, "suspence", ""],
     [16, "time", ""],
     [21, "true-story", ""],
-    [26, "war", ""]
+    [26, "war", ""],
+    [27, "zombie", ""]
 ]
 
 AGERATE = [

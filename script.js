@@ -355,7 +355,7 @@ function makeFig(place, m, n){
             div = document.createElement('div');
             div.classList.add("figTop");
                 figT = document.createElement('figcaption');
-                figT.innerHTML = DATASORTED[m][1] + " " + DATASORTED[m][6];
+                figT.innerHTML = DATASORTED[m][1] + ": " + DATASORTED[m][6];
                 div.appendChild(figT);
 
                 spn = document.createElement('span');

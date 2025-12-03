@@ -311,7 +311,7 @@ function build(m, n) {
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
-        if(score <= parseInt(max.value) && score >= parseInt(min.value) || score == ""){
+        if((score <= parseInt(max.value) && score >= parseInt(min.value)) || score == ""){
 
             film = DATASORTED[m][8];
             if(CHECKANIMATED && film == "an" || film == "la"){

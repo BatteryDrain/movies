@@ -359,7 +359,12 @@ function makeFig(place, m, n){
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                spn.innerHTML = DATASORTED[m][7];
+                value = DATASORTED[m][7];
+                if(value == ""){
+                    spn.innerHTML = "error";
+                } else {
+                    spn.innerHTML = value;
+                }
                 div.appendChild(spn);
             fig.appendChild(div);
 

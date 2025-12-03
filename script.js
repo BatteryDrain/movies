@@ -360,6 +360,7 @@ function makeFig(place, m, n){
 
                 spn = document.createElement('span');
                 value = DATASORTED[m][7];
+                console.log("value:" + value);
                 if(value == ""){
                     console.log("here");
                     spn.innerHTML = "error";

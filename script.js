@@ -362,6 +362,7 @@ function makeFig(place, m, n){
                 value = DATASORTED[m][7];
                 if(value == ""){
                     spn.innerHTML = "error";
+                    console.error("no score on movie " + m);
                 } else {
                     spn.innerHTML = value;
                 }

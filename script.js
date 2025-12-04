@@ -311,7 +311,7 @@ function build(m, n) {
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
-        if((score <= parseInt(max.value) && score >= parseInt(min.value)) || score == ""){
+        if((score <= parseInt(max.value) && score >= parseInt(min.value))){
 
             film = DATASORTED[m][8];
             if(CHECKANIMATED && film == "an" || film == "la"){
@@ -359,15 +359,7 @@ function makeFig(place, m, n){
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                value = DATASORTED[m][7];
-                console.log("value:" + value);
-                if(value == ""){
-                    console.log("here");
-                    spn.innerHTML = "error";
-                    console.error("no score on movie " + m);
-                } else {
-                    spn.innerHTML = value;
-                }
+                    spn.innerHTML = DATASORTED[m][7];
                 div.appendChild(spn);
             fig.appendChild(div);
 

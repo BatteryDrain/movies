@@ -22,6 +22,41 @@ if(document.cookie == "") {
     COOKIES = true;
 }
 
+//img api
+const TMDB_KEY = "fc065b93f4a36c47d3ceb37ce2a75eca";
+
+async function getPosterFromIMDB(imdbID) {
+    try {
+        const res = await fetch(
+            `https://api.themoviedb.org/3/find/${imdbID}?api_key=${TMDB_KEY}&external_source=imdb_id`
+        );
+
+        const data = await res.json();
+
+        // Movie result
+        if (data.movie_results && data.movie_results.length > 0) {
+            const poster = data.movie_results[0].poster_path;
+            if (poster) {
+                return "https://image.tmdb.org/t/p/w500" + poster;
+            }
+        }
+
+        // TV result fallback
+        if (data.tv_results && data.tv_results.length > 0) {
+            const poster = data.tv_results[0].poster_path;
+            if (poster) {
+                return "https://image.tmdb.org/t/p/w500" + poster;
+            }
+        }
+
+        return null; // no poster
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+}
+//end api
+
 filterage();
 
 tagCountReset();
@@ -378,13 +413,19 @@ function makeFig(place, m, n){
                     }
                 all.appendChild(div1);
                 
-                if(DATASORTED[m][2] != ""){
-                    foto = document.createElement('img');
-                    foto.src = "assets/" + DATASORTED[m][2] + ".jpg";
-                    foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
-                    foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
-                    all.appendChild(foto);
-                }
+                foto = document.createElement("img");
+                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
+                foto.style.opacity = "0";
+                all.appendChild(foto);
+                getPosterFromIMDB(DATASORTED[m][2]).then(url => {
+                    if (url) {
+                        foto.src = url;
+                    } else {
+                        console.error("image api error");
+                    }
+                    foto.style.opacity = "1";
+                });
+                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][3] + ")");
                 
                 div2 = document.createElement('div');
                 div2.classList.add("div2");
@@ -427,12 +468,8 @@ function addTag(number){
     }
 }
 
-function goToLink(number){
-    for(index=0; index<DATA.length; index++){
-        if(DATA[index][0] == number){
-            window.open(DATA[index][3], "_self");
-        }
-    }
+function goToLink(link){
+    window.open(link, "_self");
 }
 
 function saw(number){
@@ -638,3 +675,4 @@ function openTop() {
         EXPANDED = true;
     }
 }
+

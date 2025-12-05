@@ -380,9 +380,9 @@ function makeFig(place, m, n){
                 
                 foto = document.createElement("img");
                 foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
-                url = "https://www.themoviedb.org/t/p/w1280/dDaxvxTnipgQBMyjhytvBZLJs2s.jpg";
-                if (url) {
-                    foto.src = url;
+                pict = DATASORTED[m][2];
+                if (pict) {
+                    foto.src = pict;
                 } else {
                     console.error("image url error");
                 }

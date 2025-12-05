@@ -22,37 +22,6 @@ if(document.cookie == "") {
     COOKIES = true;
 }
 
-//img api
-async function getPosterFromIMDB(imdbID) {
-    try {
-        const res = await fetch(
-            `https://api.themoviedb.org/3/find/${imdbID}?external_source=imdb_id`,
-            {
-                headers: {
-                    Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYzA2NWI5M2Y0YTM2YzQ3ZDNjZWIzN2NlMmE3NWVjYSIsIm5iZiI6MTc2NDkyOTMxMi42MjcsInN1YiI6IjY5MzJhZjIwMDhhMWM3ZjkwMzhjNDRiOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DTCgZiQuSCU5ouFtDQQmLqd_m5HXSyfk1OcSJvOTMSk`,
-                    "Content-Type": "application/json;charset=utf-8"
-                }
-            }
-        );
-
-        const data = await res.json();
-
-        const poster =
-            data.movie_results?.[0]?.poster_path ||
-            data.tv_results?.[0]?.poster_path ||
-            null;
-
-        return poster
-            ? `https://image.tmdb.org/t/p/w500${poster}`
-            : null;
-
-    } catch (err) {
-        console.error("TMDB error:", err);
-        return null;
-    }
-}
-//end api
-
 filterage();
 
 tagCountReset();
@@ -412,13 +381,11 @@ function makeFig(place, m, n){
                 foto = document.createElement("img");
                 foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
                 all.appendChild(foto);
-                getPosterFromIMDB(DATASORTED[m][2]).then(url => {
-                    if (url) {
+                    if (DATASORTED[m][2]) {
                         foto.src = url;
                     } else {
-                        console.error("image api error");
+                        console.error("image url error");
                     }
-                });
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][3] + ")");
                 
                 div2 = document.createElement('div');

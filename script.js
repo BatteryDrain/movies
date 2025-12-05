@@ -415,7 +415,6 @@ function makeFig(place, m, n){
                 
                 foto = document.createElement("img");
                 foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
-                foto.style.opacity = "0";
                 all.appendChild(foto);
                 getPosterFromIMDB(DATASORTED[m][2]).then(url => {
                     if (url) {
@@ -423,7 +422,6 @@ function makeFig(place, m, n){
                     } else {
                         console.error("image api error");
                     }
-                    foto.style.opacity = "1";
                 });
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][3] + ")");
                 

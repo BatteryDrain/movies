@@ -23,35 +23,31 @@ if(document.cookie == "") {
 }
 
 //img api
-const TMDB_KEY = "fc065b93f4a36c47d3ceb37ce2a75eca";
-
 async function getPosterFromIMDB(imdbID) {
     try {
         const res = await fetch(
-            `https://api.themoviedb.org/3/find/${imdbID}?api_key=${TMDB_KEY}&external_source=imdb_id`
+            `https://api.themoviedb.org/3/find/${imdbID}?external_source=imdb_id`,
+            {
+                headers: {
+                    Authorization: `Bearer YOUR_V4_ACCESS_TOKEN_HERE`,
+                    "Content-Type": "application/json;charset=utf-8"
+                }
+            }
         );
 
         const data = await res.json();
 
-        // Movie result
-        if (data.movie_results && data.movie_results.length > 0) {
-            const poster = data.movie_results[0].poster_path;
-            if (poster) {
-                return "https://image.tmdb.org/t/p/w500" + poster;
-            }
-        }
+        const poster =
+            data.movie_results?.[0]?.poster_path ||
+            data.tv_results?.[0]?.poster_path ||
+            null;
 
-        // TV result fallback
-        if (data.tv_results && data.tv_results.length > 0) {
-            const poster = data.tv_results[0].poster_path;
-            if (poster) {
-                return "https://image.tmdb.org/t/p/w500" + poster;
-            }
-        }
+        return poster
+            ? `https://image.tmdb.org/t/p/w500${poster}`
+            : null;
 
-        return null; // no poster
     } catch (err) {
-        console.error(err);
+        console.error("TMDB error:", err);
         return null;
     }
 }

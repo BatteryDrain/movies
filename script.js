@@ -379,7 +379,7 @@ function makeFig(place, m, n){
                 all.appendChild(div1);
                 
                 foto = document.createElement("img");
-                foto.alt = "movie cover of " + DATASORTED[m][1] + " " + DATASORTED[m][6];
+                foto.alt = "movie cover of " + DATASORTED[m][1] + ": " + DATASORTED[m][6];
                 pict = DATASORTED[m][2];
                 if (pict) {
                     foto.src = pict;

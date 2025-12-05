@@ -386,7 +386,7 @@ function makeFig(place, m, n){
                 } else {
                     console.error("image url error");
                 }
-                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][3] + ")");
+                foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 all.appendChild(foto);
                 
                 div2 = document.createElement('div');
@@ -430,8 +430,12 @@ function addTag(number){
     }
 }
 
-function goToLink(link){
-    window.open(link, "_self");
+function goToLink(number){
+    for(index=0; index<DATA.length; index++){
+        if(DATA[index][0] == number){
+            window.open(DATA[index][3], "_self");
+        }
+    }
 }
 
 function saw(number){

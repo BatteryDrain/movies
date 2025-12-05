@@ -29,7 +29,7 @@ async function getPosterFromIMDB(imdbID) {
             `https://api.themoviedb.org/3/find/${imdbID}?external_source=imdb_id`,
             {
                 headers: {
-                    Authorization: `Bearer YOUR_V4_ACCESS_TOKEN_HERE`,
+                    Authorization: `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYzA2NWI5M2Y0YTM2YzQ3ZDNjZWIzN2NlMmE3NWVjYSIsIm5iZiI6MTc2NDkyOTMxMi42MjcsInN1YiI6IjY5MzJhZjIwMDhhMWM3ZjkwMzhjNDRiOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DTCgZiQuSCU5ouFtDQQmLqd_m5HXSyfk1OcSJvOTMSk`,
                     "Content-Type": "application/json;charset=utf-8"
                 }
             }

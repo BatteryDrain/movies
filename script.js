@@ -350,6 +350,7 @@ function build(m, n) {
 
 function makeFig(place, m, n){
     colum = document.getElementById("div" + (n % COL));
+    bigfig = document.createElement('div');
         fig = document.createElement('figure');
         fig.classList.add("fig");
             div = document.createElement('div');
@@ -397,6 +398,11 @@ function makeFig(place, m, n){
                     but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
                     div2.appendChild(but);
 
+                    but = document.createElement('button');
+                    but.innerHTML = "before";
+                    but.setAttribute("onclick", "before(" + DATASORTED[m][0] + ")");
+                    div2.appendChild(but);
+
                     p = document.createElement('p');
                     p.classList.add("time");
                     p.innerHTML = DATASORTED[m][9].substring(1, DATASORTED[m][9].length);
@@ -408,7 +414,7 @@ function makeFig(place, m, n){
                     div2.appendChild(p);
                 all.appendChild(div2);
             fig.appendChild(all);
-
+            
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "show";
@@ -419,7 +425,27 @@ function makeFig(place, m, n){
             fig.appendChild(but);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
-        colum.appendChild(fig);
+        bigfig.appendChild(fig);
+
+        div = document.createElement('div');
+        div.id = DATASORTED[m][0] + "before";
+        div.classList.add("before");
+        div.classList.add("hide");
+        if(WATCH[m].length > 1){
+            for(index=0; index<WATCH[m + 1].length; index++){
+                sdiv = document.createElement('div');
+                sdiv.style.backgroundColor = `hsl(${DATASORTED[WATCH[m + 1][0]][7] * 108}, ${65}%, ${58.4}%)`;
+                    p = document.createElement('p');
+                        p.innerHTML = DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][1] + ": " + DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][6];
+                    div.appendChild(p);
+
+                    spn = document.createElement('span');
+                        spn.innerHTML = DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][7];
+                    div.appendChild(spn);
+                bigfig.appendChild(div);
+            }
+        }
+        colum.appendChild(bigfig);
 }
 
 function addTag(number){
@@ -456,6 +482,11 @@ function saw(number){
     if (COOKIES) {
         saveSeenCookie(SEEN);
     }
+}
+
+function before(number){
+    section = document.getElementById(number + "before");
+    section.classList.toggle("hide");
 }
 
 

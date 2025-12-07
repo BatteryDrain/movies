@@ -399,10 +399,12 @@ function makeFig(place, m, n){
                     but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
                     div2.appendChild(but);
 
-                    but = document.createElement('button');
-                    but.innerHTML = "before";
-                    but.setAttribute("onclick", "before(" + DATASORTED[m][0] + ")");
-                    div2.appendChild(but);
+                    if(WATCH[m + 1].length > 1){
+                        but = document.createElement('button');
+                        but.innerHTML = "before";
+                        but.setAttribute("onclick", "before(" + DATASORTED[m][0] + ")");
+                        div2.appendChild(but);
+                    }
 
                     p = document.createElement('p');
                     p.classList.add("time");
@@ -432,7 +434,7 @@ function makeFig(place, m, n){
         div.id = DATASORTED[m][0] + "before";
         div.classList.add("before");
         div.classList.add("hide");
-        if(WATCH[m].length > 1){
+        if(WATCH[m + 1].length > 1){
             for(index=0; index<WATCH[m + 1].length; index++){
                 sdiv = document.createElement('div');
                 sdiv.style.backgroundColor = `hsl(${DATASORTED[WATCH[m + 1][0]][7] * 108}, ${65}%, ${58.4}%)`;

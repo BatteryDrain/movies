@@ -351,6 +351,7 @@ function build(m, n) {
 function makeFig(place, m, n){
     colum = document.getElementById("div" + (n % COL));
     bigfig = document.createElement('div');
+    bigfig.classList.add("bigfig");
         fig = document.createElement('figure');
         fig.classList.add("fig");
             div = document.createElement('div');

@@ -347,9 +347,9 @@ figure button {
     padding: 0 2px;
 }
 
-/* .div2 button {
-    width: fit-content;
-} */
+.div2 button {
+    width: 90px;
+}
 
 select {
     border-radius: 15px;

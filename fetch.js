@@ -2,7 +2,8 @@ SMALLARRAY = [];
 DATA = [[]];
 DATASORTED = [[]];
 MOVIETAGS = [[]];
-MOVIETAGS = [[]];
+WATCH = [[]];
+
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRYGFdNceXfw0s3LluGvK3utm0yLTkuJ0Inqwr6F7SVSJxmq5glxwdkZjJJiOXxXjPho8dCygmNEzg/pub?output=csv';
 
@@ -36,6 +37,16 @@ function csvToBIGARRAY(csvString) {
             }
         }
         MOVIETAGS.push(temp);
+    }
+
+    for(i=1; i<DATASORTED.length; i++){
+    temp = [parseInt(DATASORTED[i][0])];
+    for(j=0; j<5; j++){
+        if(DATASORTED[i][j + 17] != ''){
+            temp.push(parseInt(DATASORTED[i][j + 17]));
+        }
+    }
+    WATCH.push(temp);
     }
 
     loadScript("DATA2.js", () => {

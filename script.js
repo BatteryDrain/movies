@@ -431,7 +431,8 @@ function makeFig(place, m, n){
         bigfig.appendChild(fig);
 
         div = document.createElement('div');
-        div.id = DATASORTED[m][0] + "before";
+        identifed = FindMovieIndex(DATASORTED[m][0]);
+        div.id = identifed + "before";
         div.classList.add("before");
         div.classList.add("hide");
         if(WATCH[m + 1].length > 1){
@@ -492,6 +493,11 @@ function before(number){
     section.classList.toggle("hide");
 }
 
+function FindBeforeIndex(ID) {
+    for(i=0; i<DATASORTED.length; i++){
+        if(WATCH[i][0] == ID){return i;}
+    }
+}
 
 function FindMovieIndex(ID) {
     for(i=0; i<DATASORTED.length; i++){

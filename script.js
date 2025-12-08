@@ -377,7 +377,7 @@ function makeFig(place, m, n){
                         div1.appendChild(spn);
                     }
                 all.appendChild(div1);
-                
+
                 foto = document.createElement("img");
                 foto.alt = "movie cover of " + DATASORTED[m][1] + ": " + DATASORTED[m][6];
                 pict = DATASORTED[m][2];
@@ -389,7 +389,7 @@ function makeFig(place, m, n){
                 }
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 all.appendChild(foto);
-                
+
                 div2 = document.createElement('div');
                 div2.classList.add("div2");
                     but = document.createElement('button');
@@ -408,7 +408,7 @@ function makeFig(place, m, n){
                     div2.appendChild(p);
                 all.appendChild(div2);
             fig.appendChild(all);
-            
+
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "show";
@@ -416,13 +416,11 @@ function makeFig(place, m, n){
                 but.classList.add("hide");
             }
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+            fig.appendChild(but);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);
 }
-        
-
-
 
 function addTag(number){
     tag = TAGS[FindTagIndex(number)][1];
@@ -459,6 +457,7 @@ function saw(number){
         saveSeenCookie(SEEN);
     }
 }
+
 
 function FindMovieIndex(ID) {
     for(i=0; i<DATASORTED.length; i++){
@@ -554,9 +553,9 @@ function organizeS() {
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
-    
+
             if (parseInt(DATASORTED[j][7]) < parseInt(DATASORTED[j+1][7])) {
-    
+
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
                 DATASORTED[j+1] = temp;
@@ -570,9 +569,9 @@ function organizeY() {
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
-    
+
             if (parseInt(DATASORTED[j][6]) < parseInt(DATASORTED[j+1][6])) {
-    
+
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
                 DATASORTED[j+1] = temp;
@@ -586,9 +585,9 @@ function organizeR() {
     for (var i = 0; i < DATASORTED.length; i++) {
 
         for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
-    
+
             if (parseFloat(DATASORTED[j][4]) < parseFloat(DATASORTED[j+1][4])) {
-    
+
                 temp = DATASORTED[j];
                 DATASORTED[j] = DATASORTED[j+1];
                 DATASORTED[j+1] = temp;
@@ -622,7 +621,7 @@ function cleanString(str) {
     if (!str) return "";
 
     return str
-        // remove any accidental HTML tags
+        // remove HTML tags
         .replace(/<[^>]*>/g, "")
         // replace &nbsp; with normal space
         .replace(/[\u00A0]/g, " ")
@@ -643,4 +642,3 @@ function openTop() {
         EXPANDED = true;
     }
 }
-

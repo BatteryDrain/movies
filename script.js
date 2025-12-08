@@ -491,6 +491,7 @@ function saw(number){
 function before(number){
     section = document.getElementById(number + "before");
     section.classList.toggle("hide");
+    console.log(number);
 }
 
 function FindBeforeIndex(ID) {

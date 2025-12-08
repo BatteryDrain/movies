@@ -350,8 +350,6 @@ function build(m, n) {
 
 function makeFig(place, m, n){
     colum = document.getElementById("div" + (n % COL));
-    bigfig = document.createElement('div');
-    bigfig.classList.add("bigfig");
         fig = document.createElement('figure');
         fig.classList.add("fig");
             div = document.createElement('div');
@@ -399,13 +397,6 @@ function makeFig(place, m, n){
                     but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
                     div2.appendChild(but);
 
-                    if(WATCH[FindBeforeIndex(DATASORTED[m][0])].length > 1){
-                        but = document.createElement('button');
-                        but.innerHTML = "before";
-                        but.setAttribute("onclick", "before(" + DATASORTED[m][0] + ")");
-                        div2.appendChild(but);
-                    }
-
                     p = document.createElement('p');
                     p.classList.add("time");
                     p.innerHTML = DATASORTED[m][9].substring(1, DATASORTED[m][9].length);
@@ -425,32 +416,13 @@ function makeFig(place, m, n){
                 but.classList.add("hide");
             }
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-            fig.appendChild(but);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
-        bigfig.appendChild(fig);
-
-        div = document.createElement('div');
-        identifed = FindMovieIndex(DATASORTED[m][0]);
-        div.id = identifed + "before";
-        div.classList.add("before");
-        div.classList.add("hide");
-        if(WATCH[m + 1].length > 1){
-            for(index=0; index<WATCH[m + 1].length; index++){
-                sdiv = document.createElement('div');
-                sdiv.style.backgroundColor = `hsl(${DATASORTED[identifed][7] * 108}, ${65}%, ${58.4}%)`;
-                    p = document.createElement('p');
-                        p.innerHTML = DATASORTED[DATASORTED[FindMovieIndex(WATCH[identifed + 1][index])][0]][1] + ": " + DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][6];
-                    div.appendChild(p);
-
-                    spn = document.createElement('span');
-                        spn.innerHTML = DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][7];
-                    div.appendChild(spn);
-                bigfig.appendChild(div);
-            }
-        }
-        colum.appendChild(bigfig);
+        fig.appendChild(but);
 }
+        
+
+
 
 function addTag(number){
     tag = TAGS[FindTagIndex(number)][1];
@@ -485,19 +457,6 @@ function saw(number){
 
     if (COOKIES) {
         saveSeenCookie(SEEN);
-    }
-}
-
-function before(number){
-    id = number + "before";
-    console.log(id);
-    section = document.getElementById(id);
-    section.classList.toggle("hide");
-}
-
-function FindBeforeIndex(ID) {
-    for(i=0; i<DATASORTED.length; i++){
-        if(WATCH[i][0] == ID){return i;}
     }
 }
 

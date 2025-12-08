@@ -491,7 +491,7 @@ function saw(number){
 function before(number){
     id = number + "before";
     console.log(id);
-    section = document.getElementById(number;
+    section = document.getElementById(id);
     section.log(typeof(number));
     section.classList.toggle("hide");
 }

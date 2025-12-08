@@ -438,9 +438,9 @@ function makeFig(place, m, n){
         if(WATCH[m + 1].length > 1){
             for(index=0; index<WATCH[m + 1].length; index++){
                 sdiv = document.createElement('div');
-                sdiv.style.backgroundColor = `hsl(${DATASORTED[WATCH[m + 1][0]][7] * 108}, ${65}%, ${58.4}%)`;
+                sdiv.style.backgroundColor = `hsl(${DATASORTED[identifed][7] * 108}, ${65}%, ${58.4}%)`;
                     p = document.createElement('p');
-                        p.innerHTML = DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][1] + ": " + DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][6];
+                        p.innerHTML = DATASORTED[DATASORTED[FindMovieIndex(WATCH[identifed + 1][index])][0]][1] + ": " + DATASORTED[DATASORTED[WATCH[m + 1][index]][0]][6];
                     div.appendChild(p);
 
                     spn = document.createElement('span');

@@ -399,7 +399,7 @@ function makeFig(place, m, n){
                     but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
                     div2.appendChild(but);
 
-                    if(WATCH[FindBeforeIndex(DATASORTED[m][0]) + 1].length > 1){
+                    if(WATCH[FindBeforeIndex(DATASORTED[m][0])].length > 1){
                         but = document.createElement('button');
                         but.innerHTML = "before";
                         but.setAttribute("onclick", "before(" + DATASORTED[m][0] + ")");

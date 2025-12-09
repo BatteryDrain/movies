@@ -385,7 +385,6 @@ function makeFig(place, m, n){
                     foto.src = pict;
                 } else {
                     console.error("image url error");
-                    foto.style.margin = "200px 0";
                 }
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 foto.loading = "lazy";

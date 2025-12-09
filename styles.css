@@ -271,6 +271,10 @@ figure {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+figure img {
+    min-height: 500px;
+}
+
 figcaption {
     width: fit-content;
 }

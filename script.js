@@ -386,6 +386,7 @@ function makeFig(place, m, n){
                 } else {
                     console.error("image url error");
                 }
+                foto.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${30}% / 0.4)`;
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 foto.loading = "lazy";
                 all.appendChild(foto);

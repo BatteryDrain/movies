@@ -273,7 +273,7 @@ figure {
 
 figure img {
     min-height: 400px;
-    background-color: grey;
+    width: 100%;
 }
 
 figcaption {
@@ -403,7 +403,7 @@ footer p {
 }
 
 #rect {
-    background-color: darkgray;
+    background-color: darkgrey;
     height: 430px;
 }
 

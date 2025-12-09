@@ -273,6 +273,7 @@ figure {
 
 figure img {
     min-height: 400px;
+    background-color: grey;
 }
 
 figcaption {

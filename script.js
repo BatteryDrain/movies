@@ -388,6 +388,7 @@ function makeFig(place, m, n){
                     foto.style.margin = "200px 0";
                 }
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
+                foto.loading = "lazy";
                 all.appendChild(foto);
 
                 div2 = document.createElement('div');

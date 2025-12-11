@@ -18,6 +18,7 @@ TAGS = [
     [5, "heist", ""],
     [2, "love", ""],
     [24, "magical", ""],
+    [28, "martial arts", ""],
     [13, "medieval", ""],
     [25, "musical", ""],
     [8, "mystery", ""],

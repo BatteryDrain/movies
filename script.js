@@ -389,7 +389,7 @@ function makeFig(place, m, n){
                 foto.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${30}%)`;
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");
                 foto.loading = "lazy";
-                foto.decoding = "async";
+                // foto.decoding = "async";
                 all.appendChild(foto);
 
                 div2 = document.createElement('div');

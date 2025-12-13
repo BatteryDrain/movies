@@ -420,6 +420,7 @@ function makeFig(place, m, n){
                 if(DATASORTED[m][16] != ""){
                     p = document.createElement('p');
                     p.id = "review" + DATASORTED[m][0];
+                    p.classList.add("para");
                     p.classList.add("hide");
                     p.innerHTML = DATASORTED[m][16];
                     all.appendChild(p);

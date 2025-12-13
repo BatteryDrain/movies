@@ -412,9 +412,15 @@ footer p {
     flex-direction: row;
     margin: 5px;
 }
+
 #nom p {
     color: white;
     margin: 0;
+}
+
+.para {
+    margin: 0;
+    margin-top: 5px;
 }
 
 @media screen and (min-width: 639px) {

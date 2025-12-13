@@ -403,7 +403,7 @@ footer p {
 }
 
 #rect {
-    background-color: darkgrey;
+    background: linear-gradient(to right, hsl(108, 65%, 30.4%), hsl(54, 65%, 30.4%), hsl(0, 65%, 30.4%));
     height: 430px;
 }
 

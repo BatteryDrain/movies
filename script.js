@@ -398,7 +398,7 @@ function makeFig(place, m, n){
                     but.innerHTML = "seen it";
                     but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
                     div2.appendChild(but);
-                    
+
                     if(DATASORTED[m][16] != ""){
                         det = document.createElement('details');
                             sum = document.createElement('summary');
@@ -406,7 +406,7 @@ function makeFig(place, m, n){
                             det.appendChild(sum);
                             p = document.createElement('p');
                                 p.innerHTML = DATASORTED[m][16];
-                            div2.appendChild(p);
+                            det.appendChild(p);
                         div2.appendChild(det);
                     }
 

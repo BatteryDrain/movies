@@ -400,14 +400,10 @@ function makeFig(place, m, n){
                     div2.appendChild(but);
 
                     if(DATASORTED[m][16] != ""){
-                        det = document.createElement('details');
-                            sum = document.createElement('summary');
-                                sum.innerHTML = "review";
-                            det.appendChild(sum);
-                            p = document.createElement('p');
-                                p.innerHTML = DATASORTED[m][16];
-                            det.appendChild(p);
-                        div2.appendChild(det);
+                        but = document.createElement('button');
+                        but.innerHTML = "review";
+                        but.setAttribute("onclick", "reviewOpen(" + DATASORTED[m][0] + ")");
+                        div2.appendChild(but);
                     }
 
                     p = document.createElement('p');
@@ -420,6 +416,14 @@ function makeFig(place, m, n){
                     p.innerHTML = DATASORTED[m][5];
                     div2.appendChild(p);
                 all.appendChild(div2);
+                
+                if(DATASORTED[m][16] != ""){
+                    p = document.createElement('p');
+                    p.id = "review" + DATASORTED[m][0];
+                    p.classList.add("hide");
+                    p.innerHTML = DATASORTED[m][16];
+                    all.appendChild(p);
+                }
             fig.appendChild(all);
 
             but = document.createElement('button');
@@ -442,6 +446,11 @@ function addTag(number){
         setTagsToFilter(tag);
         populate();
     }
+}
+
+function reviewOpen(number){
+    review = document.getElementById("review" + number);
+    review.classList.toggle("hide");
 }
 
 function goToLink(number){

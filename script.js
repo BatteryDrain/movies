@@ -381,10 +381,14 @@ function makeFig(place, m, n){
                 foto = document.createElement("img");
                 foto.alt = "movie cover for " + DATASORTED[m][1] + ": " + DATASORTED[m][6];
                 pict = DATASORTED[m][2];
-                if (pict) {
-                    foto.src = pict;
+                if (pict == "") {
+                    console.error("no image url for " + DATASORTED[m][1]);
                 } else {
-                    console.error("image url error");
+                    if(!pict.contains("themoviedb")){
+                        console.error("image url not tmdb for " + DATASORTED[m][1]);
+                    } else {
+                        foto.src = pict;
+                    }
                 }
                 foto.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${30}%)`;
                 foto.setAttribute("onclick", "goToLink(" + DATASORTED[m][0] + ")");

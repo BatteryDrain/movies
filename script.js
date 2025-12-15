@@ -384,7 +384,7 @@ function makeFig(place, m, n){
                 if (pict == "") {
                     console.error("no image url for " + DATASORTED[m][1]);
                 } else {
-                    if(!pict.contains("themoviedb")){
+                    if(!pict.includes("themoviedb")){
                         console.error("image url not tmdb for " + DATASORTED[m][1]);
                     } else {
                         foto.src = pict;

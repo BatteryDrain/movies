@@ -400,6 +400,7 @@ footer p {
 
 #help {
     background: linear-gradient(to right, hsl(108, 65%, 58.4%), hsl(54, 65%, 58.4%), hsl(0, 65%, 58.4%));
+    margin: 0 5px;
 }
 
 #rect {
@@ -448,5 +449,9 @@ footer p {
 
     #tagHere button:hover {
         background-color: grey;
+    }
+
+    #help {
+        margin: 5vw;
     }
 }

@@ -569,6 +569,9 @@ function sort() {
     if(theme == "year"){
         organizeY();
     }
+    if(theme == "name"){
+        organizeN();
+    }
 }
 
 function organizeD() {
@@ -621,6 +624,27 @@ function organizeR() {
             }
         }
     }
+}
+
+function organizeN(){
+    n = DATASORTED.length;
+    swapped = true;
+
+    do {
+        swapped = false;
+
+        for (let i = 0; i < n - 1; i++) {
+            if (names[i].toLowerCase() > names[i + 1].toLowerCase()) {
+                // swap
+                let temp = names[i];
+                names[i] = names[i + 1];
+                names[i + 1] = temp;
+                swapped = true;
+            }
+        }
+
+        n--; // last element is now in place
+    } while (swapped);
 }
 
 function tagCountReset() {

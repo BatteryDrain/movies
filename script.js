@@ -626,7 +626,7 @@ function organizeR() {
     }
 }
 
-function organizeNames() {
+function organizeN() {
     // bubble sort for names (A–Z)
     for (var i = 0; i < DATASORTED.length; i++) {
 

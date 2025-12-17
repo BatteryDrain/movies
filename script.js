@@ -626,26 +626,22 @@ function organizeR() {
     }
 }
 
-function organizeN(){
-    n = DATASORTED.length;
-    swapped = true;
+function organizeNames() {
+    // bubble sort for names (A–Z)
+    for (var i = 0; i < DATASORTED.length; i++) {
 
-    do {
-        swapped = false;
+        for (var j = 0; j < (DATASORTED.length - i - 1); j++) {
 
-        for (let i = 0; i < n - 1; i++) {
-            if (names[i].toLowerCase() > names[i + 1].toLowerCase()) {
-                // swap
-                let temp = names[i];
-                names[i] = names[i + 1];
-                names[i + 1] = temp;
-                swapped = true;
+            if (DATASORTED[j][1].toLowerCase() > DATASORTED[j + 1][1].toLowerCase()) {
+
+                temp = DATASORTED[j];
+                DATASORTED[j] = DATASORTED[j + 1];
+                DATASORTED[j + 1] = temp;
             }
         }
-
-        n--; // last element is now in place
-    } while (swapped);
+    }
 }
+
 
 function tagCountReset() {
     TAGCOUNTL = [];

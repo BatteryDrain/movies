@@ -21,6 +21,7 @@ TAGS = [
     [24, "magical", ""],
     [28, "martial arts", ""],
     [13, "medieval", ""],
+    [31, "murder mystery", ""],
     [25, "musical", ""],
     [8, "mystery", ""],
     [19, "racing", ""],

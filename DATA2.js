@@ -29,7 +29,7 @@ TAGS = [
     [10, "school", ""],
     [6, "spy", ""],
     [22, "Superhero", ""],
-    [14, "suspence", ""],
+    [14, "suspense", ""],
     [30, "thrill", ""],
     [16, "time", ""],
     [21, "true-story", ""],

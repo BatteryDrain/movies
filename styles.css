@@ -243,6 +243,7 @@ input:checked + .slider::before {
 }
 
 #tagHere button span {
+    padding: 0 2px;
     color: black;
     float: right;
     background-color: rgba(0, 0, 0, 0);

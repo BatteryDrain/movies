@@ -104,7 +104,7 @@ Ftags.addEventListener("change", () => {
 helpShow.addEventListener("click", () => {
     HELP = !HELP;
     help.classList.toggle("hide");
-    if(HELP) {
+    if(!HELP) {
         helpShow.innerHTML = "show help";
     } else {
         helpShow.innerHTML = "hide help";        

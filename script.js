@@ -295,7 +295,7 @@ function populate(){
     for(d=0; d<COL; d++){
         div = document.createElement('div');
         div.id = "div" + d;
-        div.classList.add("divCol")
+        div.classList.add("divCol");
         cont.appendChild(div);
     }
     //sort
@@ -336,7 +336,6 @@ function build(m, n) {
                                 }
                             }
                         }
-
                         recomend = DATASORTED[m][4];
                         makeFig(recomend, m, n);
                         VISIBLE_INDEX++;

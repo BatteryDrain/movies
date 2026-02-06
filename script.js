@@ -321,20 +321,17 @@ function build(m, n) {
 
             film = DATASORTED[m][8];
             console.log("BUILD PASS", {film,CHECKANIMATED,CHECKLIVE,TAGINUSE});
-            if(CHECKANIMATED && film == "an" || film == "la"){
-                if(CHECKLIVE && film == "la" || film == "an"){
+            if((CHECKANIMATED && film === "an") || (CHECKLIVE && film === "la")){
+                has = hasTags(m);
+                // console.log("has  = " + has);
+                // console.log("length " + (TAGINUSE.length == 0));
+                if((TAGINUSE.length == 0) || has){
 
-                    has = hasTags(m);
-                    // console.log("has  = " + has);
-                    // console.log("length " + (TAGINUSE.length == 0));
-                    if((TAGINUSE.length == 0) || has){
-
-                        currentTags = makeTagList(m);
-                        for(i=0; i<currentTags.length; i++){
-                            for(j=0; j<TAGS.length; j++){
-                                if(TAGS[j][1] == currentTags[i]){
-                                    TAGCOUNTL[j][0] = (parseInt(TAGCOUNTL[j][0]) + 1);
-                                }
+                    currentTags = makeTagList(m);
+                    for(i=0; i<currentTags.length; i++){
+                        for(j=0; j<TAGS.length; j++){
+                            if(TAGS[j][1] == currentTags[i]){
+                                TAGCOUNTL[j][0] = (parseInt(TAGCOUNTL[j][0]) + 1);
                             }
                         }
                         recomend = DATASORTED[m][4];

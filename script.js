@@ -183,12 +183,6 @@ SortS.addEventListener("change", () => {
     populate();
 });
 
-window.addEventListener('resize', function() {
-    if(window.innerWidth > 800){
-        document.documentElement.style.overscrollBehavior = "none";
-    }
-});
-
 window.addEventListener('resize', populate);
 
 function filterage(){ 
@@ -205,7 +199,6 @@ function filterage(){
             const tooltipSpan = tooltipT(ii);
             if (tooltipSpan) { 
                 txt.appendChild(tooltipSpan);
-
             }
             ageList.appendChild(txt); AGE.push(RATE[ii][2]);
         }
@@ -295,7 +288,7 @@ function populate(){
     for(d=0; d<COL; d++){
         div = document.createElement('div');
         div.id = "div" + d;
-        div.classList.add("divCol");
+        div.classList.add("divCol")
         cont.appendChild(div);
     }
     //sort
@@ -314,7 +307,6 @@ function populate(){
 }
 
 function build(m, n) {
-    console.log("BUILD PASS" + DATASORTED[m][8] + CHECKANIMATED + CHECKLIVE,TAGINUSE);
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
@@ -337,6 +329,7 @@ function build(m, n) {
                                 }
                             }
                         }
+
                         recomend = DATASORTED[m][4];
                         makeFig(recomend, m, n);
                         VISIBLE_INDEX++;

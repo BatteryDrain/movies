@@ -26,7 +26,9 @@ if(document.cookie == "") {
 filterage();
 
 tagCountReset();
+
 populate();
+
 setOptInFilterTag();
 
 function setOptInFilterTag(){

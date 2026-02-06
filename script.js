@@ -314,7 +314,7 @@ function populate(){
 }
 
 function build(m, n) {
-    console.log("BUILD PASS", {DATASORTED[m][8],CHECKANIMATED,CHECKLIVE,TAGINUSE});
+    console.log("BUILD PASS" + DATASORTED[m][8] + CHECKANIMATED + CHECKLIVE,TAGINUSE);
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);

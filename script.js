@@ -314,6 +314,13 @@ function populate(){
 }
 
 function build(m, n) {
+    console.log("BUILD PASS", {
+        film,
+        CHECKANIMATED,
+        CHECKLIVE,
+        TAGINUSE
+    });
+
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);

@@ -406,10 +406,10 @@ function makeFig(place, m, n){
 
                 div2 = document.createElement('div');
                 div2.classList.add("div2");
-                    but = document.createElement('button');
-                    but.innerHTML = "seen it";
-                    but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-                    div2.appendChild(but);
+                    // but = document.createElement('button');
+                    // but.innerHTML = "seen it";
+                    // but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+                    // div2.appendChild(but);
 
                     if(DATASORTED[m][16] != ""){
                         but = document.createElement('button');
@@ -439,16 +439,16 @@ function makeFig(place, m, n){
                 }
             fig.appendChild(all);
 
-            but = document.createElement('button');
-            but.id = DATASORTED[m][0] + "show";
-            but.innerHTML = "show";
-            if(SEEN != null){
-                if(!SEEN[parseInt(DATASORTED[m][0])]){
-                    all.classList.add("hide");
-                }
-            }
-            but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
-            fig.appendChild(but);
+            // but = document.createElement('button');
+            // but.id = DATASORTED[m][0] + "show";
+            // but.innerHTML = "show";
+            // if(SEEN != null){
+            //     if(!SEEN[parseInt(DATASORTED[m][0])]){
+            //         all.classList.add("hide");
+            //     }
+            // }
+            // but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
+            // fig.appendChild(but);
 
         fig.style.backgroundColor = `hsl(${place * 108}, ${65}%, ${58.4}%)`;
         colum.appendChild(fig);

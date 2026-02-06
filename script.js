@@ -12,6 +12,7 @@ COL = Math.floor(COL);
 // VISIBLE_INDEX = 0;
 COOKIES = false;
 HELP = false;
+SEEN = [];
 
 
 if(document.cookie == "") {

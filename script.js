@@ -314,19 +314,13 @@ function populate(){
 }
 
 function build(m, n) {
-    console.log("BUILD PASS", {
-        film,
-        CHECKANIMATED,
-        CHECKLIVE,
-        TAGINUSE
-    });
-
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
         if((score <= parseInt(max.value) && score >= parseInt(min.value))){
 
             film = DATASORTED[m][8];
+            console.log("BUILD PASS", {film,CHECKANIMATED,CHECKLIVE,TAGINUSE});
             if(CHECKANIMATED && film == "an" || film == "la"){
                 if(CHECKLIVE && film == "la" || film == "an"){
 

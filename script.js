@@ -372,7 +372,7 @@ function makeFig(place, m, n){
             all = document.createElement('div');
             all.id = DATASORTED[m][0] + "all";
             all.classList.add("all");
-            if(SEEN[DATASORTED[m][0]] && SEEN != null){all.classList.add("hide");}
+            if(SEEN[parseInt(DATASORTED[m][0])] && SEEN != null){all.classList.add("hide");}
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){

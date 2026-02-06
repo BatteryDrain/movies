@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: "Mulish", Arial, sans-serif;
-    background-color: rgb(138, 169, 247);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #content {
@@ -24,6 +24,7 @@ background-color: black;
 }
 
 header {
+    background-color: rgb(138, 169, 247);
     margin: 0;
 }
 

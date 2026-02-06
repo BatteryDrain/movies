@@ -183,6 +183,12 @@ SortS.addEventListener("change", () => {
     populate();
 });
 
+window.addEventListener('resize', function() {
+    if(window.innerWidth > 800){
+        document.documentElement.style.overscrollBehavior = "none";
+    }
+});
+
 window.addEventListener('resize', populate);
 
 function filterage(){ 

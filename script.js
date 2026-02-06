@@ -314,7 +314,7 @@ function populate(){
 }
 
 function build(m, n) {
-    console.log("BUILD PASS" + DATASORTED[m][8] + CHECKANIMATED + CHECKLIVE,TAGINUSE);
+    // console.log("BUILD PASS" + DATASORTED[m][8] + CHECKANIMATED + CHECKLIVE,TAGINUSE);
     if(AGE.includes(DATASORTED[m][5])){
 
         score = parseInt(DATASORTED[m][7]);
@@ -352,7 +352,6 @@ function build(m, n) {
     }
     count.innerHTML = total + " movies";
 }
-
 
 function makeFig(place, m, n){
     colum = document.getElementById("div" + (n % COL));

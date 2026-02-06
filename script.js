@@ -440,9 +440,7 @@ function makeFig(place, m, n){
             but = document.createElement('button');
             but.id = DATASORTED[m][0] + "show";
             but.innerHTML = "show";
-            if(!SEEN[DATASORTED[m][0]]){
-                but.classList.add("hide");
-            }
+            if(SEEN != null){if(SEEN[parseInt(DATASORTED[m][0])]){but.classList.add("hide");}}
             but.setAttribute("onclick", "saw(" + DATASORTED[m][0] + ")");
             fig.appendChild(but);
 

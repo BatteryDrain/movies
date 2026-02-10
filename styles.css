@@ -70,10 +70,6 @@ h1 {
     margin-left: 5px;
 }
 
-.hide {
-    display: none;
-}
-
 #ageList p {
     margin: 2px;
     background-color: grey;
@@ -424,6 +420,10 @@ footer p {
 .para {
     margin: 0;
     margin-top: 5px;
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (min-width: 639px) {

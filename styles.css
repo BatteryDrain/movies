@@ -460,4 +460,12 @@ footer p {
     img:hover {
         cursor: pointer;
     }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    select:hover {
+        cursor: pointer;
+    }
 }

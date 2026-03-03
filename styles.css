@@ -456,4 +456,8 @@ footer p {
     #help {
         margin: 5vw;
     }
+    
+    #img:hover {
+        cursor: pointer;
+    }
 }

@@ -367,7 +367,12 @@ function makeFig(place, m, n){
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                    spn.innerHTML = DATASORTED[m][7];
+                spn.classList.add("hide");
+        constructor(parameters) {
+            
+        }
+    }
+                spn.innerHTML = DATASORTED[m][7];
                 div.appendChild(spn);
             fig.appendChild(div);
 

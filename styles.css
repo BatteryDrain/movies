@@ -308,6 +308,7 @@ figcaption {
     margin-left: auto;
     background-color: grey;
     border-radius: 15px;
+    padding: 0 2px;
 }
 
 figure button {

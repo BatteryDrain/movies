@@ -378,11 +378,11 @@ function makeFig(place, m, n){
                 div1 = document.createElement('div');
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
-                        spn = document.createElement('span');
+                        btn = document.createElement('button');
                         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][t];
-                        spn.innerHTML = TAGS[FindTagIndex(tagID)][1];
-                        spn.setAttribute("onclick", "addTag(" + tagID + ")");
-                        div1.appendChild(spn);
+                        btn.innerHTML = TAGS[FindTagIndex(tagID)][1];
+                        btn.setAttribute("onclick", "addTag(" + tagID + ")");
+                        div1.appendChild(btn);
                     }
                 all.appendChild(div1);
 

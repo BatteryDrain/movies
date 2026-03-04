@@ -315,7 +315,7 @@ figure button {
     margin-left: 0;
 }
 
-.figTop .tagBTN {
+button.tagBTN {
     background-color: white;
     color: black;
     border-radius: 15px;

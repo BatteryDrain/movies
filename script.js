@@ -379,6 +379,7 @@ function makeFig(place, m, n){
                 div1.classList.add("tags");
                     for(t=1; t<MOVIETAGS[FindMovieIndex(DATASORTED[m][0])].length; t++){
                         btn = document.createElement('button');
+                        btn.classList.add("tagBTN");
                         tagID = MOVIETAGS[FindMovieIndex(DATASORTED[m][0])][t];
                         btn.innerHTML = TAGS[FindTagIndex(tagID)][1];
                         btn.setAttribute("onclick", "addTag(" + tagID + ")");

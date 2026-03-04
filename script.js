@@ -367,7 +367,7 @@ function makeFig(place, m, n){
                 div.appendChild(figT);
 
                 spn = document.createElement('span');
-                spn.classList.add("hide");
+                spn.classList.add("sco")
                 spn.innerHTML = DATASORTED[m][7];
                 div.appendChild(spn);
             fig.appendChild(div);

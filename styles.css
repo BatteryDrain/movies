@@ -304,6 +304,12 @@ figcaption {
     height: auto;
 }
 
+.sco {
+    margin-left: auto;
+    background-color: grey;
+    border-radius: 15px;
+}
+
 figure button {
     width: 100px;
     height: auto;
